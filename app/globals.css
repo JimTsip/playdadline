@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@font-face { font-family: 'Barlow SC'; src: url('/fonts/barlow-semi-condensed-semibold-italic.ttf') format('truetype'); font-style: italic; font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Barlow SC'; src: url('/fonts/barlow-semi-condensed-extrabold-italic.ttf') format('truetype'); font-style: italic; font-weight: 800; font-display: swap; }
+
+:root { --navy:#082e50; --navy-deep:#041d34; --navy-band:#0a416b; --cream:#fff3d9; --sky:#78d4ff; --coral:#f15b46; --ink:#031827; }
+* { box-sizing: border-box; }
+html { background: var(--navy); }
+body { margin: 0; background: var(--navy); color: var(--cream); }
+button, input { font: inherit; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+.landing-shell { position:relative; min-height:100svh; overflow:hidden; background:var(--navy); font-family:'Barlow SC','Arial Narrow',sans-serif; isolation:isolate; }
+.comic-band { position:absolute; z-index:-1; left:-4vw; right:-4vw; bottom:5.6rem; height:12rem; background:var(--navy-band); transform:rotate(4deg); transform-origin:center; }
+.site-header { width:min(1296px,calc(100% - 9rem)); margin:0 auto; padding-top:2rem; display:flex; align-items:flex-start; justify-content:space-between; }
+.brand-logo { width:205px; height:92px; object-fit:contain; object-position:left top; }
+.launch-chip,.mission-chip,.honor-card,.store-card,.waitlist-form,.hero-art { border:3px solid var(--ink); }
+.launch-chip { margin-top:.8rem; min-width:250px; padding:.7rem 1.6rem; border-radius:999px; background:var(--cream); color:var(--navy-deep); text-align:center; font-size:1.05rem; font-weight:800; font-style:italic; }
+
+.hero { width:min(1296px,calc(100% - 9rem)); min-height:calc(100svh - 202px); margin:0 auto; display:grid; grid-template-columns:1.02fr .98fr; gap:4.5rem; align-items:center; padding:1rem 0 8rem; }
+.hero-copy { min-width:0; }
+.eyebrow,.form-kicker,.form-note,.mission-chip,.honor-card small,.store-card small { font-weight:800; font-style:italic; }
+.eyebrow { margin:0 0 1rem; color:var(--sky); font-size:1.15rem; }
+h1 { margin:0; font-size:clamp(4rem,5.35vw,5.75rem); line-height:.94; letter-spacing:-.035em; font-weight:800; font-style:italic; }
+.intro { max-width:690px; margin:2rem 0 0; color:#d7efff; font-family:'Arial Narrow',Arial,sans-serif; font-size:1.32rem; line-height:1.45; }
+
+.waitlist-block { margin-top:2.65rem; max-width:650px; }
+.form-kicker { margin:0 0 .5rem; font-size:1.1rem; }
+.waitlist-form { display:grid; grid-template-columns:1.15fr .95fr; gap:.55rem; padding:.45rem; border-radius:18px; background:var(--cream); box-shadow:0 8px 0 var(--ink); }
+.waitlist-form input { min-width:0; border:0; outline:0; padding:1rem; background:transparent; color:var(--navy); font-weight:800; font-style:italic; }
+.waitlist-form input::placeholder { color:#607080; opacity:1; }
+.waitlist-form button { border:2px solid var(--ink); border-radius:13px; background:var(--coral); color:#fff; padding:.85rem 1rem; cursor:pointer; font-size:1.15rem; font-weight:800; font-style:italic; box-shadow:0 3px 0 var(--ink); transition:transform 140ms ease,box-shadow 140ms ease; }
+.waitlist-form button:hover { transform:translateY(-2px); box-shadow:0 5px 0 var(--ink); }
+.waitlist-form button:active { transform:translateY(2px); box-shadow:0 1px 0 var(--ink); }
+.waitlist-form button:disabled { cursor:wait; opacity:.76; }
+.form-note { margin:.75rem 0 0; font-size:.82rem; }
+.form-message { min-height:1.2rem; margin:.45rem 0 0; font-family:Arial,sans-serif; font-size:.9rem; }
+.form-message.success { color:#6ee7a5; }
+.form-message.error { color:#ffd1ca; }
+
+.store-row { display:flex; gap:.95rem; margin-top:1.4rem; }
+.store-card { width:248px; height:72px; display:flex; align-items:center; gap:.75rem; padding:.45rem .8rem; border-color:var(--cream); border-radius:14px; background:var(--navy-deep); color:#fff; }
+.store-mark { width:52px; height:52px; flex:0 0 52px; display:grid; place-items:center; border-radius:12px; background:#fff; }
+.store-mark img { width:34px; height:34px; object-fit:contain; }
+.store-card span:last-child { display:flex; min-width:0; flex-direction:column; }
+.store-card small { color:var(--sky); font-size:.78rem; line-height:1; }
+.store-card strong { white-space:nowrap; font-size:1.45rem; line-height:1.15; font-weight:800; font-style:italic; }
+
+.art-wrap { position:relative; width:min(100%,560px); margin-left:auto; }
+.hero-art { position:relative; overflow:hidden; aspect-ratio:1/1; border-width:8px; border-color:var(--cream); border-radius:15% 15% 20% 20%; background:var(--sky); box-shadow:14px 18px 0 var(--ink); }
+.hero-art img { width:100%; height:100%; display:block; object-fit:cover; }
+.mission-chip { position:absolute; z-index:2; left:-7%; top:-5%; padding:.75rem 1.3rem; border-radius:999px; background:var(--coral); color:#fff; font-size:1rem; transform:rotate(3deg); }
+.honor-card { position:absolute; z-index:2; right:-1.5%; bottom:-2%; min-width:240px; padding:.85rem 1rem; border-radius:16px; background:var(--cream); color:var(--navy-deep); transform:rotate(-2deg); box-shadow:5px 6px 0 var(--ink); }
+.honor-card small { display:block; color:var(--coral); }
+.honor-card strong { display:block; margin-top:.15rem; font-size:1.25rem; font-weight:800; font-style:italic; }
+.mobile-art-slot { display:none; }
+
+.footer-strip { position:absolute; z-index:3; left:0; right:0; bottom:0; height:110px; display:flex; align-items:center; justify-content:space-between; padding:0 5vw; background:var(--coral); color:#fff; }
+.footer-strip strong { font-size:clamp(2rem,3vw,2.65rem); font-weight:800; font-style:italic; }
+.footer-strip span { font-size:1.05rem; font-weight:800; font-style:italic; }
+
+@media (max-width:900px) {
+  .landing-shell { padding-bottom:0; }
+  .comic-band { bottom:56px; height:11rem; transform:rotate(4deg); }
+  .site-header { width:calc(100% - 48px); padding-top:1.25rem; }
+  .brand-logo { width:168px; height:76px; }
+  .launch-chip { min-width:105px; padding:.62rem .8rem; font-size:.75rem; border-width:2px; }
+  .hero { width:calc(100% - 48px); min-height:auto; display:block; padding:1.4rem 0 2rem; }
+  .eyebrow { margin-top:.5rem; font-size:.92rem; }
+  h1 { font-size:clamp(3.15rem,13vw,4.4rem); line-height:.96; }
+  .intro { margin-top:1.4rem; font-size:1.07rem; }
+  .desktop-art-slot { display:none; }
+  .mobile-art-slot { display:block; margin:2.25rem 0 3.6rem; }
+  .art-wrap { width:min(100%,520px); margin:0 auto; }
+  .hero-art { border-width:6px; box-shadow:9px 12px 0 var(--ink); }
+  .mission-chip { display:none; }
+  .honor-card { min-width:205px; padding:.65rem .8rem; }
+  .honor-card strong { font-size:1.05rem; }
+  .waitlist-block { margin-top:0; max-width:none; }
+  .waitlist-form { grid-template-columns:1fr; gap:.75rem; padding:0; border:0; background:transparent; box-shadow:none; }
+  .waitlist-form input,.waitlist-form button { min-height:58px; border:3px solid var(--ink); border-radius:13px; box-shadow:0 5px 0 var(--ink); }
+  .waitlist-form input { background:var(--cream); padding:1rem; }
+  .store-row { gap:.75rem; }
+  .store-card { flex:1 1 0; min-width:0; height:64px; padding:.4rem; gap:.6rem; }
+  .store-mark { width:46px; height:46px; flex-basis:46px; border-radius:10px; }
+  .store-mark img { width:31px; height:31px; }
+  .store-card small { font-size:.65rem; }
+  .store-card strong { font-size:clamp(.9rem,4vw,1.12rem); }
+  .footer-strip { position:relative; height:58px; padding:0 24px; }
+  .footer-strip strong { font-size:1.35rem; }
+  .footer-strip span { display:none; }
+}
+
+@media (max-width:410px) {
+  .site-header,.hero { width:calc(100% - 32px); }
+  .brand-logo { width:150px; }
+  .store-card { gap:.4rem; }
+  .store-mark { width:42px; height:42px; flex-basis:42px; }
+  .store-mark img { width:28px; height:28px; }
+}
+
+@media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
