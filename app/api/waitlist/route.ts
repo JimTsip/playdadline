@@ -1,14 +1,23 @@
 import { env } from 'cloudflare:workers';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://playdadline.com',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
+const allowedOrigins = new Set([
+  'http://playdadline.com',
+  'https://playdadline.com',
+]);
 
-export async function OPTIONS() {
-  return new Response(null, { status: 204, headers: corsHeaders });
+function corsHeaders(request: Request) {
+  const origin = request.headers.get('origin');
+  return {
+    'Access-Control-Allow-Origin': origin && allowedOrigins.has(origin) ? origin : 'https://playdadline.com',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Vary': 'Origin',
+  };
+}
+
+export async function OPTIONS(request: Request) {
+  return new Response(null, { status: 204, headers: corsHeaders(request) });
 }
 
 export async function POST(request: Request) {
@@ -16,12 +25,12 @@ export async function POST(request: Request) {
   try {
     body = (await request.json()) as { email?: unknown };
   } catch {
-    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders });
+    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders(request) });
   }
 
   const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
   if (!emailPattern.test(email) || email.length > 254) {
-    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders });
+    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders(request) });
   }
 
   const db = env.DB;
@@ -44,5 +53,5 @@ export async function POST(request: Request) {
     message: result.meta.changes === 0
       ? 'You are already on the list. Mission still accepted!'
       : 'You are on the list. Mission accepted!',
-  }, { headers: corsHeaders });
+  }, { headers: corsHeaders(request) });
 }
