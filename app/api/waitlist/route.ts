@@ -1,18 +1,27 @@
 import { env } from 'cloudflare:workers';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'https://playdadline.com',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export async function OPTIONS() {
+  return new Response(null, { status: 204, headers: corsHeaders });
+}
 
 export async function POST(request: Request) {
   let body: { email?: unknown };
   try {
     body = (await request.json()) as { email?: unknown };
   } catch {
-    return Response.json({ message: 'Please enter a valid email.' }, { status: 400 });
+    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders });
   }
 
   const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
   if (!emailPattern.test(email) || email.length > 254) {
-    return Response.json({ message: 'Please enter a valid email.' }, { status: 400 });
+    return Response.json({ message: 'Please enter a valid email.' }, { status: 400, headers: corsHeaders });
   }
 
   const db = env.DB;
@@ -35,5 +44,5 @@ export async function POST(request: Request) {
     message: result.meta.changes === 0
       ? 'You are already on the list. Mission still accepted!'
       : 'You are on the list. Mission accepted!',
-  });
+  }, { headers: corsHeaders });
 }
