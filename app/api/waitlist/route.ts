@@ -51,7 +51,7 @@ export async function POST(request: Request) {
 
   return Response.json({
     message: result.meta.changes === 0
-      ? 'You are already on the list. Mission still accepted!'
-      : 'You are on the list. Mission accepted!',
+      ? 'You are already on the TestFlight tester list!'
+      : 'You are on the TestFlight list. Invite incoming!',
   }, { headers: corsHeaders(request) });
 }

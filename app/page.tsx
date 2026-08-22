@@ -28,7 +28,7 @@ export default function Home() {
       const result = (await response.json()) as { message?: string };
       if (!response.ok) throw new Error(result.message || 'Something went wrong.');
       setFormState('success');
-      setMessage(result.message || 'You are on the list. Mission accepted!');
+      setMessage(result.message || 'You are on the TestFlight list. Invite incoming!');
       setEmail('');
     } catch (error) {
       setFormState('error');
@@ -57,7 +57,8 @@ export default function Home() {
           <div className="mobile-art-slot"><HeroArtwork /></div>
 
           <div className="waitlist-block">
-            <p className="form-kicker">BE FIRST TO RUN</p>
+            <p className="form-kicker">JOIN THE TESTFLIGHT CREW</p>
+            <p className="form-intro">Enter your email to get invited as a DadLine tester.</p>
             <form className="waitlist-form" onSubmit={joinWaitlist}>
               <label className="sr-only" htmlFor="email">Email address</label>
               <input
@@ -71,10 +72,10 @@ export default function Home() {
                 required
               />
               <button type="submit" disabled={formState === 'submitting'}>
-                {formState === 'submitting' ? 'JOINING…' : 'JOIN THE WAITLIST'}
+                {formState === 'submitting' ? 'JOINING…' : 'BECOME A TESTER'}
               </button>
             </form>
-            <p className="form-note">NO SPAM • JUST THE LAUNCH CALL</p>
+            <p className="form-note">NO SPAM • JUST YOUR TESTFLIGHT INVITE</p>
             <p className={`form-message ${formState}`} role="status" aria-live="polite">{message}</p>
           </div>
 

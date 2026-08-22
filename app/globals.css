@@ -26,6 +26,7 @@ h1 { margin:0; font-size:clamp(4rem,5.35vw,5.75rem); line-height:.94; letter-spa
 
 .waitlist-block { margin-top:2.65rem; max-width:650px; }
 .form-kicker { margin:0 0 .5rem; font-size:1.1rem; }
+.form-intro { margin:0 0 .8rem; color:#d7efff; font-family:'Arial Narrow',Arial,sans-serif; font-size:1rem; line-height:1.35; }
 .waitlist-form { width:100%; min-height:72px; display:flex; align-items:stretch; gap:.55rem; padding:.45rem; border-radius:18px; background:var(--cream); box-shadow:0 8px 0 var(--ink); }
 .waitlist-form input { width:100%; min-width:0; flex:1 1 auto; border:0; outline:0; padding:1rem; background:transparent; color:var(--navy); font-weight:800; font-style:italic; }
 .waitlist-form input::placeholder { color:#607080; opacity:1; }
