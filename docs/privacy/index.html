@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — DADLINE: Family Rush</title>
-<meta name="description" content="How DADLINE: Family Rush handles your data: what stays on your phone, what reaches our server in the EU, what the ads do, and how to have it all deleted.">
+<meta name="description" content="How DADLINE: Family Rush uses account, gameplay, purchase and advertising data, and how to manage your privacy choices or delete your account.">
 <link rel="canonical" href="https://playdadline.com/privacy/">
 <meta name="theme-color" content="#082e50">
 <meta name="robots" content="index,follow">
@@ -52,58 +52,56 @@ footer a { color:var(--sky); }
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="upd">Last updated: 7 September 2026</p>
+  <p class="upd">Last updated: 13 September 2026</p>
 
-  <p class="lede">DADLINE: Family Rush is made by THE LAST CLICK L.P., which is responsible for the data described here. The short version: the game never asks who you are, your progress lives on your phone with a copy on our server in the European Union so it survives a new device, and we do not sell or share anything with anyone.</p>
+  <p class="lede">THE LAST CLICK L.P., Greece, is responsible for DADLINE: Family Rush. The game stores progress on your device and uses online services for accounts, cloud saves, purchases and leaderboards. Optional rewarded ads use Google AdMob. This policy explains the data involved and your choices.</p>
 
-  <h2>Your progress</h2>
-  <p>Your Dad, the family you name during onboarding, your coins, badges, career level, streak, missions and settings are stored on your phone, in the app's own private storage. That copy is the original; everything else is a mirror of it.</p>
-  <p>A copy is also kept on our server, so your Dad survives a reinstall or a new phone. What is stored there is the same progress listed above, a record of the coins you earn and spend, and the runs you complete — score, duration and checkpoints — which is how the game can tell a real run from a forged one. That copy sits on infrastructure in the European Union (Ireland).</p>
+  <h2>Your account and progress</h2>
+  <p>You can start playing without registering or signing in. When online, the app creates an anonymous account with a game-specific identifier and keeps its session credentials in the iPhone keychain. “Anonymous” means you do not need to provide your identity to start; your saved activity is still linked to that account.</p>
+  <p>We store gameplay data including the names you give Dad and family members, selected characters, moods, errands, badges, inventory, run results and progression. Some settings stay on your device. Our backend stores supported cloud-save fields, coin balances and transactions, and run-validation records such as scores, duration, checkpoints and app build. The server verifies purchases and competitive results; it is not simply a duplicate of your local save.</p>
+  <p>Sign in with Apple is optional. If you use it, Apple provides an app-specific account identifier and may provide your email address, including a private relay address if you choose Hide My Email. We receive authentication information needed to link the account and request revocation when you delete it, but not your Apple password or payment credentials. Linking helps maintain access to your account; an unlinked anonymous account may not be recoverable on a new device.</p>
 
-  <h2>The account, and what it is not</h2>
-  <p>There is no sign-up here, no password, and you are never asked for an email address to play. The first time the game runs it gives itself an anonymous account: an identifier that means nothing outside this game and is not taken from your hardware. It is kept in your iPhone's keychain and exists so the copy of your progress on our server has something to belong to.</p>
-  <p>You may also sign in with Apple, and it is optional — the whole game plays without it. Its only purpose is to tie your progress to something that outlives the phone. Apple gives us an identifier specific to this app, and an email address only if you allow it; if you use Apple's Hide My Email, we never see your real one. We never receive your password or your Apple ID.</p>
-
-  <h2>The leaderboard</h2>
-  <p>If you appear on a leaderboard, other players see the display name you chose, your country and your score. Nothing else is published — not your email, not your identifier, not your family.</p>
-  <p>The country is read from your device's region setting. The game does not use GPS, does not ask for location permission, and does not look up where you are from your IP address. If you would rather not appear at all, do not enter a display name.</p>
-  <p>The public leaderboard is served through a Cloudflare worker that caches it briefly at the edge so the game stays fast. It carries the same three public fields and nothing more.</p>
+  <h2>Leaderboards</h2>
+  <p>Leaderboard entries can display Dad's name, your device's country/region setting, rank, score, delivery count and an aggregate family-mood score. Your email, account credentials and individual family members' names are not shown. Choose a nickname if you do not want a real name displayed. Leaving a name blank is not a guaranteed opt-out and does not erase a previously saved name.</p>
+  <p>The game's leaderboard country comes from the device's region setting, not GPS. Cloudflare helps deliver and briefly cache leaderboard results. Account and network information is processed as needed to authenticate requests, deliver the service and prevent abuse.</p>
 
   <h2>Purchases</h2>
-  <p>Coin packs are bought through Apple In-App Purchase. Apple handles the payment: your card, your billing address and your Apple ID never pass through us and we never see them.</p>
-  <p>What reaches us is the receipt Apple issues — the transaction identifiers, the product bought, whether it came from the real store or Apple's sandbox, and when. We verify it with Apple and credit the coins. Keeping it is what stops the same purchase being credited twice, and what lets a refund take the coins back.</p>
+  <p>Apple handles payment for the optional coin pack. We do not receive your card number or billing details. We process the Apple transaction and product identifiers, purchase time, purchase or refund status, verification information and the game account associated with the purchase. These records let us credit coins, prevent duplicate credits and handle refunds.</p>
 
-  <h2>Ads</h2>
-  <p>Some coins can be earned by watching a rewarded ad. Those ads are always your choice: nothing plays unless you tap to watch it, and the game is fully playable without ever watching one.</p>
-  <p>The ads are served by Google AdMob, which is the recipient of the data involved and may use device identifiers to select and measure them. See <a href="https://business.safety.google/privacy/" rel="noopener">how Google uses data from apps that use its services</a> and <a href="https://support.google.com/admob/answer/9012903" rel="noopener">Google's list of ad partners</a>. We do not receive an advertising profile about you from Google, and we do not give Google your progress, your family, your purchases or your email.</p>
-  <p>The game does not ask for App Tracking Transparency permission, so it hands Google no advertising identifier from your iPhone and the ads are not personalised through one.</p>
-  <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the game shows you Google's consent form before any ad is requested, and it keeps your answer. You can change it at any time from the privacy options inside the game.</p>
+  <h2>Rewarded ads and consent</h2>
+  <p>Watching a rewarded ad is optional. Google AdMob may prepare ads in the background after the consent system permits ad requests, even if you do not choose to watch one.</p>
+  <p>Google's advertising and consent SDKs can process device or app identifiers, IP addresses and approximate location inferred from them, ad impressions and interactions, app interactions, crash reports, performance information and other diagnostics. These support ad delivery and measurement, analytics, fraud prevention and consent management. Some advertising data is associated with a device or app identifier. We do not pass your family names, saved progress, purchase records or Apple sign-in email to AdMob.</p>
+  <p>The iOS app does not request App Tracking Transparency permission or access to the IDFA advertising identifier. This does not mean that the ad SDK collects no data: app- or developer-scoped identifiers and the data listed above may still be processed. See <a href="https://business.safety.google/privacy/" rel="noopener">Google's information about data use</a> and <a href="https://support.google.com/admob/answer/9012903" rel="noopener">Google's advertising partners</a>.</p>
+  <p>Google's consent platform checks which choices apply to your region, including the EEA, UK and Switzerland. Ad requests wait until that platform permits them. Where offered, open <em>Dad's profile → Settings → Ad Privacy Options</em> to review or change your choices. Consent choices do not prevent you from playing the core game.</p>
 
-  <h2>Children</h2>
-  <p>DADLINE is a game about family life, but it is made for adults and is not directed at children. We do not knowingly collect anything from a child. If you believe a child has used the game and left data with us, write to us and we will remove it.</p>
+  <h2>Service providers and data sharing</h2>
+  <p>We use Supabase for accounts, saved progress and purchase verification, Cloudflare for service delivery, Apple for sign-in and purchases, and Google and its advertising partners for ads and consent. These services process the information needed for their respective functions. We do not sell your game-account data or provide your family profile to advertisers.</p>
+  <p>Our game database is hosted in Ireland. This is not a promise that all processing stays in the EU: our providers operate internationally and may process network, support or advertising data in other countries under their applicable data-protection arrangements. Contact us for information about the providers and safeguards relevant to your request.</p>
 
-  <h2>What the game does not do</h2>
-  <ul>
-    <li>No analytics or tracking SDK of any kind is built into the game.</li>
-    <li>No push notifications, so no notification token is created or stored.</li>
-    <li>No location, no contacts, no photos, no microphone, no camera, no health data.</li>
-    <li>No advertising identifier is collected by us, and nothing is sold or shared for advertising or for anyone else's purposes.</li>
-  </ul>
+  <h2>Diagnostics and device permissions</h2>
+  <p>We keep service and security records to diagnose failures, validate activity and prevent abuse. They can include account identifiers, request times, error or security events and network information processed by our hosting providers. The app does not use a separate Unity Analytics or Unity Cloud Diagnostics service, but Google's SDKs process analytics and diagnostic data as described above.</p>
+  <p>The game does not request access to your contacts, precise GPS location, microphone, camera or health data. Family calls and messages are fictional gameplay events; the game does not read your real phone calls, SMS or email messages.</p>
 
-  <h2>Deleting everything</h2>
+  <h2 id="privacy-choices">Your choices and deletion</h2>
   <div class="card">
-    <p>Write to <a href="mailto:hello@playdadline.com">hello@playdadline.com</a> from the game and we will erase what we hold: the progress copy, the coin record, the runs, the leaderboard entry, and the anonymous account itself. We answer within 30 days.</p>
-    <p>Deleting the app removes the copy on your phone. If you signed in with Apple, you can also revoke it yourself from <em>iPhone Settings → your name → Sign in with Apple</em>.</p>
+    <p>To delete your game account and saved data, open <em>Home → Dad's portrait → Settings</em>, scroll to <em>Your Data</em>, choose <em>Delete My Data</em> and confirm. An internet connection is required to complete the server-side deletion.</p>
+    <p>This removes the account and its associated cloud profile, coin ledger, purchase-verification records, runs and leaderboard entries, and clears the app's local profile and session. For Apple-linked accounts, the service also attempts to revoke the stored Sign in with Apple authorization. Deleting the app alone does not request deletion of the server account. Account deletion does not refund a purchase or delete records held independently by Apple or Google.</p>
+    <p>For help, access, correction or deletion requests, email <a href="mailto:hello@playdadline.com">hello@playdadline.com</a>. We may need enough information to locate your account and verify the request. Never send your password or payment-card details.</p>
   </div>
 
-  <h2>Your rights</h2>
-  <p>Under the GDPR you may ask us for a copy of what we hold about you, ask us to correct it, ask us to delete it, or object to how we use it. The same address, <a href="mailto:hello@playdadline.com">hello@playdadline.com</a>, reaches us for all of it.</p>
-  <p>We keep your progress for as long as the account is in use, and purchase records for as long as tax and consumer-protection law requires. You also have the right to complain to your national data protection authority; in Greece that is the <a href="https://www.dpa.gr/en" rel="noopener">Hellenic Data Protection Authority</a>.</p>
+  <h2>Retention and your rights</h2>
+  <p>We keep account and gameplay records while providing the account and until they are deleted through the process above. Security events may remain with their player identifier removed. Copies in provider backups or logs can remain for the provider's retention period; information needed to meet a legal obligation or resolve a dispute may be retained for that purpose. Advertising data is subject to Google's and its partners' retention practices.</p>
+  <p>Where the GDPR applies, we process data needed to provide the game and requested online features to perform our contract with you, rely on legitimate interests for service security and abuse prevention, and obtain consent where required for advertising-related processing. Legal obligations may also require some processing.</p>
+  <p>You may request access, correction, erasure, restriction or portability of your personal data, object to processing based on legitimate interests, and withdraw consent without affecting processing that was lawful before withdrawal. We respond within the time required by applicable law, normally one month. You may complain to your local supervisory authority, including the <a href="https://www.dpa.gr/en" rel="noopener">Hellenic Data Protection Authority</a>.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes, the date at the top changes with it, and anything that materially affects you is announced in the game before it takes effect.</p>
+  <h2>Children</h2>
+  <p>DADLINE is about family life and is not directed at children under 13. Do not enter real children's details when naming game characters. If you believe a child has provided personal data without appropriate authorization, contact us so we can investigate and remove it where required.</p>
 
-  <h2>Who we are</h2>
+  <h2>Website and support</h2>
+  <p>If you separately join the website's launch waitlist, we store the email address you submit, its signup source and date to send the launch information you requested. This is separate from your game account. You can withdraw that request by contacting us. Support emails contain the information you choose to send and are used to respond to your request. Website hosting providers also process network information needed to deliver and secure the site.</p>
+
+  <h2>Changes and contact</h2>
+  <p>We update the date above when this policy changes and provide additional notice or seek consent when required for a material change.</p>
   <p>THE LAST CLICK L.P., Greece — <a href="mailto:hello@playdadline.com">hello@playdadline.com</a></p>
 </main>
 
