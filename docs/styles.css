@@ -147,7 +147,9 @@ html:not(.anim) .round span:not(:first-child) { display: none; }
 .card .count { font-size: 1rem; font-weight: 400; line-height: 1; margin-top: 2px; }
 .card .bar { width: 78%; height: 6px; margin-top: 4px; border-radius: 9px; background: #efe6d6; overflow: hidden; display: none; }
 .card .tag { position: absolute; right: 2px; top: 3px; font-size: .55rem; color: var(--navy); background: var(--sun); padding: 1px 5px; border-radius: 999px; }
-.card .tick { position: absolute; width: 46%; top: 12%; left: 27%; opacity: 0; visibility: hidden; }
+.card .tick { position: absolute; width: 46%; aspect-ratio: 1; top: 18px; left: 27%; border-radius: 50%; opacity: 0; visibility: hidden;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 70% no-repeat, radial-gradient(circle at 35% 30%, #9af5cf, #2bbd84 72%);
+  box-shadow: 0 4px 0 #1d9466, 0 6px 10px rgba(20,90,60,.3), inset 0 2px 2px rgba(255,255,255,.6); }
 .card .plus { position: absolute; top: -6px; right: -2px; font-style: normal; font-family: var(--display); color: #fff; font-size: .9rem; background: var(--coral); padding: 1px 7px; border-radius: 999px; opacity: 0; visibility: hidden; }
 html:not(.anim) .card.later { display: none; }
 .buzzer, .power { --ready: 0; position: relative; width: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow), 0 0 calc(var(--ready) * 22px) calc(var(--ready) * 4px) rgba(255,200,58,.9); }

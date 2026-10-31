@@ -35,7 +35,7 @@
     d.className = 'card' + (c.race ? ' race' : '');
     d.innerHTML = `<img class="who" src="${px(MEMBER[c.member])}" alt=""><img class="item" src="${ITEM[c.kind]}" alt="">` +
       `<b class="count">0/${c.need}</b><i class="bar"><i></i></i>${c.race ? '<span class="tag">RACE</span>' : ''}` +
-      `<img class="tick" src="${px('tick')}" alt=""><em class="plus"></em>`;
+      `<i class="tick"></i><em class="plus"></em>`;
     if (c.id > 2) d.classList.add('later');
     slots[c.slot].appendChild(d); return d;
   });
