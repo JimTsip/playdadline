@@ -50,14 +50,21 @@ h1, h2, h3 { margin: 0; line-height: 1.04; }
 .hero .back { inset: -6% 0 -6% 0; }
 .hero .back img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 .hero .scene::before { content: ""; position: absolute; inset: 0; z-index: 3;
-  background: linear-gradient(180deg, rgba(191,230,255,.92) 0%, rgba(191,230,255,.7) 34%, rgba(191,230,255,0) 56%); }
-.hero .scene::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; z-index: 8; background: linear-gradient(0deg, var(--sky), transparent); }
-.hero .pod { z-index: 4; width: min(96%, 560px); left: calc(50% - min(48%, 280px)); bottom: 22px; }
-.hero .host { z-index: 5; height: 280px; left: calc(50% - min(44vw, 240px)); bottom: 74px; filter: drop-shadow(0 14px 14px rgba(22,36,94,.22)); }
-.hero .dad { z-index: 5; height: 262px; right: calc(50% - min(46vw, 250px)); bottom: 70px; filter: drop-shadow(0 14px 14px rgba(22,36,94,.22)); }
+  background: linear-gradient(180deg, rgba(255,246,234,.92) 0%, rgba(255,246,234,.7) 36%, rgba(255,246,234,0) 58%); }
+.hero .scene::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 170px; z-index: 8; background: linear-gradient(0deg, var(--sky), rgba(191,230,255,.55) 45%, transparent); }
+/* the base and the two on it: one block in the base's own proportions, so the feet stand on its top at every size */
+.hero .podium { z-index: 9; --w: min(88vw, 360px); width: var(--w); aspect-ratio: 1004 / 458; left: 50%; margin-left: calc(var(--w) / -2); bottom: 26px; container-type: inline-size; }
+.podium > * { position: absolute; }
+.podium .pod { inset: 0; width: 100%; height: 100%; }
+.floor-shade { left: -10%; right: -14%; bottom: -16%; height: 50%; border-radius: 50%; background: radial-gradient(closest-side, rgba(130,55,20,.34), rgba(130,55,20,0)); }
+.plate { left: 34%; width: 32%; top: 73%; height: 18%; display: grid; place-items: center; font-family: var(--display); font-size: 3.6cqw; color: var(--navy); letter-spacing: .02em; white-space: nowrap; }
+.shoe { height: 13%; border-radius: 50%; background: radial-gradient(closest-side, rgba(110,45,15,.5), rgba(110,45,15,0)); }
+.f-host { left: 17%; width: 30%; top: 34%; } .f-dad { left: 50%; width: 32%; top: 38%; }
+.podium .host { height: 155%; left: 8%; bottom: 60%; filter: drop-shadow(0 10px 10px rgba(110,45,15,.18)); }
+.podium .dad { height: 148%; right: 8%; bottom: 56%; filter: drop-shadow(0 10px 10px rgba(110,45,15,.18)); }
 .hero .front-l { z-index: 7; width: min(40vw, 280px); left: -6%; bottom: -4%; }
 .hero .front-r { z-index: 7; width: min(26vw, 180px); right: -4%; bottom: -2%; }
-.hero-copy { position: relative; z-index: 10; width: var(--wrap); margin: 0 auto; padding: 78px 0 330px; text-align: center; }
+.hero-copy { position: relative; z-index: 10; width: var(--wrap); margin: 0 auto; padding: 78px 0 380px; text-align: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; padding: 6px 14px; border-radius: 999px; background: #fff; box-shadow: var(--clay-shadow); }
 .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px rgba(255,106,61,.2); animation: blink 1.6s ease-in-out infinite; }
 @keyframes blink { 50% { opacity: .35; } }
@@ -203,16 +210,14 @@ html:not(.anim) .story-pin { padding: 70px 0; }
 /* ---------- desktop ---------- */
 @media (min-width: 821px) {
   .hero { min-height: max(100vh, 700px); }
-  .hero .scene::before { background: linear-gradient(90deg, rgba(191,230,255,.95) 0%, rgba(191,230,255,.75) 32%, rgba(191,230,255,0) 54%); }
-  .hero .back img { object-position: 50% 60%; }
+  .hero .scene::before { background: linear-gradient(90deg, rgba(255,246,234,.94) 0%, rgba(255,246,234,.72) 32%, rgba(255,246,234,0) 54%); }
+  .hero .back img { object-position: 50% 55%; }
   .hero-copy { margin: auto 0 auto calc((100% - min(1180px, 100% - 64px)) / 2); width: min(560px, 44%); padding: 90px 0 60px; text-align: left; }
   .hero-word { margin: 16px 0 6px; width: 360px; }
   .hero h1 span { display: block; }
   .lead { margin-left: 0; }
   .hero-actions { justify-content: flex-start; }
-  .hero .pod { left: calc(72% - min(24vw, 320px)); width: min(48vw, 640px); bottom: 6%; }
-  .hero .host { left: calc(72% - min(23vw, 300px)); height: min(52vh, 460px); bottom: 12%; }
-  .hero .dad { right: calc(28% - min(22vw, 290px)); height: min(50vh, 440px); bottom: 11%; }
+  .hero .podium { z-index: 5; --w: min(40vw, 580px); left: 71%; bottom: 7%; }
   .hero .front-l { width: 220px; left: 0; bottom: -10%; }
   .hero .front-r { width: 190px; right: 1%; bottom: -2%; }
 

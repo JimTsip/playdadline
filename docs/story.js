@@ -217,7 +217,7 @@
   gsap.from('.hero-copy > *', { y: 24, autoAlpha: 0, duration: 0.6, stagger: 0.07 });
   const leave = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
   gsap.to('.hero .front-l, .hero .front-r', { yPercent: -30, ease: 'none', scrollTrigger: leave });
-  gsap.to('.hero .host, .hero .dad, .hero .pod', { yPercent: -12, ease: 'none', scrollTrigger: leave });
+  gsap.to('.hero .podium', { yPercent: -12, ease: 'none', scrollTrigger: leave });
   gsap.to('.hero .back', { yPercent: 10, ease: 'none', scrollTrigger: leave });
 
   // ---------- studios: a quick sideways intro ----------

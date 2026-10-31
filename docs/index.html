@@ -19,7 +19,7 @@
     <link rel="icon" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_back.webp" media="(max-width: 820px)" />
-    <link rel="preload" as="image" href="/assets/fr/px/beach_wide.webp" media="(min-width: 821px)" />
+    <link rel="preload" as="image" href="/assets/fr/px/beach_set_wide.webp" media="(min-width: 821px)" />
     <link rel="stylesheet" href="/styles.css" />
     <script>document.documentElement.classList.add("js")</script>
   </head>
@@ -38,12 +38,17 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="scene" aria-hidden="true">
           <picture class="layer back">
-            <source media="(min-width: 821px)" srcset="/assets/fr/px/beach_wide.webp" />
+            <source media="(min-width: 821px)" srcset="/assets/fr/px/beach_set_wide.webp" />
             <img src="/assets/fr/px/beach_back.webp" alt="" />
           </picture>
-          <img class="layer pod" src="/assets/fr/px/beach_pod.webp" alt="" />
-          <img class="layer host" src="/assets/fr/px/host_welcome.webp" alt="" />
-          <img class="layer dad" src="/assets/fr/px/dad_cheer.webp" alt="" />
+          <div class="layer podium">
+            <i class="floor-shade"></i>
+            <img class="pod" src="/assets/fr/px/beach_pod.webp" alt="" />
+            <span class="plate">THE WEEKENDERS</span>
+            <i class="shoe f-host"></i><i class="shoe f-dad"></i>
+            <img class="host" src="/assets/fr/px/host_welcome.webp" alt="" />
+            <img class="dad" src="/assets/fr/px/dad_cheer.webp" alt="" />
+          </div>
           <img class="layer front-l" src="/assets/fr/px/beach_front_l.webp" alt="" />
           <img class="layer front-r" src="/assets/fr/px/beach_front_r.webp" alt="" />
         </div>
