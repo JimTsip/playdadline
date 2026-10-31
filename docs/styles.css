@@ -157,9 +157,15 @@ html:not(.anim) .card.later { display: none; }
 .bolts { position: relative; }
 .bolts::before { content: ""; position: absolute; inset: 0; background: url('/assets/fr/px/bolt.webp') left center / 15px auto no-repeat, url('/assets/fr/px/bolt.webp') right center / 15px auto no-repeat; opacity: .2; filter: grayscale(1); }
 .bolts img { position: relative; }
-.power .ring { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: #f1ecff; box-shadow: inset 0 0 0 calc(3px + var(--ready) * 2px) color-mix(in srgb, var(--grape) calc(var(--ready) * 100%), #ddd6ef); }
-.power .ring img { width: 70%; filter: grayscale(calc(1 - var(--ready))); opacity: calc(.55 + var(--ready) * .45); }
+/* the charge arc fills piece by piece as Mom's card fills (--chg 0..1), --ready lights it when full */
+.power { --chg: 0; }
+.power .ring { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(closest-side, #f1ecff calc(100% - 5px), transparent calc(100% - 4px)), conic-gradient(var(--grape) calc(var(--chg) * 1turn), #ddd6ef 0); }
+.power .ring img { width: 70%; filter: grayscale(calc(1 - var(--chg))); opacity: calc(.55 + var(--chg) * .45); }
 .power small { font-size: .55rem; margin-top: 4px; color: var(--ink); }
+.power .who { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--sky); box-shadow: 0 0 0 2px #fff; }
+.dock { position: relative; }
+.spark { --p: 0; --arc: 0; position: absolute; left: calc((100% - 164px) / 6 + (100% - 34px - (100% - 164px) / 6) * var(--p)); top: calc(50% - var(--arc) * 44px); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle, #fff 0 25%, var(--grape) 60%, rgba(139,92,246,0) 72%); opacity: 0; visibility: hidden; pointer-events: none; z-index: 3; }
+html:not(.anim) .power { --chg: 1; }
 
 /* without motion the story reads as a list beside the opening board */
 html:not(.anim) .captions { max-width: 640px; display: grid; gap: 14px; text-align: left; }

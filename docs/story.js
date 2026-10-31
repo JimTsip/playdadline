@@ -88,7 +88,15 @@
     return e;
   }
 
-  let bolts = 0;
+  let bolts = 0, chg = 0;
+  // a spark flies from Mom's card to her power-up each time her pieces charge it (path in CSS: --p along, --arc up)
+  const spark = $('.spark');
+  function zap(t0) {
+    tl.fromTo(spark, { '--p': 0, autoAlpha: 1, scale: 0.7 }, { '--p': 1, scale: 1.2, duration: 0.45, ease: 'power1.inOut', immediateRender: false }, t0)
+      .fromTo(spark, { '--arc': 0 }, { '--arc': 1, duration: 0.225, ease: 'power1.out', yoyo: true, repeat: 1, immediateRender: false }, t0)
+      .to(spark, { autoAlpha: 0, scale: 2, duration: 0.15 }, t0 + 0.45)
+      .fromTo($('.ring', power), { scale: 1 }, { scale: 1.15, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, t0 + 0.42);
+  }
   const boltEls = $$('.bolts img'), buzz = $('.buzzer'), power = $('.power');
   gsap.set(boltEls, { scale: 0, autoAlpha: 0 });
   function setBolts(b, at) {
@@ -157,11 +165,13 @@
         .fromTo(plus, { autoAlpha: 0, y: 6 }, { autoAlpha: 1, y: -14, duration: 0.3, immediateRender: false }, t + 0.1)
         .to(old, { yPercent: -70, autoAlpha: 0, duration: 0.3, ease: 'power2.in' }, t + 0.8)
         .to(nu, { yPercent: 0, autoAlpha: 1, duration: 0.35, ease: 'back.out(2)' }, t + 1);
-      if (sim.cards[e.card].member === 'mom') tl.to(power, { '--ready': 1, duration: 0.3 }, t + 0.4);
+      if (sim.cards[e.card].member === 'mom') { zap(t); tl.to(power, { '--chg': 1, duration: 0.3 }, t + 0.4).to(power, { '--ready': 1, duration: 0.3 }, t + 0.6); chg = 1; }
       t += 0.6;
     } else if (e.t === 'state') {
       if (e.score !== you) { youTo(e.score, t - 0.2); you = e.score; }
       setBolts(e.bolts, t - 0.2);
+      const m = e.cards[0], c = Math.max(chg, Math.min(0.9, m.have / sim.cards[m.id].need)); // Mom's pieces charge her power-up
+      if (c > chg) { zap(t - 0.6); tl.to(power, { '--chg': c, duration: 0.35 }, t - 0.2); chg = c; }
     }
   }
 
@@ -189,7 +199,7 @@
         .to(dm, { autoAlpha: 0, duration: 0.3 }, t + 1.4);
       t += 1.6;
     } else if (s.name === 'power') {
-      press($('.ring', power), t); tl.to(power, { '--ready': 0, duration: 0.3 }, t + 0.2); t += 0.4;
+      press($('.ring', power), t); tl.to(power, { '--ready': 0, '--chg': 0, duration: 0.3 }, t + 0.2); chg = 0; t += 0.4;
     } else if (s.name === 'final') {
       pop($('.fx-final'), t, 1.1); tl.fromTo($('.x2'), { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(3)', immediateRender: false }, t + 0.5);
       t += 1.5;
