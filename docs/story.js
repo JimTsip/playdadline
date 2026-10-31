@@ -114,7 +114,42 @@
     if (b < 2 && bolts === 2) tl.to(buzz, { '--ready': 0, duration: 0.3 }, at);
     bolts = b;
   }
-  const press = (el, at) => tl.to(el, { scale: 0.86, duration: 0.12, ease: 'power1.in' }, at).to(el, { scale: 1, duration: 0.3, ease: 'back.out(3)' }, at + 0.12);
+  // DAD MODE: the hand comes in, hovers over the full buzzer, presses it, and everything bursts out of it
+  const dmx = document.createElement('div'); dmx.className = 'dmx';
+  const BITS = ['bolt', 'star', 'it_apple', 'bolt', 'star', 'it_bread', 'bolt', 'star', 'it_milk', 'bolt', 'star', 'it_grapes', 'star', 'bolt', 'it_banana', 'star', 'bolt', 'it_strawberry'];
+  dmx.innerHTML = '<i class="dmx-rays"></i><i class="dmx-flash"></i><i class="dmx-ring"></i><i class="dmx-aim"></i>' +
+    BITS.map((b) => (b === 'star' ? '<i class="dmx-star"></i>' : `<img class="dmx-p" src="${px(b)}" alt="">`)).join('') +
+    `<img class="dmx-hand" src="${px('hand')}" alt="">`;
+  buzz.appendChild(dmx);
+  $('.dm').insertAdjacentHTML('afterbegin', '<i class="dm-sun"></i>');
+  function dadPress(t0) {
+    const hand = $('.dmx-hand'), aim = $('.dmx-aim'), hit = t0 + 1.05;
+    // reach in from below, hover with a little hesitation, the aim ring pulsing
+    tl.fromTo(hand, { autoAlpha: 0, x: 60, y: 110, rotate: 18 }, { autoAlpha: 1, x: 6, y: 22, rotate: -8, duration: 0.5, ease: 'power2.out', immediateRender: false }, t0)
+      .to(hand, { y: 14, x: 2, duration: 0.18, ease: 'sine.inOut', yoyo: true, repeat: 1 }, t0 + 0.5)
+      .to(hand, { y: 26, rotate: -4, duration: 0.15, ease: 'power1.out' }, t0 + 0.86)
+      .fromTo(aim, { autoAlpha: 0.9, scale: 0.8 }, { autoAlpha: 0, scale: 1.5, duration: 0.35, repeat: 2, immediateRender: false }, t0 + 0.35)
+      // the press: the finger drives in, the buzzer squashes
+      .to(hand, { x: 0, y: 0, rotate: -8, scale: 0.94, duration: 0.1, ease: 'power3.in' }, hit - 0.1)
+      .to(buzz, { scale: 0.84, duration: 0.1, ease: 'power3.in' }, hit - 0.1)
+      .to(buzz, { scale: 1, duration: 0.4, ease: 'elastic.out(1.2, 0.4)' }, hit)
+      .to(hand, { y: 40, x: 30, rotate: 14, autoAlpha: 0, duration: 0.35, ease: 'power2.in' }, hit + 0.15)
+      // the burst: flash, shockwave, rays and a spray of bolts, stars and errands over the tray
+      .fromTo('.dmx-flash', { autoAlpha: 1, scale: 0.3 }, { autoAlpha: 0, scale: 9, duration: 0.5, ease: 'power2.out', immediateRender: false }, hit)
+      .fromTo('.dmx-ring', { autoAlpha: 1, scale: 0.2 }, { autoAlpha: 0, scale: 9, duration: 0.6, ease: 'power2.out', immediateRender: false }, hit)
+      .fromTo('.dmx-rays', { autoAlpha: 0.95, scale: 0.2, rotate: 0 }, { autoAlpha: 0, scale: 1.3, rotate: 40, duration: 0.9, ease: 'power2.out', immediateRender: false }, hit)
+      .to('.tray', { keyframes: { x: [0, -10, 9, -7, 5, -2, 0], rotate: [0, -1.2, 1, -0.6, 0.3, 0, 0] }, duration: 0.45, ease: 'none' }, hit + 0.02);
+    const k = $('.stage').offsetWidth / 440; // the spray fits the tray, phone or desktop
+    $$('.dmx-p, .dmx-star', dmx).forEach((el, i) => {
+      const a = (-170 + (i * 89) % 140) * Math.PI / 180, d = (90 + (i * 47) % 140) * k; // fanned out over the tray
+      tl.fromTo(el, { autoAlpha: 1, x: 0, y: 0, scale: 0.2, rotate: 0 },
+        { autoAlpha: 1, x: Math.cos(a) * d * 0.95, y: Math.sin(a) * d * 1.5, scale: 1 + (i % 4) * 0.15, rotate: (i % 2 ? 1 : -1) * (120 + i * 20), duration: 0.65, ease: 'power3.out', immediateRender: false }, hit + 0.02 + (i % 5) * 0.015)
+        .to(el, { y: `+=${40 + (i % 3) * 15}`, autoAlpha: 0, duration: 0.4, ease: 'power1.in' }, hit + 0.62);
+    });
+    setBolts(0, hit + 0.1);
+    return hit + 0.45;
+  }
+  const press = (el, at) =>tl.to(el, { scale: 0.86, duration: 0.12, ease: 'power1.in' }, at).to(el, { scale: 1, duration: 0.3, ease: 'back.out(3)' }, at + 0.12);
   const pop = (el, at, hold = 0.9) => tl.fromTo(el, { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(2.2)', immediateRender: false }, at)
     .to(el, { autoAlpha: 0, scale: 1.08, duration: 0.25 }, at + hold);
 
@@ -197,9 +232,10 @@
       const rk = s.ev.find((e) => e.fire != null);
       tl.to(tile[rk.fire], { rotate: 8, duration: 0.12, yoyo: true, repeat: 3 }, t); t += 0.5;
     } else if (s.name === 'dadmode') {
-      press(buzz, t); t += 0.3;
+      t = dadPress(t);
       const dm = $('.dm');
       tl.fromTo(dm, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, t)
+        .fromTo($('.dm-sun', dm), { rotate: 0 }, { rotate: 50, duration: 1.7, ease: 'none', immediateRender: false }, t)
         .fromTo($('.dm-dad'), { yPercent: 60 }, { yPercent: 0, duration: 0.45, ease: 'back.out(1.6)', immediateRender: false }, t)
         .fromTo($('.dm-word'), { scale: 0.3, rotate: -8 }, { scale: 1, rotate: -4, duration: 0.45, ease: 'back.out(2.5)', immediateRender: false }, t + 0.2)
         .to(dm, { autoAlpha: 0, duration: 0.3 }, t + 1.4);

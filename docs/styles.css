@@ -174,6 +174,24 @@ html:not(.anim) .card.later { display: none; }
 .dock { position: relative; }
 .spark { --p: 0; --arc: 0; position: absolute; left: calc((100% - 184px) / 6 + (100% - 32px - (100% - 184px) / 6) * var(--p)); top: calc(50% - var(--arc) * 44px); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle, #fff 0 25%, var(--grape) 60%, rgba(139,92,246,0) 72%); opacity: 0; visibility: hidden; pointer-events: none; z-index: 3; }
 html:not(.anim) .power { --chg: 1; }
+/* DAD MODE press: the game's hand reaches for the buzzer, presses it, and the tray goes wild (built by story.js) */
+.buzzer { z-index: 4; }
+.dmx { position: absolute; left: 50%; top: 46%; width: 0; height: 0; pointer-events: none; }
+.dmx > * { position: absolute; max-width: none; opacity: 0; visibility: hidden; }
+.dmx-hand { width: 54px; left: -36px; top: -4px; transform-origin: 67% 0; filter: drop-shadow(0 8px 8px rgba(22,36,94,.3)); }
+.dmx-aim, .dmx-ring, .dmx-flash { width: 80px; height: 80px; left: -40px; top: -40px; border-radius: 50%; }
+.dmx-aim { border: 4px solid #fff; box-shadow: 0 0 0 3px rgba(255,200,58,.8), 0 0 18px rgba(255,200,58,.9); }
+.dmx-ring { border: 8px solid #ffd23a; box-shadow: 0 0 24px #ffb43a, inset 0 0 18px #fff3b0; }
+.dmx-flash { background: radial-gradient(circle, #fff 0 30%, rgba(255,240,170,.9) 50%, rgba(255,200,58,0) 70%); }
+.dmx-rays { width: 360px; height: 360px; left: -180px; top: -180px; border-radius: 50%;
+  background: repeating-conic-gradient(rgba(255,236,150,.85) 0 9deg, rgba(255,236,150,0) 9deg 22deg);
+  -webkit-mask: radial-gradient(circle, #000 18%, transparent 68%); mask: radial-gradient(circle, #000 18%, transparent 68%); }
+.dmx-p { left: -18px; top: -18px; width: 36px; height: 36px; object-fit: contain; filter: drop-shadow(0 5px 4px rgba(22,36,94,.25)); }
+.dmx-star { width: 26px; height: 26px; left: -13px; top: -13px; background: radial-gradient(circle at 45% 40%, #fff 0 14%, #ffe27a 30%, #ffb43a 80%);
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.dm-sun { position: absolute; width: 170%; aspect-ratio: 1; left: -35%; top: -20%; border-radius: 50%;
+  background: repeating-conic-gradient(rgba(255,255,255,.28) 0 10deg, rgba(255,255,255,0) 10deg 24deg); }
+@media (min-width: 821px) { .dmx-hand { width: 64px; left: -43px; } .dmx-p { width: 46px; height: 46px; left: -23px; top: -23px; } .dmx-rays { width: 480px; height: 480px; left: -240px; top: -240px; } }
 
 /* without motion the story reads as a list beside the opening board */
 html:not(.anim) .captions { max-width: 640px; display: grid; gap: 14px; text-align: left; }
