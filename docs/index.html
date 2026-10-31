@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Family Rush — Match-3 Family Game Show</title>
     <meta name="description" content="Family Rush is a match-3 TV game show: two families take turns on one shared board, fill their errand cards and race for DAD MODE. Join the TestFlight crew." />
-    <meta name="theme-color" content="#062a86" />
+    <meta name="theme-color" content="#9fd8ff" />
     <link rel="canonical" href="https://playfamilyrush.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://playfamilyrush.com/" />
@@ -21,276 +21,170 @@
     <link rel="preload" as="image" href="/assets/fr/px/beach_back.webp" media="(max-width: 820px)" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_wide.webp" media="(min-width: 821px)" />
     <link rel="stylesheet" href="/styles.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="top">
       <a class="brand" href="/" aria-label="Family Rush home"><img src="/assets/fr/icon.webp" alt="" width="44" height="44" /></a>
       <nav class="top-nav" aria-label="Sections">
-        <a href="#rules">How to play</a>
+        <a href="#play">How it plays</a>
         <a href="#studios">Studios</a>
         <a class="top-cta" href="#join">Become a tester</a>
       </nav>
     </header>
 
     <main>
-      <!-- 1. HERO: the beach studio, built from the game's own layers -->
+      <!-- HERO: the beach studio, built from the game's own layers -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="scene" aria-hidden="true">
-          <picture class="layer back" data-speed="0.35">
+          <picture class="layer back">
             <source media="(min-width: 821px)" srcset="/assets/fr/px/beach_wide.webp" />
             <img src="/assets/fr/px/beach_back.webp" alt="" />
           </picture>
-          <div class="layer rays" data-speed="0.25"></div>
-          <img class="layer pod" data-speed="0.12" src="/assets/fr/px/beach_pod.webp" alt="" />
-          <img class="layer host" data-speed="0.08" src="/assets/fr/px/host_welcome.webp" alt="" />
-          <img class="layer dad" data-speed="0.05" src="/assets/fr/px/dad_cheer.webp" alt="" />
-          <img class="float f1" data-speed="-0.25" src="/assets/fr/px/it_strawberry.webp" alt="" />
-          <img class="float f2" data-speed="-0.45" src="/assets/fr/px/it_banana.webp" alt="" />
-          <img class="float f3" data-speed="-0.3" src="/assets/fr/px/it_grapes.webp" alt="" />
-          <img class="float f4" data-speed="-0.55" src="/assets/fr/px/it_milk.webp" alt="" />
-          <img class="layer front-l" data-speed="-0.2" src="/assets/fr/px/beach_front_l.webp" alt="" />
-          <img class="layer front-r" data-speed="-0.3" src="/assets/fr/px/beach_front_r.webp" alt="" />
+          <img class="layer pod" src="/assets/fr/px/beach_pod.webp" alt="" />
+          <img class="layer host" src="/assets/fr/px/host_welcome.webp" alt="" />
+          <img class="layer dad" src="/assets/fr/px/dad_cheer.webp" alt="" />
+          <img class="layer front-l" src="/assets/fr/px/beach_front_l.webp" alt="" />
+          <img class="layer front-r" src="/assets/fr/px/beach_front_r.webp" alt="" />
         </div>
-
         <div class="hero-copy">
-          <span class="chip on-air"><i></i>ON AIR SOON · iPhone first</span>
+          <span class="chip"><i></i>ON AIR SOON · iPhone first</span>
           <img class="hero-word" src="/assets/fr/wordmark.webp" alt="Family Rush" width="880" height="444" />
           <h1 id="hero-title">Two families. <span>One board.</span></h1>
-          <p class="lead">The match-3 TV game show. Take turns on one shared board, tick off your family's errands first and hit <b>DAD MODE</b>.</p>
+          <p class="lead">The match-3 TV game show. Take turns on one shared board, tick off your family's errands first and hit DAD MODE.</p>
           <div class="hero-actions">
             <a class="btn" href="#join">BECOME A TESTER</a>
-            <a class="btn ghost" href="#rules">HOW TO PLAY ↓</a>
+            <a class="btn soft" href="#play">SEE IT PLAY ↓</a>
           </div>
         </div>
       </section>
 
-      <!-- 2. THE SHOW IN NUMBERS -->
-      <section class="facts" aria-label="A match at a glance">
-        <ul>
-          <li><b>7×7</b><span>one shared board</span></li>
-          <li><b>5</b><span>rounds a match</span></li>
-          <li><b>2</b><span>moves a turn</span></li>
-          <li><b>20 s</b><span>to play a turn</span></li>
-        </ul>
-      </section>
+      <!-- THE SHOW: a scripted match plays as you scroll (story-sim.js + story.js) -->
+      <section class="story" id="play" aria-labelledby="play-title">
+        <h2 id="play-title" class="sr-only">How a match plays</h2>
+        <div class="story-pin">
+          <div class="captions" aria-live="polite">
+            <div class="cap"><p class="kicker">IT'S YOUR TURN</p><h3>Two families, one board</h3><p>Both families play the same 7×7 board, turn by turn: 5 rounds, 2 moves a turn, 20 seconds to play.</p></div>
+            <div class="cap"><p class="kicker">1 · MATCH 3</p><h3>Clear pieces, fill your cards</h3><p>Swap two pieces to line up 3. Whatever you clear fills your 3 errand cards: 2 points for every piece a card needs.</p></div>
+            <div class="cap"><p class="kicker">2 · MATCH 4</p><h3>A Rocket and an extra move</h3><p>4 in a row makes a Rocket and gives you an EXTRA MOVE. Every special you make charges a DAD MODE bolt.</p></div>
+            <div class="cap"><p class="kicker">3 · THE RACE</p><h3>Finish a card: +10</h3><p>Tap the Rocket to clear its line. Mom's card holds the race item, on both families' cards: finish it first for a second bolt.</p></div>
+            <div class="cap"><p class="kicker">4 · DAD MODE</p><h3>Two bolts, one big move</h3><p>DAD MODE clears the 2 columns holding most of what your cards still need. About once a match, so pick the moment.</p></div>
+            <div class="cap"><p class="kicker">5 · THE FAMILY HELPS</p><h3>Mom's List Check</h3><p>Every card charges the power-up of the family member who asked for it. Mom grabs the pieces her card needs; Kid skates a row, the little one swaps stickers.</p></div>
+            <div class="cap"><p class="kicker">6 · ROUND 5</p><h3>Final round: double points</h3><p>Every point counts twice. Most points at the final buzzer wins the show.</p></div>
+            <div class="cap"><p class="kicker">7 · THE PRIZE</p><h3>New studio unlocked</h3><p>Wins grow your VIEWERS, and more VIEWERS open new TV studios, each with its own twist.</p></div>
+          </div>
 
-      <!-- 3. HOW TO PLAY -->
-      <section class="rules" id="rules" aria-labelledby="rules-title">
-        <header class="sec-head">
-          <p class="kicker">TONIGHT'S RUN OF SHOW</p>
-          <h2 id="rules-title">How to play</h2>
-          <p class="sub">Seven things to know. Both families play the same rules on the same tiles: no family is stronger than another.</p>
-        </header>
+          <div class="stage" aria-hidden="true">
+            <div class="hud">
+              <div class="team you"><img src="/assets/fr/px/dad_point.webp" alt="" /><span><small>WEEKENDERS</small><b class="score-you">0</b></span><em class="x2">×2</em></div>
+              <div class="round"><span>ROUND 1/5</span><span>ROUND 2/5</span><span>ROUND 3/5</span><span>ROUND 4/5</span><span class="fin">FINAL ROUND</span></div>
+              <div class="team rival"><span><small>BAKERS</small><b class="score-rival">0</b></span><img src="/assets/fr/px/rival_cheer.webp" alt="" /></div>
+            </div>
 
-        <ol class="steps">
-          <li class="step">
-            <div class="step-art art-board" aria-hidden="true">
-              <div class="phone" data-speed="0.06"><img src="/assets/fr/shot-match.webp" alt="" loading="lazy" /></div>
-              <img class="pin p-coin" data-speed="-0.18" src="/assets/fr/px/i_coin.webp" alt="" loading="lazy" />
-              <img class="pin p-vs" data-speed="-0.1" src="/assets/fr/px/vs_bolt.webp" alt="" loading="lazy" />
+            <div class="tray">
+              <div class="cells"></div>
+              <div class="grid"></div>
+              <div class="hint"></div>
+              <div class="fx-layer">
+                <img class="fx fx-extra" src="/assets/fr/px/w_extra.webp" alt="" />
+                <div class="fx dm"><img class="dm-dad" src="/assets/fr/px/dad_dm.webp" alt="" /><img class="dm-word" src="/assets/fr/px/w_dadmode.webp" alt="" /></div>
+                <img class="fx fx-final" src="/assets/fr/px/w_final.webp" alt="" />
+                <div class="fx win"><img src="/assets/fr/px/i_trophy.webp" alt="" /><b>THE WEEKENDERS WIN!</b></div>
+                <div class="fx unlock">
+                  <div class="unlock-card"><img src="/assets/fr/px/st_super.webp" alt="" /><span class="ribbon">NEW STUDIO</span><b>Supermarket Showdown</b></div>
+                  <p class="viewers"><img src="/assets/fr/px/i_viewers.webp" alt="" />+25 VIEWERS</p>
+                </div>
+              </div>
             </div>
-            <div class="step-copy">
-              <span class="num">1</span>
-              <h3>Take turns on one board</h3>
-              <p>Both families play the same 7×7 board. A match has <b>5 rounds</b>; each round every family plays one turn of <b>2 moves</b>, with 20 seconds to play. A coin flip picks who opens the rounds.</p>
-              <p class="tip">Swap two neighbouring pieces to line up 3 or more of a kind.</p>
-            </div>
-          </li>
 
-          <li class="step flip">
-            <div class="step-art art-cards" aria-hidden="true">
-              <img class="mem m1" data-speed="0.1" src="/assets/fr/px/m_mom.webp" alt="" loading="lazy" />
-              <img class="mem m2" data-speed="0.18" src="/assets/fr/px/m_kid.webp" alt="" loading="lazy" />
-              <img class="mem m3" data-speed="0.26" src="/assets/fr/px/m_little.webp" alt="" loading="lazy" />
-              <img class="pin p-it1" data-speed="-0.3" src="/assets/fr/px/it_apple.webp" alt="" loading="lazy" />
-              <img class="pin p-it2" data-speed="-0.4" src="/assets/fr/px/it_bread.webp" alt="" loading="lazy" />
+            <div class="dock">
+              <div class="cards"></div>
+              <div class="buzzer"><img class="buzz" src="/assets/fr/px/buzzer.webp" alt="" /><div class="bolts"><img src="/assets/fr/px/bolt.webp" alt="" /><img src="/assets/fr/px/bolt.webp" alt="" /></div></div>
+              <div class="power"><div class="ring"><img src="/assets/fr/px/pu_listcheck.webp" alt="" /></div><small>LIST CHECK</small></div>
             </div>
-            <div class="step-copy">
-              <span class="num">2</span>
-              <h3>Fill your errand cards</h3>
-              <p>You always hold <b>3 cards</b>: three different items, each asked by a different family member. A card asks for 5 or 6 pieces, and both families get the same sizes.</p>
-              <p>Everything your move clears, cascades included, fills your cards. Finish a card for <b>+10 points</b> and a new one takes its place straight away.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-art art-race" aria-hidden="true">
-              <div class="race-card" data-speed="0.08"><img src="/assets/fr/px/card_race.webp" alt="" loading="lazy" /><img class="race-item" src="/assets/fr/px/it_strawberry.webp" alt="" loading="lazy" /><span>RACE</span></div>
-              <img class="pin p-bolt" data-speed="-0.35" src="/assets/fr/px/bolt.webp" alt="" loading="lazy" />
-              <img class="pin p-rival" data-speed="0.2" src="/assets/fr/px/rival_uhoh.webp" alt="" loading="lazy" />
-            </div>
-            <div class="step-copy">
-              <span class="num">3</span>
-              <h3>Win the race item</h3>
-              <p>One item is always on <b>both</b> families' cards. That's the race. Finish it before the other family and you win a <b>DAD MODE bolt</b>.</p>
-            </div>
-          </li>
-
-          <li class="step flip">
-            <div class="step-art art-specials" aria-hidden="true">
-              <img class="sp sp1" data-speed="-0.15" src="/assets/fr/px/rocket.webp" alt="" loading="lazy" />
-              <img class="sp sp2" data-speed="-0.3" src="/assets/fr/px/gift.webp" alt="" loading="lazy" />
-              <img class="sp sp3" data-speed="-0.45" src="/assets/fr/px/rainbow.webp" alt="" loading="lazy" />
-              <img class="pin p-extra" data-speed="0.15" src="/assets/fr/px/w_extra.webp" alt="" loading="lazy" />
-            </div>
-            <div class="step-copy">
-              <span class="num">4</span>
-              <h3>Make specials, earn moves</h3>
-              <ul class="legend">
-                <li><img src="/assets/fr/px/rocket.webp" alt="" loading="lazy" /><span><b>4 in a row → Rocket.</b> Flies the way you swiped and clears its line.</span></li>
-                <li><img src="/assets/fr/px/gift.webp" alt="" loading="lazy" /><span><b>L or T shape → Gift.</b> Blows up the pieces around it.</span></li>
-                <li><img src="/assets/fr/px/rainbow.webp" alt="" loading="lazy" /><span><b>5 in a row → Rainbow.</b> Clears every piece of one kind.</span></li>
-              </ul>
-              <p>Move or tap a special to fire it; put two together for a bigger blast. A match of 4+ or a special from your own swap gives an <b>EXTRA MOVE</b>, up to 3 a turn.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-art art-dad" aria-hidden="true">
-              <img class="buzz" data-speed="0.1" src="/assets/fr/px/buzzer.webp" alt="" loading="lazy" />
-              <img class="pin p-b1" data-speed="-0.3" src="/assets/fr/px/bolt.webp" alt="" loading="lazy" />
-              <img class="pin p-b2" data-speed="-0.45" src="/assets/fr/px/bolt.webp" alt="" loading="lazy" />
-              <img class="pin p-daddm" data-speed="0.22" src="/assets/fr/px/dad_dm.webp" alt="" loading="lazy" />
-            </div>
-            <div class="step-copy">
-              <span class="num">5</span>
-              <h3>Charge DAD MODE</h3>
-              <p>Every special your own move makes is <b>1 bolt</b>, and winning the race is another. With <b>2 bolts</b> the Dad's buzzer is ready.</p>
-              <p>Hit it and DAD MODE clears the 2 columns holding most of what your cards still need. About once a match, so pick the moment.</p>
-            </div>
-          </li>
-
-          <li class="step flip">
-            <div class="step-art art-pu" aria-hidden="true">
-              <img class="pu pu1" data-speed="-0.12" src="/assets/fr/px/pu_listcheck.webp" alt="" loading="lazy" />
-              <img class="pu pu2" data-speed="-0.28" src="/assets/fr/px/pu_skate.webp" alt="" loading="lazy" />
-              <img class="pu pu3" data-speed="-0.2" src="/assets/fr/px/pu_stickers.webp" alt="" loading="lazy" />
-            </div>
-            <div class="step-copy">
-              <span class="num">6</span>
-              <h3>The family helps</h3>
-              <p>Each card fills the power-up of the family member who asked for it. Finish the card and the power-up is ready. One power-up a turn.</p>
-              <ul class="legend pus">
-                <li><img src="/assets/fr/px/pu_listcheck.webp" alt="" loading="lazy" /><span><b>Mom · List Check.</b> Collects up to 6 pieces your nearest card needs.</span></li>
-                <li><img src="/assets/fr/px/pu_skate.webp" alt="" loading="lazy" /><span><b>Kid · Skate Dash.</b> Clears a whole row.</span></li>
-                <li><img src="/assets/fr/px/pu_stickers.webp" alt="" loading="lazy" /><span><b>Little one · Sticker Swap.</b> Turns 5 pieces into the kind worth most to you.</span></li>
-              </ul>
-              <p class="tip">Stuck? <b>SHUFFLE</b> once a match. It doesn't cost a move.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-art art-final" aria-hidden="true">
-              <img class="pin p-final" data-speed="-0.2" src="/assets/fr/px/w_final.webp" alt="" loading="lazy" />
-              <img class="pin p-trophy" data-speed="0.12" src="/assets/fr/px/i_trophy.webp" alt="" loading="lazy" />
-              <img class="pin p-dadwin" data-speed="0.06" src="/assets/fr/px/dad_point.webp" alt="" loading="lazy" />
-            </div>
-            <div class="step-copy">
-              <span class="num">7</span>
-              <h3>Finish strong</h3>
-              <p>In the <b>FINAL ROUND every point counts double</b>. At the final buzzer the family with most points wins.</p>
-              <p class="tip">A tie goes to the family with more cards finished, then to the one that opened the rounds. A Dad who walks off loses the match.</p>
-            </div>
-          </li>
-        </ol>
-
-        <aside class="scoreboard" aria-labelledby="score-title">
-          <h3 id="score-title">The scoreboard</h3>
-          <dl>
-            <div><dt>Any piece your move clears</dt><dd>1</dd></div>
-            <div><dt>A piece from your swap that fills your card</dt><dd>2</dd></div>
-            <div><dt>A lucky cascade piece</dt><dd>1</dd></div>
-            <div class="hot"><dt>A finished card</dt><dd>+10</dd></div>
-            <div><dt>An open card more than half done, at the end</dt><dd>5</dd></div>
-            <div class="x2"><dt>Everything in the FINAL ROUND</dt><dd>×2</dd></div>
-          </dl>
-        </aside>
-      </section>
-
-      <!-- 4. STUDIOS -->
-      <section class="studios" id="studios" aria-labelledby="studios-title">
-        <div class="studios-bg" data-speed="0.3" aria-hidden="true"></div>
-        <header class="sec-head">
-          <p class="kicker">TWELVE SETS, TWELVE TWISTS</p>
-          <h2 id="studios-title">The TV studios</h2>
-          <p class="sub">Win shows to grow your <b>VIEWERS</b> and open new studios. Each studio has an ENTRY FEE in coins and the winner takes the PRIZE. Every set brings its own items and its own house rule.</p>
-        </header>
-
-        <ol class="studio-list">
-          <li><img src="/assets/fr/studios/beach.webp" alt="" loading="lazy" /><div><h3>Sunny Beach</h3><p class="rule">Classic rules. Learn the show here.</p><p class="meta"><span class="free">FREE ENTRY</span><span>PRIZE 20</span></p></div></li>
-          <li><img src="/assets/fr/studios/super.webp" alt="" loading="lazy" /><div><h3>Supermarket Showdown</h3><p class="rule"><b>+3 CHEESE</b> Cheese with a +3 sticker is worth 3 points.</p><p class="meta"><span>ENTRY 25</span><span>PRIZE 50</span><span class="v">100 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/farmers.webp" alt="" loading="lazy" /><div><h3>Farmers Market</h3><p class="rule"><b>+3 CARROTS</b> Carrots with a +3 sticker are worth 3 points.</p><p class="meta"><span>ENTRY 50</span><span>PRIZE 100</span><span class="v">400 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/bbq.webp" alt="" loading="lazy" /><div><h3>Park BBQ</h3><p class="rule"><b>HOT KETCHUP</b> Hot ketchup also pops the 4 pieces around it.</p><p class="meta"><span>ENTRY 75</span><span>PRIZE 150</span><span class="v">700 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/funfair.webp" alt="" loading="lazy" /><div><h3>Funfair</h3><p class="rule"><b>POPCORN POP</b> Popcorn pops the 4 pieces around it when you clear it.</p><p class="meta"><span>ENTRY 100</span><span>PRIZE 200</span><span class="v">1,000 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/pool.webp" alt="" loading="lazy" /><div><h3>Pool Party</h3><p class="rule"><b>SURPRISE SPLASH</b> Pieces with a surprise badge blast the 3×3 around them.</p><p class="meta"><span>ENTRY 150</span><span>PRIZE 300</span><span class="v">1,350 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/sports.webp" alt="" loading="lazy" /><div><h3>Sports Day</h3><p class="rule"><b>SLAM DUNK</b> Basketballs with a surprise badge blast the 3×3 around them.</p><p class="meta"><span>ENTRY 200</span><span>PRIZE 400</span><span class="v">1,700 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/camping.webp" alt="" loading="lazy" /><div><h3>Camping Trip</h3><p class="rule"><b>CAMPFIRE COMBO</b> +3 s'mores, and hot thermoses pop the pieces around them.</p><p class="meta"><span>ENTRY 250</span><span>PRIZE 500</span><span class="v">2,100 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/ski.webp" alt="" loading="lazy" /><div><h3>Ski Lodge</h3><p class="rule"><b>COZY COMBO</b> +3 baubles, and hot cocoa pops the pieces around it.</p><p class="meta"><span>ENTRY 300</span><span>PRIZE 600</span><span class="v">2,500 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/halloween.webp" alt="" loading="lazy" /><div><h3>Halloween Night</h3><p class="rule"><b>SPOOKY COMBO</b> Hot pumpkins pop their neighbours; surprise badges blast a 3×3.</p><p class="meta"><span>ENTRY 400</span><span>PRIZE 800</span><span class="v">2,950 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/birthday.webp" alt="" loading="lazy" /><div><h3>Birthday Party</h3><p class="rule"><b>PARTY COMBO</b> Balloons pop their neighbours; surprise cupcakes blast a 3×3.</p><p class="meta"><span>ENTRY 500</span><span>PRIZE 1,000</span><span class="v">3,400 VIEWERS</span></p></div></li>
-          <li><img src="/assets/fr/studios/science.webp" alt="" loading="lazy" /><div><h3>Science Fair</h3><p class="rule"><b>LAB COMBO</b> +3 geodes, and surprise badges blast a 3×3.</p><p class="meta"><span>ENTRY 600</span><span>PRIZE 1,200</span><span class="v">3,900 VIEWERS</span></p></div></li>
-        </ol>
-
-        <div class="economy">
-          <div><img src="/assets/fr/px/i_viewers.webp" alt="" loading="lazy" /><p><b>VIEWERS</b> are your progress. A win adds them, three wins in a row puts you ON FIRE for double, and a loss takes 5. You never drop below a studio you've opened.</p></div>
-          <div><img src="/assets/fr/px/i_coin.webp" alt="" loading="lazy" /><p><b>COINS</b> pay the ENTRY FEE. Win the show and take the PRIZE.</p></div>
-          <div><img src="/assets/fr/px/i_gem.webp" alt="" loading="lazy" /><p><b>DIAMONDS</b> are the rare currency.</p></div>
+          </div>
         </div>
       </section>
 
-      <!-- 5. FAMILIES -->
+      <!-- STUDIOS: a quick intro, sideways -->
+      <section class="studios" id="studios" aria-labelledby="studios-title">
+        <div class="studios-pin">
+          <header class="sec-head">
+            <p class="kicker">TWELVE SETS, TWELVE TWISTS</p>
+            <h2 id="studios-title">Meet the studios</h2>
+            <p class="sub">Each studio has an ENTRY FEE in coins and the winner takes the PRIZE. The first one is free.</p>
+          </header>
+          <ol class="track">
+            <li class="st"><img src="/assets/fr/px/st_beach.webp" alt="" loading="lazy" /><div><span class="n">1</span><h3>Sunny Beach</h3><p>Classic rules. Learn the show here.</p><p class="meta"><span class="free">FREE ENTRY</span><span>PRIZE 20</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_super.webp" alt="" loading="lazy" /><div><span class="n">2</span><h3>Supermarket Showdown</h3><p><b>+3 CHEESE</b> Cheese with a +3 sticker is worth 3.</p><p class="meta"><span>ENTRY 25</span><span>PRIZE 50</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_farmers.webp" alt="" loading="lazy" /><div><span class="n">3</span><h3>Farmers Market</h3><p><b>+3 CARROTS</b> Carrots with a +3 sticker are worth 3.</p><p class="meta"><span>ENTRY 50</span><span>PRIZE 100</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_bbq.webp" alt="" loading="lazy" /><div><span class="n">4</span><h3>Park BBQ</h3><p><b>HOT KETCHUP</b> Hot ketchup pops the 4 pieces around it.</p><p class="meta"><span>ENTRY 75</span><span>PRIZE 150</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_funfair.webp" alt="" loading="lazy" /><div><span class="n">5</span><h3>Funfair</h3><p><b>POPCORN POP</b> Popcorn pops the 4 pieces around it.</p><p class="meta"><span>ENTRY 100</span><span>PRIZE 200</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_pool.webp" alt="" loading="lazy" /><div><span class="n">6</span><h3>Pool Party</h3><p><b>SURPRISE SPLASH</b> Surprise badges blast a 3×3.</p><p class="meta"><span>ENTRY 150</span><span>PRIZE 300</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_sports.webp" alt="" loading="lazy" /><div><span class="n">7</span><h3>Sports Day</h3><p><b>SLAM DUNK</b> Surprise basketballs blast a 3×3.</p><p class="meta"><span>ENTRY 200</span><span>PRIZE 400</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_camping.webp" alt="" loading="lazy" /><div><span class="n">8</span><h3>Camping Trip</h3><p><b>CAMPFIRE COMBO</b> +3 s'mores, hot thermoses.</p><p class="meta"><span>ENTRY 250</span><span>PRIZE 500</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_ski.webp" alt="" loading="lazy" /><div><span class="n">9</span><h3>Ski Lodge</h3><p><b>COZY COMBO</b> +3 baubles, hot cocoa.</p><p class="meta"><span>ENTRY 300</span><span>PRIZE 600</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_halloween.webp" alt="" loading="lazy" /><div><span class="n">10</span><h3>Halloween Night</h3><p><b>SPOOKY COMBO</b> Hot pumpkins, surprise blasts.</p><p class="meta"><span>ENTRY 400</span><span>PRIZE 800</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_birthday.webp" alt="" loading="lazy" /><div><span class="n">11</span><h3>Birthday Party</h3><p><b>PARTY COMBO</b> Balloons pop, surprise cupcakes.</p><p class="meta"><span>ENTRY 500</span><span>PRIZE 1,000</span></p></div></li>
+            <li class="st"><img src="/assets/fr/px/st_science.webp" alt="" loading="lazy" /><div><span class="n">12</span><h3>Science Fair</h3><p><b>LAB COMBO</b> +3 geodes, surprise blasts.</p><p class="meta"><span>ENTRY 600</span><span>PRIZE 1,200</span></p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAMILIES -->
       <section class="families" aria-labelledby="fam-title">
         <header class="sec-head">
           <p class="kicker">THE CONTESTANTS</p>
           <h2 id="fam-title">Pick your family</h2>
           <p class="sub">Eight families, each with their own look, pet and personality. Same rules for all.</p>
         </header>
-        <div class="family-strip">
-          <figure class="fam" style="--c:#2E78E6" data-speed="-0.06"><img src="/assets/fr/families/weekenders.webp" alt="" loading="lazy" /><figcaption>The Weekenders</figcaption></figure>
-          <figure class="fam" style="--c:#1FA39A" data-speed="0.06"><img src="/assets/fr/families/bakers.webp" alt="" loading="lazy" /><figcaption>The Bakers</figcaption></figure>
-          <figure class="fam" style="--c:#22A447" data-speed="-0.06"><img src="/assets/fr/families/sprinters.webp" alt="" loading="lazy" /><figcaption>The Sprinters</figcaption></figure>
-          <figure class="fam" style="--c:#2F6B3A" data-speed="0.06"><img src="/assets/fr/families/campbells.webp" alt="" loading="lazy" /><figcaption>The Campbells</figcaption></figure>
-          <figure class="fam" style="--c:#16A9D6" data-speed="-0.06"><img src="/assets/fr/families/pixels.webp" alt="" loading="lazy" /><figcaption>The Pixels</figcaption></figure>
-          <figure class="fam" style="--c:#E23A2E" data-speed="0.06"><img src="/assets/fr/families/grillers.webp" alt="" loading="lazy" /><figcaption>The Grillers</figcaption></figure>
-          <figure class="fam" style="--c:#D9A514" data-speed="-0.06"><img src="/assets/fr/families/sunnyfields.webp" alt="" loading="lazy" /><figcaption>The Sunnyfields</figcaption></figure>
-          <figure class="fam" style="--c:#8E3FD6" data-speed="0.06"><img src="/assets/fr/families/rockwells.webp" alt="" loading="lazy" /><figcaption>The Rockwells</figcaption></figure>
-        </div>
-      </section>
-
-      <!-- 6. JOIN: the funfair studio, crowd in the stands -->
-      <section class="join" id="join" aria-labelledby="join-title">
-        <div class="scene" aria-hidden="true">
-          <picture class="layer back" data-speed="0.3">
-            <source media="(min-width: 821px)" srcset="/assets/fr/px/funfair_wide.webp" />
-            <img src="/assets/fr/px/funfair_back.webp" alt="" loading="lazy" />
-          </picture>
-          <img class="layer crowd-l" data-speed="-0.12" src="/assets/fr/px/crowd_l.webp" alt="" loading="lazy" />
-          <img class="layer crowd-r" data-speed="-0.12" src="/assets/fr/px/crowd_r.webp" alt="" loading="lazy" />
-          <img class="layer front-l" data-speed="-0.3" src="/assets/fr/px/funfair_front_l.webp" alt="" loading="lazy" />
-          <img class="layer front-r" data-speed="-0.4" src="/assets/fr/px/funfair_front_r.webp" alt="" loading="lazy" />
-        </div>
-        <div class="join-card">
-          <img class="join-host" src="/assets/fr/px/host_left.webp" alt="" loading="lazy" />
-          <p class="kicker">JOIN THE TESTFLIGHT CREW</p>
-          <h2 id="join-title">Be in the audience first</h2>
-          <p>Send us one email and we reply with your TestFlight invite for iPhone. No spam.</p>
-          <div class="waitlist-form">
-            <span class="waitlist-mail">hello@thelastclick.ai</span>
-            <a class="btn" href="mailto:hello@thelastclick.ai?subject=Family%20Rush%20TestFlight%20invite">BECOME A TESTER</a>
-          </div>
-          <div class="stores" aria-label="Planned platforms">
-            <div class="store"><img class="apple" src="/assets/apple-logo.png" alt="" /><span><small>SOON ON</small><strong>App Store</strong></span></div>
-            <div class="store"><img src="/assets/google-play-logo.png" alt="" /><span><small>SOON ON</small><strong>Google Play</strong></span></div>
-          </div>
+        <div class="family-grid">
+          <figure class="fam" style="--c:#2E78E6"><img src="/assets/fr/families/weekenders.webp" alt="" loading="lazy" /><figcaption>The Weekenders</figcaption></figure>
+          <figure class="fam" style="--c:#1FA39A"><img src="/assets/fr/families/bakers.webp" alt="" loading="lazy" /><figcaption>The Bakers</figcaption></figure>
+          <figure class="fam" style="--c:#22A447"><img src="/assets/fr/families/sprinters.webp" alt="" loading="lazy" /><figcaption>The Sprinters</figcaption></figure>
+          <figure class="fam" style="--c:#2F6B3A"><img src="/assets/fr/families/campbells.webp" alt="" loading="lazy" /><figcaption>The Campbells</figcaption></figure>
+          <figure class="fam" style="--c:#16A9D6"><img src="/assets/fr/families/pixels.webp" alt="" loading="lazy" /><figcaption>The Pixels</figcaption></figure>
+          <figure class="fam" style="--c:#E23A2E"><img src="/assets/fr/families/grillers.webp" alt="" loading="lazy" /><figcaption>The Grillers</figcaption></figure>
+          <figure class="fam" style="--c:#D9A514"><img src="/assets/fr/families/sunnyfields.webp" alt="" loading="lazy" /><figcaption>The Sunnyfields</figcaption></figure>
+          <figure class="fam" style="--c:#8E3FD6"><img src="/assets/fr/families/rockwells.webp" alt="" loading="lazy" /><figcaption>The Rockwells</figcaption></figure>
         </div>
       </section>
     </main>
 
     <footer class="foot">
+      <div class="join" id="join">
+        <img class="join-icon" src="/assets/fr/icon.webp" alt="" width="88" height="88" loading="lazy" />
+        <div>
+          <p class="kicker">JOIN THE TESTFLIGHT CREW</p>
+          <h2>Be in the audience first</h2>
+          <p>Send us one email and we reply with your TestFlight invite for iPhone. No spam.</p>
+          <div class="waitlist-form">
+            <span class="waitlist-mail">hello@thelastclick.ai</span>
+            <a class="btn" href="mailto:hello@thelastclick.ai?subject=Family%20Rush%20TestFlight%20invite">BECOME A TESTER</a>
+          </div>
+        </div>
+      </div>
+      <details class="all-rules">
+        <summary>All the rules</summary>
+        <ul>
+          <li>Two families share one 7×7 board. 5 rounds; each round every family plays one turn of 2 moves, with 20 seconds. A coin flip picks who opens the rounds.</li>
+          <li>You hold 3 errand cards: 3 different items, each asked by a different family member, 5 or 6 pieces each. Everything your move clears, cascades included, fills them. A finished card is replaced straight away.</li>
+          <li>Points: 1 for any piece, 2 for a piece from your swap that fills your card, 1 for a lucky cascade piece, +10 for a finished card. At the end an open card more than half done pays 5.</li>
+          <li>The race: one item is on both families' cards. Finish it first for a DAD MODE bolt.</li>
+          <li>Specials: 4 in a row makes a Rocket, an L or T shape a Gift, 5 in a row a Rainbow. Move or tap one to fire it; two together make a bigger blast. A 4+ match or a special from your own swap gives an extra move, up to 3 a turn.</li>
+          <li>DAD MODE: every special your own move makes is a bolt. With 2 bolts, DAD MODE clears the 2 columns holding most of what your cards still need.</li>
+          <li>Power-ups: each card charges its family member's power-up, ready when the card is finished. Mom's List Check collects up to 6 pieces, Kid's Skate Dash clears a row, the little one's Sticker Swap turns 5 pieces into the kind worth most to you. One power-up a turn; one free SHUFFLE a match.</li>
+          <li>In the final round every point counts double. Most points wins; a tie goes to more cards finished, then to the family that opened the rounds. A Dad who walks off loses.</li>
+          <li>VIEWERS are your progress: a win adds them, 3 wins in a row puts you ON FIRE for double, a loss takes 5, and you never drop below a studio you opened. Coins pay the ENTRY FEE; the winner takes the PRIZE.</li>
+        </ul>
+      </details>
       <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms of Use</a><a href="mailto:hello@thelastclick.ai">hello@thelastclick.ai</a></nav>
-      <p>© 2026 THE LAST CLICK L.P. · Design &amp; Developed by The Last Click</p>
+      <p class="legal">© 2026 THE LAST CLICK L.P. · Design &amp; Developed by The Last Click</p>
     </footer>
 
-    <script src="/parallax.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="/story-sim.js" defer></script>
+    <script src="/story.js" defer></script>
   </body>
 </html>
