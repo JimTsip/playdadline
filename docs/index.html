@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_back.webp" media="(max-width: 820px)" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_set_wide.webp" media="(min-width: 821px)" />
-    <link rel="stylesheet" href="/styles.css?v=10311523" />
+    <link rel="stylesheet" href="/styles.css?v=10311800" />
     <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
@@ -131,10 +131,12 @@
           </div>
 
           <div class="stage" aria-hidden="true">
+            <!-- the game's HUD v2: faces in white frames, the blue|orange split score, the turn clock, the round tape -->
             <div class="hud">
-              <div class="team you"><img src="/assets/fr/px/dad_point.webp" alt="" /><span><small>WEEKENDERS</small><b class="score-you">0</b></span><em class="x2">×2</em></div>
-              <div class="round"><span>ROUND 1/5</span><span>ROUND 2/5</span><span>ROUND 3/5</span><span>ROUND 4/5</span><span class="fin">FINAL ROUND</span></div>
-              <div class="team rival"><span><small>BAKERS</small><b class="score-rival">0</b></span><img src="/assets/fr/px/rival_cheer.webp" alt="" /></div>
+              <div class="face you"><span><i><img src="/assets/fr/px/dad_point.webp" alt="" /></i></span><small>WEEKENDERS</small><em class="x2"><img src="/assets/fr/px/sb2_x2.webp" alt="×2" /></em></div>
+              <div class="sb"><b class="score-you">0</b><i class="clock">20</i><b class="score-rival">0</b></div>
+              <div class="face rival"><span><i><img src="/assets/fr/px/rival_cheer.webp" alt="" /></i></span><small>BAKERS</small></div>
+              <div class="round"><span><b>ROUND 1</b><i>2</i><i>3</i><i>4</i><i>5</i></span><span><i class="past">1</i><b>ROUND 2</b><i>3</i><i>4</i><i>5</i></span><span><i class="past">1</i><i class="past">2</i><b>ROUND 3</b><i>4</i><i>5</i></span><span><i class="past">1</i><i class="past">2</i><i class="past">3</i><b>ROUND 4</b><i>5</i></span><span class="fin"><i class="past">1</i><i class="past">2</i><i class="past">3</i><i class="past">4</i><b>FINAL ROUND</b></span></div>
             </div>
 
             <div class="tray">
@@ -155,8 +157,8 @@
 
             <div class="dock">
               <div class="cards"></div>
-              <div class="buzzer"><span class="buzz"><img src="/assets/fr/px/buzz_v0.webp" alt="" /><img class="b1" src="/assets/fr/px/buzz_v1.webp" alt="" /><img class="b2" src="/assets/fr/px/buzz_v2.webp" alt="" /></span><div class="bolts"><img src="/assets/fr/px/bolt.webp" alt="" /><img src="/assets/fr/px/bolt.webp" alt="" /></div></div>
-              <div class="power"><div class="ring"><img src="/assets/fr/px/pu_listcheck.webp" alt="" /></div><img class="who" src="/assets/fr/px/m_mom.webp" alt="" /><small>LIST CHECK</small></div>
+              <div class="buzzer"><img class="glow" src="/assets/fr/px/buzz2_glow.webp" alt="" /><span class="buzz"><img src="/assets/fr/px/buzz2_v0.webp" alt="" /><img class="b1" src="/assets/fr/px/buzz2_v1.webp" alt="" /><img class="b2" src="/assets/fr/px/buzz2_v2.webp" alt="" /></span><img class="tap" src="/assets/fr/px/buzz2_tap.webp" alt="" /><div class="bolts"><img src="/assets/fr/px/bolt.webp" alt="" /><img src="/assets/fr/px/bolt.webp" alt="" /></div></div>
+              <div class="power"><img class="disc" src="/assets/fr/px/pu_disc.webp" alt="" /><img class="disc gold" src="/assets/fr/px/pu_disc_ready.webp" alt="" /><div class="ring"><img src="/assets/fr/px/pu_listcheck.webp" alt="" /></div><img class="who" src="/assets/fr/px/m_mom.webp" alt="" /><img class="tap" src="/assets/fr/px/pu_tap.webp" alt="" /></div>
               <i class="spark"></i>
             </div>
           </div>

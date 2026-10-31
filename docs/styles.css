@@ -87,18 +87,25 @@ h1, h2, h3 { margin: 0; line-height: 1.04; }
 
 .stage { width: min(100%, 440px, 57svh); display: flex; flex-direction: column; gap: 10px; }
 html:not(.js) .stage { display: none; }
-.hud { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; }
-.team { position: relative; display: flex; align-items: center; gap: 6px; padding: 4px 10px 4px 4px; border-radius: 18px; background: #fff; box-shadow: var(--clay-shadow); min-width: 0; }
-.team.rival { justify-content: flex-end; padding: 4px 4px 4px 10px; text-align: right; }
-.team img { width: 38px; height: 38px; object-fit: cover; object-position: 50% 6%; border-radius: 12px; background: var(--sky); flex: none; }
-.team.rival img { background: #ffe0d2; }
-.team span { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
-.team small { font-size: .62rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.team b { font-size: 1.45rem; font-weight: 400; }
-.x2 { position: absolute; left: -6px; top: -9px; font-style: normal; font-family: var(--display); font-size: .9rem; color: #fff; background: var(--grape); padding: 2px 7px; border-radius: 999px; opacity: 0; box-shadow: inset 0 -2px 0 rgba(0,0,0,.2); }
-.round { display: grid; text-align: center; font-size: .82rem; color: var(--navy); }
-.round span { grid-area: 1 / 1; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.65); white-space: nowrap; }
-.round .fin { background: var(--grape); color: #fff; }
+/* the game's HUD v2 (build 198): faces in white frames, the blue|orange split score with the turn clock, the round tape */
+.hud { display: grid; grid-template-columns: 58px 1fr 58px; grid-template-rows: auto auto; align-items: center; column-gap: 6px; row-gap: 6px; }
+.face { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.face span { display: block; width: 54px; height: 54px; padding: 4px; background: url('/assets/fr/px/sb2_square.webp') center / 100% 100% no-repeat; filter: drop-shadow(0 3px 3px rgba(22,36,94,.22)); }
+.face span i { display: block; width: 100%; height: 100%; overflow: hidden; border-radius: 10px; background: var(--sky); }
+.face.rival span i { background: #ffe0d2; }
+.face span img { display: block; width: 150%; max-width: none; margin-left: -25%; }
+.face small { font-family: var(--display); font-size: .58rem; letter-spacing: .02em; color: #fff; -webkit-text-stroke: 3px var(--navy); paint-order: stroke fill; white-space: nowrap; }
+.x2 { position: absolute; right: -10px; top: -8px; width: 30px; opacity: 0; }
+.x2 img { width: 100%; display: block; }
+.sb { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; aspect-ratio: 1335 / 438; max-height: 64px; background: url('/assets/fr/px/sb2_split.webp') center / 100% 100% no-repeat; filter: drop-shadow(0 4px 4px rgba(22,36,94,.22)); }
+.sb b { text-align: center; font-size: clamp(1.35rem, 6.4vw, 1.95rem); font-weight: 400; line-height: 1; color: #fff; -webkit-text-stroke: 4px rgba(16,30,90,.45); paint-order: stroke fill; padding-bottom: 4%; }
+.sb .clock { display: grid; place-items: center; width: 44px; aspect-ratio: 1; margin: -6px 0; font-style: normal; font-family: var(--display); font-size: 1.05rem; color: var(--navy);
+  background: radial-gradient(closest-side, #fff calc(100% - 6px), transparent calc(100% - 5px)), conic-gradient(#3b8cf0 .78turn, #d9e6f7 0); border-radius: 50%; box-shadow: 0 0 0 3px #fff, 0 3px 4px rgba(22,36,94,.25); }
+.round { grid-column: 1 / -1; justify-self: center; display: grid; font-size: .74rem; }
+.round span { grid-area: 1 / 1; display: flex; align-items: center; gap: 4px; padding: 3px; border-radius: 999px; background: #3e4a73; white-space: nowrap; box-shadow: inset 0 2px 3px rgba(0,0,0,.25); }
+.round b { font-weight: 400; color: #fff; background: var(--grape); padding: 3px 12px; border-radius: 999px; box-shadow: inset 0 -2px 0 rgba(0,0,0,.18); }
+.round i { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; font-style: normal; font-family: var(--display); font-size: .66rem; color: #c8cfe6; background: #5a668f; }
+.round i.past { color: #fff; background: #7f6be8; opacity: .7; }
 html:not(.anim) .round span:not(:first-child) { display: none; }
 
 /* the tray: a clay board with a soft checker */
@@ -140,8 +147,8 @@ html:not(.anim) .round span:not(:first-child) { display: none; }
 .dock { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: stretch; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .slot { position: relative; display: grid; }
-.card { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 4px 8px; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow); }
-.card.race { background: linear-gradient(#fff, #fff1e0); box-shadow: var(--clay-shadow), 0 0 0 2px var(--sun); }
+.card { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 4px 9px; border-image: url('/assets/fr/px/card2.webp') 110 fill / 18px / 6px; }
+.card.race { border-image-source: url('/assets/fr/px/card2_race.webp'); }
 .card .who { position: absolute; left: 3px; top: 3px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--sky); }
 .card .item { width: 52%; aspect-ratio: 1; object-fit: contain; }
 .card .count { font-size: 1rem; font-weight: 400; line-height: 1; margin-top: 2px; }
@@ -152,25 +159,28 @@ html:not(.anim) .round span:not(:first-child) { display: none; }
   box-shadow: 0 4px 0 #1d9466, 0 6px 10px rgba(20,90,60,.3), inset 0 2px 2px rgba(255,255,255,.6); }
 .card .plus { position: absolute; top: -6px; right: -2px; font-style: normal; font-family: var(--display); color: #fff; font-size: .9rem; background: var(--coral); padding: 1px 7px; border-radius: 999px; opacity: 0; visibility: hidden; }
 html:not(.anim) .card.later { display: none; }
-.buzzer, .power { --ready: 0; position: relative; width: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow), 0 0 calc(var(--ready) * 22px) calc(var(--ready) * 4px) rgba(255,200,58,.9); }
-/* DAD MODE is the big button of the dock: wider, warm, louder when ready */
-.buzzer { width: 92px; background: linear-gradient(180deg, #fff 0%, #fff1dc 100%); box-shadow: var(--clay-shadow), inset 0 0 0 2px rgba(255,170,60,.35), 0 0 calc(var(--ready) * 26px) calc(var(--ready) * 6px) rgba(255,200,58,.95); }
-/* placeholder: the game's current buzzer in 3 states (0, 1, 2 bolts), redone with the new game HUD */
-.buzz { position: relative; display: block; width: 72px; aspect-ratio: 262 / 310; filter: drop-shadow(0 4px 4px rgba(20,40,110,.25)); }
+/* DAD MODE as in the game: a buzzer on its own, no box; the ring charges bolt by bolt, full it glows and wears TAP! */
+.buzzer, .power { --ready: 0; position: relative; display: grid; place-items: center; }
+.buzzer { width: 96px; }
+.buzzer .glow { position: absolute; width: 150%; max-width: none; left: -25%; top: 50%; translate: 0 -50%; opacity: var(--ready); pointer-events: none; }
+.buzz { position: relative; display: block; width: 96px; aspect-ratio: 1; filter: drop-shadow(0 4px 4px rgba(20,40,110,.25)); }
 .buzz img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .buzz .b1, .buzz .b2 { opacity: 0; visibility: hidden; }
+.buzzer .tap, .power .tap { position: absolute; opacity: var(--ready); pointer-events: none; }
+.buzzer .tap { width: 46px; right: -8px; top: calc(50% + 22px); rotate: -8deg; }
 .buzzer .bolts { display: none; }
 .bolts { display: flex; gap: 4px; margin-top: 3px; }
 .bolts img { width: 20px; }
-.bolts { position: relative; }
-.bolts::before { content: ""; position: absolute; inset: 0; background: url('/assets/fr/px/bolt.webp') left center / 20px auto no-repeat, url('/assets/fr/px/bolt.webp') right center / 20px auto no-repeat; opacity: .2; filter: grayscale(1); }
-.bolts img { position: relative; }
-/* the charge arc fills piece by piece as Mom's card fills (--chg 0..1), --ready lights it when full */
-.power { --chg: 0; }
-.power .ring { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(closest-side, #f1ecff calc(100% - 5px), transparent calc(100% - 4px)), conic-gradient(var(--grape) calc(var(--chg) * 1turn), #ddd6ef 0); }
-.power .ring img { width: 70%; filter: grayscale(calc(1 - var(--chg))); opacity: calc(.55 + var(--chg) * .45); }
-.power small { font-size: .55rem; margin-top: 4px; color: var(--ink); }
-.power .who { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--sky); box-shadow: 0 0 0 2px #fff; }
+/* the game's power disc: blue until it is full, then gold; the green charge ring fills from the bottom as Mom's card fills */
+.power { --chg: 0; width: 62px; }
+.power .disc { grid-area: 1 / 1; width: 62px; filter: drop-shadow(0 3px 3px rgba(20,40,110,.22)); }
+.power .disc.gold { opacity: var(--ready); }
+.power .ring { grid-area: 1 / 1; position: relative; width: 54px; height: 54px; margin-top: -3px; display: grid; place-items: center; }
+.power .ring::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 180deg, #7ce040 calc(var(--chg) * 1turn), rgba(255,255,255,.3) 0);
+  -webkit-mask: radial-gradient(closest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(closest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+.power .ring img { position: relative; width: 56%; }
+.power .who { position: absolute; top: 2px; left: -4px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: #7ccbff; box-shadow: 0 0 0 2px #fff; }
+.power .tap { width: 40px; top: -12px; left: 11px; }
 .dock { position: relative; }
 .spark { --p: 0; --arc: 0; position: absolute; left: calc((100% - 184px) / 6 + (100% - 32px - (100% - 184px) / 6) * var(--p)); top: calc(50% - var(--arc) * 44px); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle, #fff 0 25%, var(--grape) 60%, rgba(139,92,246,0) 72%); opacity: 0; visibility: hidden; pointer-events: none; z-index: 3; }
 html:not(.anim) .power { --chg: 1; }
