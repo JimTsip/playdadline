@@ -265,8 +265,12 @@
   ScrollTrigger.create({ trigger: pinned, pin: true, start: 'top top', end: () => '+=' + Math.round(innerHeight * tl.duration() * 0.22), scrub: 0.6, animation: tl });
 
   // ---------- hero: a soft drift as you leave it ----------
-  gsap.from('.hero .host, .hero .dad', { y: 50, autoAlpha: 0, duration: 0.8, ease: 'back.out(1.6)', stagger: 0.12, delay: 0.1 });
-  gsap.from('.hero-copy > *', { y: 24, autoAlpha: 0, duration: 0.6, stagger: 0.07 });
+  // the hero comes on once the loader has gone ON AIR
+  gsap.set('.hero .host, .hero .dad, .hero-copy > *', { autoAlpha: 0 });
+  (window.frLoad || Promise.resolve()).then(() => {
+    gsap.fromTo('.hero .host, .hero .dad', { y: 50, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'back.out(1.6)', stagger: 0.12, delay: 0.1 });
+    gsap.fromTo('.hero-copy > *', { y: 24, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, stagger: 0.07 });
+  });
   const leave = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
   gsap.to('.hero .front-l, .hero .front-r', { yPercent: -30, ease: 'none', scrollTrigger: leave });
   gsap.to('.hero .podium', { yPercent: -12, ease: 'none', scrollTrigger: leave });

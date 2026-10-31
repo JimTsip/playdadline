@@ -20,10 +20,52 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_back.webp" media="(max-width: 820px)" />
     <link rel="preload" as="image" href="/assets/fr/px/beach_set_wide.webp" media="(min-width: 821px)" />
-    <link rel="stylesheet" href="/styles.css?v=10311511" />
+    <link rel="stylesheet" href="/styles.css?v=10311523" />
     <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
+    <!-- LOADER: counts while the studio's graphics load (part real, part show), then goes ON AIR -->
+    <div class="loader" id="loader" aria-hidden="true">
+      <img class="ld-rays" src="/assets/fr/rays-orange.webp" alt="" />
+      <div class="ld-box">
+        <img class="ld-word" src="/assets/fr/wordmark.webp" alt="" width="880" height="444" />
+        <div class="ld-bar"><i class="ld-fill"></i><img class="ld-bolt" src="/assets/fr/px/bolt.webp" alt="" /></div>
+        <div class="ld-row"><b class="ld-num">0%</b><span class="ld-msg">Setting up the studio</span></div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var d = document, h = d.documentElement, L = d.getElementById('loader'), resolve;
+        window.frLoad = new Promise(function (r) { resolve = r; });
+        if (!L) return resolve();
+        h.classList.add('loading');
+        var num = L.querySelector('.ld-num'), fill = L.querySelector('.ld-fill'), msg = L.querySelector('.ld-msg');
+        var seen = false; try { seen = !!sessionStorage.getItem('frl'); } catch (e) {}
+        var MIN = seen ? 500 : 1700, t0 = performance.now(), loaded = false, dcl = false, shown = 0;
+        var MSG = [[0, 'Setting up the studio'], [22, 'Polishing the fruit'], [45, 'Charging the bolts'], [68, 'Waking up Dad'], [88, 'Cue the crowd'], [100, 'ON AIR!']];
+        addEventListener('load', function () { loaded = true; });
+        d.addEventListener('DOMContentLoaded', function () { dcl = true; });
+        setTimeout(function () { loaded = true; }, 9000);
+        function real() { var im = d.images, n = 0, c = 0; for (var i = 0; i < im.length; i++) { if (im[i].loading === 'lazy') continue; n++; if (im[i].complete) c++; } return n ? c / n : 0; }
+        function tick(now) {
+          var e = now - t0, fake = 92 * (1 - Math.exp(-e / (seen ? 250 : 1000)));
+          var target = loaded && e >= MIN ? 100 : Math.min(94, fake * 0.6 + (dcl ? real() : 0) * 94 * 0.4);
+          shown += (target - shown) * (target === 100 ? 0.18 : 0.07);
+          if (target === 100 && shown > 99.4) shown = 100;
+          var p = Math.floor(shown);
+          num.textContent = p + '%'; fill.style.width = shown + '%'; L.style.setProperty('--p', shown / 100);
+          for (var i = MSG.length - 1; i >= 0; i--) if (p >= MSG[i][0]) { msg.textContent = MSG[i][1]; break; }
+          if (shown === 100) return finish();
+          requestAnimationFrame(tick);
+        }
+        function finish() {
+          L.classList.add('air'); try { sessionStorage.setItem('frl', '1'); } catch (e) {}
+          setTimeout(function () { L.classList.add('done'); h.classList.remove('loading'); resolve(); }, seen ? 200 : 520);
+          setTimeout(function () { L.remove(); }, 1500);
+        }
+        requestAnimationFrame(tick);
+      })();
+    </script>
     <header class="top">
       <a class="brand" href="/" aria-label="Family Rush home"><img src="/assets/fr/icon.webp" alt="" width="44" height="44" /></a>
       <nav class="top-nav" aria-label="Sections">
@@ -199,8 +241,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script src="/story-sim.js?v=10311511" defer></script>
-    <script src="/story.js?v=10311511" defer></script>
-    <script src="/hero-fx.js?v=10311511" defer></script>
+    <script src="/story-sim.js?v=10311523" defer></script>
+    <script src="/story.js?v=10311523" defer></script>
+    <script src="/hero-fx.js?v=10311523" defer></script>
   </body>
 </html>
