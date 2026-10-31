@@ -104,6 +104,11 @@
       if (i < b && i >= bolts) tl.fromTo(boltEls[i], { scale: 0, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.35, ease: 'back.out(3)', immediateRender: false }, at);
       if (i >= b && i < bolts) tl.to(boltEls[i], { scale: 0, autoAlpha: 0, duration: 0.25 }, at);
     }
+    // the buzzer's own segments show the bolts: 1 = green arc, 2 = gold
+    if (b >= 1 && bolts < 1) tl.fromTo($('.b1', buzz), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, at);
+    if (b < 1 && bolts >= 1) tl.to($('.b1', buzz), { autoAlpha: 0, duration: 0.25 }, at);
+    if (b === 2 && bolts < 2) tl.fromTo($('.b2', buzz), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, at + 0.2);
+    if (b < 2 && bolts === 2) tl.to($('.b2', buzz), { autoAlpha: 0, duration: 0.25 }, at);
     if (b === 2 && bolts < 2) tl.to(buzz, { '--ready': 1, duration: 0.3 }, at + 0.2)
       .fromTo($('.buzz', buzz), { scale: 1 }, { scale: 1.18, duration: 0.18, ease: 'power1.out', yoyo: true, repeat: 3, immediateRender: false }, at + 0.3);
     if (b < 2 && bolts === 2) tl.to(buzz, { '--ready': 0, duration: 0.3 }, at);
