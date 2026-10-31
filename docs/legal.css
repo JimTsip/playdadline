@@ -1,0 +1,32 @@
+@font-face { font-family: 'Lilita One'; src: url('/fonts/LilitaOne.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+:root { --blue:#0b3fbf; --blue-deep:#062a86; --blue-ink:#041a57; --sky:#8fdcff; --yellow:#ffd23f; --orange:#ff7a1a; --text:#dbe8ff; --white:#fff;
+  --display:'Lilita One','Arial Rounded MT Bold','Arial Black',sans-serif;
+  --body:ui-rounded,'SF Pro Rounded',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; }
+* { box-sizing: border-box; }
+html { background: var(--blue-deep); }
+body { margin: 0; background: var(--blue-deep); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.65; }
+.wrap { width: min(780px, calc(100% - 32px)); margin-inline: auto; }
+header { background: url('/assets/fr/rays-blue.webp') center 40% / cover; border-bottom: 4px solid var(--blue-ink); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 96px; padding: 14px 0; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img:first-child { width: 48px; height: 48px; border-radius: 12px; border: 3px solid var(--white); box-shadow: 0 3px 0 var(--blue-ink); }
+.brand img:last-child { width: 150px; height: auto; filter: drop-shadow(0 3px 0 rgba(4,26,87,.45)); }
+.back { font-family: var(--display); font-size: 1.05rem; color: var(--blue-ink); background: var(--white); padding: 8px 16px; border-radius: 999px; text-decoration: none; box-shadow: 0 3px 0 var(--blue-ink); white-space: nowrap; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 7vw, 3.5rem); line-height: 1; margin: 2.6rem 0 .4rem; text-shadow: 0 4px 0 var(--blue-ink); }
+h2 { font-size: 1.6rem; color: var(--yellow); margin: 2.6rem 0 .5rem; }
+h3 { font-size: 1.25rem; color: var(--sky); margin: 1.8rem 0 .4rem; }
+p, li { color: var(--text); }
+li { margin: .35rem 0; }
+a { color: var(--sky); }
+a:hover { color: var(--white); }
+em { color: var(--white); font-style: normal; font-weight: 700; }
+.upd { color: #9db4e6; font-size: .92rem; margin: 0 0 1.6rem; }
+.lede { color: var(--white); font-size: 1.12rem; }
+.card { border: 3px solid rgba(255,255,255,.6); border-radius: 20px; background: var(--blue); padding: 1.1rem 1.3rem; margin: 1.6rem 0; box-shadow: 0 6px 0 var(--blue-ink); }
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.earlier { border-top: 3px dashed rgba(255,255,255,.25); margin-top: 3rem; padding-top: .5rem; }
+footer { background: var(--blue-ink); margin-top: 4rem; padding: 1.8rem 0 3rem; color: #9db4e6; font-size: .9rem; }
+footer a { color: var(--sky); }
+@media (max-width: 520px) { .brand img:last-child { width: 110px; } .back { font-size: .9rem; padding: 6px 12px; } }

@@ -3,82 +3,137 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DADLINE: Family Rush — Coming Soon</title>
-    <meta name="description" content="Run the day. Be the best Dad. Join the DADLINE: Family Rush TestFlight crew." />
+    <title>Family Rush — Match-3 Family Game Show</title>
+    <meta name="description" content="Family Rush is a match-3 game show where two families play on one shared board, live, turn by turn. Join the TestFlight crew." />
+    <meta name="theme-color" content="#0b3fbf" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://playdadline.com/" />
-    <meta property="og:title" content="DADLINE: Family Rush — Coming Soon" />
-    <meta property="og:description" content="Every errand is a mission. Enter your email to join the TestFlight crew." />
+    <meta property="og:title" content="Family Rush — Two families. One board." />
+    <meta property="og:description" content="A friendly match-3 TV game show: two families, one shared board, live and turn by turn." />
     <meta property="og:image" content="https://playdadline.com/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DADLINE: Family Rush — Coming Soon" />
-    <meta name="twitter:description" content="Every errand is a mission. Enter your email to join the TestFlight crew." />
+    <meta name="twitter:title" content="Family Rush — Two families. One board." />
+    <meta name="twitter:description" content="A friendly match-3 TV game show: two families, one shared board, live and turn by turn." />
     <meta name="twitter:image" content="https://playdadline.com/og.png" />
     <link rel="icon" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <main class="landing-shell">
-      <div class="comic-band" aria-hidden="true"></div>
+    <header class="top">
+      <a class="brand" href="/" aria-label="Family Rush home">
+        <img class="brand-icon" src="/assets/fr/icon.webp" alt="" width="56" height="56" />
+        <img class="brand-word" src="/assets/fr/wordmark.webp" alt="Family Rush" width="220" height="111" />
+      </a>
+      <span class="chip on-air"><i></i>ON AIR SOON</span>
+    </header>
 
-      <header class="site-header">
-        <img class="brand-logo" src="/assets/dadline-logo.png" alt="DADLINE: Family Rush" />
-        <span class="launch-chip">COMING SOON • 2026</span>
-      </header>
-
+    <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">EVERY ERRAND IS A MISSION</p>
-          <h1>RUN THE DAY.<br />BE THE BEST DAD.</h1>
-          <p class="intro">A fast, funny comic runner about family missions, everyday pressure, and one Dad trying to get it all done.</p>
+          <p class="kicker">THE MATCH-3 FAMILY GAME SHOW</p>
+          <h1>Two families.<br /><span>One board.</span></h1>
+          <p class="lead">Lights, camera, match! Two families play on ONE shared board, live, turn by turn. Tick off today's errands before the other family does, charge the Dad's buzzer and hit DAD MODE.</p>
 
-          <div class="mobile-art-slot">
-            <div class="art-wrap">
-              <span class="mission-chip">MISSION ACCEPTED!</span>
-              <div class="hero-art"><img src="/assets/dadline-hero.png" alt="Dad sprinting through the city with milk" /></div>
-              <div class="honor-card"><small>HONOR UNLOCKED</small><strong>DAD OF THE DAY</strong></div>
-            </div>
-          </div>
-
-          <div class="waitlist-block">
+          <div class="waitlist" id="join">
             <p class="form-kicker">JOIN THE TESTFLIGHT CREW</p>
-            <p class="form-intro">Enter your email to get invited as a DadLine tester.</p>
             <form class="waitlist-form" id="waitlist-form">
               <label class="sr-only" for="email">Email address</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="YOUR EMAIL ADDRESS" maxlength="254" required />
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="your@email.com" required />
               <button type="submit">BECOME A TESTER</button>
             </form>
-            <p class="form-note">NO SPAM • JUST YOUR TESTFLIGHT INVITE</p>
+            <p class="form-note">No spam. Just your TestFlight invite.</p>
             <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
           </div>
 
-          <div class="store-row" aria-label="Planned platforms">
-            <div class="store-card">
-              <span class="store-mark"><img src="/assets/apple-logo.png" alt="Apple logo" /></span>
-              <span><small>SOON ON</small><strong>APP STORE</strong></span>
-            </div>
-            <div class="store-card">
-              <span class="store-mark"><img src="/assets/google-play-logo.png" alt="Google Play logo" /></span>
-              <span><small>SOON ON</small><strong>GOOGLE PLAY</strong></span>
-            </div>
+          <div class="stores" aria-label="Planned platforms">
+            <div class="store"><img src="/assets/apple-logo.png" alt="" /><span><small>SOON ON</small><strong>App Store</strong></span></div>
+            <div class="store"><img src="/assets/google-play-logo.png" alt="" /><span><small>SOON ON</small><strong>Google Play</strong></span></div>
           </div>
         </div>
 
-        <div class="desktop-art-slot">
-          <div class="art-wrap">
-            <span class="mission-chip">MISSION ACCEPTED!</span>
-            <div class="hero-art"><img src="/assets/dadline-hero.png" alt="Dad sprinting through the city with milk" /></div>
-            <div class="honor-card"><small>HONOR UNLOCKED</small><strong>DAD OF THE DAY</strong></div>
-          </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="phone back"><img src="/assets/fr/shot-lobby.webp" alt="" /></div>
+          <div class="phone front"><img src="/assets/fr/shot-match.webp" alt="" /></div>
+          <img class="hero-family" src="/assets/fr/families/weekenders.webp" alt="" />
+          <span class="bubble">Look who's winning!</span>
         </div>
       </section>
 
-      <footer class="footer-strip">
-        <strong>SMALL ERRANDS. BIG SAVES.</strong>
-        <span>DADLINE • FAMILY RUSH</span>
-      </footer>
+      <section class="how">
+        <h2>How a round plays</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-art board"><img src="/assets/fr/shot-match.webp" alt="A Family Rush match on the beach set" loading="lazy" /></div>
+            <h3>Tick off the errands</h3>
+            <p>The groceries, the beach bag, the picnic basket. Swap and match items on the shared board before the other family does. Match 4 or more for an extra move.</p>
+          </article>
+          <article class="card orange">
+            <div class="card-art"><img src="/assets/fr/dadmode.webp" alt="DAD MODE!" loading="lazy" /></div>
+            <h3>Hit DAD MODE</h3>
+            <p>Every match charges the Dad's buzzer. When it's full, one big move can turn the whole round.</p>
+          </article>
+          <article class="card">
+            <div class="card-art pus">
+              <figure><img src="/assets/fr/powerups/listcheck.webp" alt="" loading="lazy" /><figcaption>List Check</figcaption></figure>
+              <figure><img src="/assets/fr/powerups/skate.webp" alt="" loading="lazy" /><figcaption>Skate Dash</figcaption></figure>
+              <figure><img src="/assets/fr/powerups/stickers.webp" alt="" loading="lazy" /><figcaption>Sticker Swap</figcaption></figure>
+              <figure><img src="/assets/fr/powerups/fetch.webp" alt="" loading="lazy" /><figcaption>Fetch</figcaption></figure>
+            </div>
+            <h3>The whole family helps</h3>
+            <p>Mom, the kids and even the family pet each bring a power-up. Use them at the right moment and the family wins together.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="families">
+        <h2>Pick your family</h2>
+        <p class="sub">Eight families, each with their own look, pet and personality. Same rules for all: no family is stronger than another.</p>
+        <div class="family-grid">
+          <figure class="fam" style="--c:#2E78E6"><img src="/assets/fr/families/weekenders.webp" alt="" loading="lazy" /><figcaption>The Weekenders</figcaption></figure>
+          <figure class="fam" style="--c:#1FA39A"><img src="/assets/fr/families/bakers.webp" alt="" loading="lazy" /><figcaption>The Bakers</figcaption></figure>
+          <figure class="fam" style="--c:#22A447"><img src="/assets/fr/families/sprinters.webp" alt="" loading="lazy" /><figcaption>The Sprinters</figcaption></figure>
+          <figure class="fam" style="--c:#2F6B3A"><img src="/assets/fr/families/campbells.webp" alt="" loading="lazy" /><figcaption>The Campbells</figcaption></figure>
+          <figure class="fam" style="--c:#16A9D6"><img src="/assets/fr/families/pixels.webp" alt="" loading="lazy" /><figcaption>The Pixels</figcaption></figure>
+          <figure class="fam" style="--c:#E23A2E"><img src="/assets/fr/families/grillers.webp" alt="" loading="lazy" /><figcaption>The Grillers</figcaption></figure>
+          <figure class="fam" style="--c:#D9A514"><img src="/assets/fr/families/sunnyfields.webp" alt="" loading="lazy" /><figcaption>The Sunnyfields</figcaption></figure>
+          <figure class="fam" style="--c:#8E3FD6"><img src="/assets/fr/families/rockwells.webp" alt="" loading="lazy" /><figcaption>The Rockwells</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="studios">
+        <h2>Twelve TV studios</h2>
+        <p class="sub">Each set brings its own items and its family crowd in the stands. Every studio has an ENTRY FEE in coins and the winner takes the PRIZE. The first studio is free.</p>
+        <div class="studio-grid">
+          <figure><img src="/assets/fr/studios/beach.webp" alt="" loading="lazy" /><figcaption>Sunny Beach</figcaption></figure>
+          <figure><img src="/assets/fr/studios/ski.webp" alt="" loading="lazy" /><figcaption>Ski Lodge</figcaption></figure>
+          <figure><img src="/assets/fr/studios/science.webp" alt="" loading="lazy" /><figcaption>Science Fair</figcaption></figure>
+          <figure><img src="/assets/fr/studios/camping.webp" alt="" loading="lazy" /><figcaption>Camping Trip</figcaption></figure>
+          <figure><img src="/assets/fr/studios/farmers.webp" alt="" loading="lazy" /><figcaption>Farmers Market</figcaption></figure>
+          <figure><img src="/assets/fr/studios/super.webp" alt="" loading="lazy" /><figcaption>Supermarket Showdown</figcaption></figure>
+          <figure><img src="/assets/fr/studios/halloween.webp" alt="" loading="lazy" /><figcaption>Halloween Night</figcaption></figure>
+          <figure><img src="/assets/fr/studios/birthday.webp" alt="" loading="lazy" /><figcaption>Birthday Party</figcaption></figure>
+          <figure><img src="/assets/fr/studios/bbq.webp" alt="" loading="lazy" /><figcaption>Park BBQ</figcaption></figure>
+          <figure><img src="/assets/fr/studios/funfair.webp" alt="" loading="lazy" /><figcaption>Funfair</figcaption></figure>
+          <figure><img src="/assets/fr/studios/pool.webp" alt="" loading="lazy" /><figcaption>Pool Party</figcaption></figure>
+          <figure><img src="/assets/fr/studios/sports.webp" alt="" loading="lazy" /><figcaption>Sports Day</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="friendly">
+        <img src="/assets/fr/icon.webp" alt="" width="120" height="120" loading="lazy" />
+        <div>
+          <h2>Friendly by design</h2>
+          <p>Families vs families, never mean. Every match is a fair duel on the same tiles, with the same items for both sides.</p>
+          <a class="cta" href="#join">JOIN THE TESTFLIGHT CREW</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="foot">
+      <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms of Use</a><a href="mailto:hello@thelastclick.ai">hello@thelastclick.ai</a></nav>
+      <p>© 2026 THE LAST CLICK L.P. · Design &amp; Developed by The Last Click</p>
+    </footer>
   </body>
 </html>
