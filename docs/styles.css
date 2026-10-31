@@ -140,7 +140,7 @@ html:not(.anim) .round span:not(:first-child) { display: none; }
 .dock { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: stretch; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .slot { position: relative; display: grid; }
-.card { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; align-items: center; padding: 8px 4px 9px; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow); }
+.card { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 4px 8px; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow); }
 .card.race { background: linear-gradient(#fff, #fff1e0); box-shadow: var(--clay-shadow), 0 0 0 2px var(--sun); }
 .card .who { position: absolute; left: 3px; top: 3px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--sky); }
 .card .item { width: 52%; aspect-ratio: 1; object-fit: contain; }
@@ -150,12 +150,14 @@ html:not(.anim) .round span:not(:first-child) { display: none; }
 .card .tick { position: absolute; width: 46%; top: 12%; left: 27%; opacity: 0; visibility: hidden; }
 .card .plus { position: absolute; top: -6px; right: -2px; font-style: normal; font-family: var(--display); color: #fff; font-size: .9rem; background: var(--coral); padding: 1px 7px; border-radius: 999px; opacity: 0; visibility: hidden; }
 html:not(.anim) .card.later { display: none; }
-.buzzer, .power { --ready: 0; position: relative; width: 68px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow), 0 0 calc(var(--ready) * 22px) calc(var(--ready) * 4px) rgba(255,200,58,.9); }
-.buzz { width: 48px; }
+.buzzer, .power { --ready: 0; position: relative; width: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 16px; background: #fff; box-shadow: var(--clay-shadow), 0 0 calc(var(--ready) * 22px) calc(var(--ready) * 4px) rgba(255,200,58,.9); }
+/* DAD MODE is the big button of the dock: wider, warm, louder when ready */
+.buzzer { width: 92px; background: linear-gradient(180deg, #fff 0%, #fff1dc 100%); box-shadow: var(--clay-shadow), inset 0 0 0 2px rgba(255,170,60,.35), 0 0 calc(var(--ready) * 26px) calc(var(--ready) * 6px) rgba(255,200,58,.95); }
+.buzz { width: 66px; filter: drop-shadow(0 4px 4px rgba(110,45,15,.25)); }
 .bolts { display: flex; gap: 4px; margin-top: 3px; }
-.bolts img { width: 15px; }
+.bolts img { width: 20px; }
 .bolts { position: relative; }
-.bolts::before { content: ""; position: absolute; inset: 0; background: url('/assets/fr/px/bolt.webp') left center / 15px auto no-repeat, url('/assets/fr/px/bolt.webp') right center / 15px auto no-repeat; opacity: .2; filter: grayscale(1); }
+.bolts::before { content: ""; position: absolute; inset: 0; background: url('/assets/fr/px/bolt.webp') left center / 20px auto no-repeat, url('/assets/fr/px/bolt.webp') right center / 20px auto no-repeat; opacity: .2; filter: grayscale(1); }
 .bolts img { position: relative; }
 /* the charge arc fills piece by piece as Mom's card fills (--chg 0..1), --ready lights it when full */
 .power { --chg: 0; }
@@ -164,7 +166,7 @@ html:not(.anim) .card.later { display: none; }
 .power small { font-size: .55rem; margin-top: 4px; color: var(--ink); }
 .power .who { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--sky); box-shadow: 0 0 0 2px #fff; }
 .dock { position: relative; }
-.spark { --p: 0; --arc: 0; position: absolute; left: calc((100% - 164px) / 6 + (100% - 34px - (100% - 164px) / 6) * var(--p)); top: calc(50% - var(--arc) * 44px); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle, #fff 0 25%, var(--grape) 60%, rgba(139,92,246,0) 72%); opacity: 0; visibility: hidden; pointer-events: none; z-index: 3; }
+.spark { --p: 0; --arc: 0; position: absolute; left: calc((100% - 184px) / 6 + (100% - 32px - (100% - 184px) / 6) * var(--p)); top: calc(50% - var(--arc) * 44px); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle, #fff 0 25%, var(--grape) 60%, rgba(139,92,246,0) 72%); opacity: 0; visibility: hidden; pointer-events: none; z-index: 3; }
 html:not(.anim) .power { --chg: 1; }
 
 /* without motion the story reads as a list beside the opening board */
