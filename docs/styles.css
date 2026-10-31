@@ -273,3 +273,46 @@ html:not(.anim) .story-pin { padding: 70px 0; }
   .btn { transition: none; }
 }
 html:not(.anim) .bolts img { visibility: hidden; }
+
+/* ---------- hero phones: a little live studio of phone screens + game graphics flying round them ---------- */
+.hero-stage { order: 2; position: relative; z-index: 6; height: 380px; margin: -6px 0 200px; pointer-events: none; --pw: 150px; }
+.hero-copy { padding-bottom: 6px; }
+.ph { position: absolute; left: 50%; top: 50%; width: var(--pw); translate: -50% -50%; will-change: transform; }
+.ph-in { will-change: transform; }
+.ph-m { z-index: 3; } .ph-l { z-index: 1; --k: .78; } .ph-r { z-index: 1; --k: .72; }
+.ph-l, .ph-r { width: calc(var(--pw) * var(--k)); filter: blur(1.4px) saturate(.95); }
+.ph-l { left: 20%; top: 56%; } .ph-r { left: 80%; top: 40%; }
+.ph-l .ph-in { transform: rotate(9deg); } .ph-r .ph-in { transform: rotate(-11deg); }
+.ph-m .ph-in { transform: rotate(-6deg); }
+.phone { container-type: inline-size; position: relative; padding: 3.4%; border-radius: 15cqw; background: linear-gradient(150deg, #ffffff, #e4eaf8 52%, #c7d2ee);
+  box-shadow: inset 0 3px 0 #fff, inset 0 -7px 0 rgba(22,36,94,.14), 0 34px 44px -26px rgba(22,36,94,.4), 0 0 0 1px rgba(22,36,94,.06); }
+.phone::before, .phone::after { content: ""; position: absolute; width: 1.6%; border-radius: 3px; background: #c3cde8; }
+.phone::before { left: -1.1%; top: 20%; height: 9%; box-shadow: 0 13cqw 0 #c3cde8; }
+.phone::after { right: -1.1%; top: 27%; height: 14%; }
+.screen { position: relative; aspect-ratio: 720 / 1560; border-radius: 11.6cqw; overflow: hidden; background: #0f1a46; box-shadow: 0 0 0 2px #16245e; }
+.screen::before { content: ""; position: absolute; z-index: 2; top: 2.4%; left: 50%; width: 27%; height: 2.5%; translate: -50% 0; border-radius: 99px; background: #0b1235; }
+.screen::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.22) 0, rgba(255,255,255,0) 30%); }
+.screen video, .screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hfxl { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.hfx-back { z-index: 0; } .hfx-front { z-index: 4; }
+.hfx { position: absolute; left: 0; top: 0; display: block; will-change: transform, opacity; opacity: 0; }
+.hfx-item { width: 34px; height: auto; filter: drop-shadow(0 6px 5px rgba(22,36,94,.18)); }
+.hfx-star { width: 22px; height: 22px; background: radial-gradient(circle, #fff 0 18%, rgba(255,240,170,.95) 20% 36%, rgba(255,200,58,0) 70%);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); background-color: #ffe27a; }
+.hfx-pts { font-family: var(--display); font-size: 1.5rem; color: #fff; white-space: nowrap; -webkit-text-stroke: 5px var(--navy); paint-order: stroke fill; text-shadow: 0 4px 0 rgba(22,36,94,.25); }
+.hfx-pts.b { color: var(--sun); } .hfx-pts.c { color: var(--mint); }
+.hfx-bolt { width: 40px; height: auto; filter: drop-shadow(0 5px 4px rgba(22,36,94,.22)); }
+.hfx-word { width: 150px; height: auto; filter: drop-shadow(0 8px 6px rgba(22,36,94,.25)); }
+.hfx-rays { width: 230px; height: auto; -webkit-mask-image: radial-gradient(closest-side, #000 50%, transparent 100%); mask-image: radial-gradient(closest-side, #000 50%, transparent 100%); }
+.hfx-conf { width: 8px; height: 13px; border-radius: 2px; }
+@media (max-width: 380px) { .hero-stage { --pw: 138px; } }
+
+@media (min-width: 821px) {
+  .hero-stage { position: absolute; z-index: 4; left: 44%; right: 0; top: 0; bottom: 0; height: auto; margin: 0; --pw: min(21vw, 31vh, 320px); }
+  .ph-m { left: 30%; top: 47%; }
+  .ph-l { left: 7%; top: 31%; --k: .62; } .ph-r { left: 66%; top: 31%; --k: .66; }
+  .hero .podium { --w: min(33vw, 480px); left: 80%; bottom: 6%; }
+  .hero-copy { padding-bottom: 60px; }
+  .hfx-item { width: 48px; } .hfx-star { width: 28px; height: 28px; } .hfx-pts { font-size: 2.1rem; } .hfx-bolt { width: 54px; } .hfx-word { width: 230px; } .hfx-rays { width: 340px; } .hfx-conf { width: 10px; height: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .hfxl { display: none; } }
