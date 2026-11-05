@@ -1,0 +1,5 @@
+GSAP 3.14.2 and ScrollTrigger
+Copyright 2026 GreenSock.
+Distributed under the GSAP standard no-charge license:
+https://gsap.com/standard-license
+Copyright and license notices are also retained in family-rush.js.LEGAL.txt.

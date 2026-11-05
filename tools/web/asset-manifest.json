@@ -1,0 +1,1602 @@
+{
+  "generated": "2026-11-05",
+  "coordinates": {
+    "up": "+Y",
+    "dad_forward": "+Z",
+    "unit": "source model units; Dads approximately 1 high",
+    "origin": "source rig origin at ground",
+    "hop": "in-place; scene owns forward travel and jump arc"
+  },
+  "fidelity_caveats": [
+    "Original FBX geometry, rig, flat normals and painted vertex colors preserved. No geometry reduction or generated replacement.",
+    "Unity custom cel/ink shader, runtime head look, lobby/result procedural poses, road shadows and fog are not encodable in standard glTF. Apply Three.js toon/ink appearance separately.",
+    "Okafors has only Hop and Idle; no Wave exists in current source."
+  ],
+  "dads": [
+    {
+      "name": "dad-weekenders",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_Dad.fbx",
+      "source_sha256": "941aaec85e6d80ed774dd9dea9c80473cfeeaf00ac3b35a09efe85b5ad7759fd",
+      "file": "dad-weekenders.glb",
+      "bytes": 1672272,
+      "sha256": "6c70d726f07e9e3d4c51ed2af107ccd4a9826b1a3e0eefa1636a726543d9a874",
+      "mesh_count": 1,
+      "vertices": 4168,
+      "triangles": 8134,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.27253371477127075,
+          -4.921204777019739e-08,
+          -0.15902815759181976
+        ],
+        "max": [
+          0.2694430351257324,
+          0.9995723962783813,
+          0.11591188609600067
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 183,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 183,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 183,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        }
+      ],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 23088,
+      "family": "weekenders",
+      "fallback_png": "dad-weekenders.png",
+      "validation": {
+        "file": "dad-weekenders.glb",
+        "maximum_vertex_error": 5.272569296721485e-07,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 4.600092609052808e-07
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 4.960094770467549e-07
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 3.9028526543916087e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 4.995779363525799e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 5.017953412789211e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 4.995779363525799e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 5.272569296721485e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 4.792901222572254e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 4.7426911464754085e-07
+          }
+        ],
+        "render": "dad-weekenders.png"
+      }
+    },
+    {
+      "name": "dad-sprinters",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadSprinters.fbx",
+      "source_sha256": "89aae27ff470749d8a968e7e9dd127e618b9ee27b2122e0090c00eb7083630f8",
+      "file": "dad-sprinters.glb",
+      "bytes": 1600596,
+      "sha256": "36f69bc19ec7a3c0222047a3ce7b870c7eee05cfec4680588f70aa5f3ef6f1c3",
+      "mesh_count": 3,
+      "vertices": 3642,
+      "triangles": 6920,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.2577504515647888,
+          2.0345706275293196e-07,
+          -0.10853695869445801
+        ],
+        "max": [
+          0.2558463215827942,
+          1.0003799200057983,
+          0.08854945749044418
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 186,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 186,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 186,
+          "loop": false
+        },
+        {
+          "name": "Whistle",
+          "duration": 3.6666666666666665,
+          "channels": 186,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        },
+        {
+          "name": "Whistle",
+          "from": 420,
+          "to": 530
+        }
+      ],
+      "vertex_color_meshes": 3,
+      "gltf_vertex_count": 19066,
+      "family": "sprinters",
+      "fallback_png": "dad-sprinters.png",
+      "validation": {
+        "file": "dad-sprinters.glb",
+        "maximum_vertex_error": 5.340606094250688e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.4639252867709729e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 1.986177267099265e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 1.5086276334841386e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.883247591649706e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.719264901112183e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 1.883247591649706e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.4800283452132135e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 1.4013706959303818e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.555387939333741e-06
+          },
+          {
+            "clip": "Whistle",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.4800283452132135e-06
+          },
+          {
+            "clip": "Whistle",
+            "frame": 55,
+            "max_nearest_vertex_error": 5.340606094250688e-06
+          },
+          {
+            "clip": "Whistle",
+            "frame": 110,
+            "max_nearest_vertex_error": 1.470692495786352e-06
+          }
+        ],
+        "render": "dad-sprinters.png"
+      }
+    },
+    {
+      "name": "dad-bakers",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadBakers.fbx",
+      "source_sha256": "0fdc589ed1bb58795acce3473af80d44e67eff97a2321897a9df16824a1a9c30",
+      "file": "dad-bakers.glb",
+      "bytes": 1919444,
+      "sha256": "c063b54e03065119ff4ec06b3d843b8f858036d96c4b0c3ce73687edad0fcf3f",
+      "mesh_count": 5,
+      "vertices": 4962,
+      "triangles": 9688,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.14301316440105438,
+          -1.4027634165358904e-08,
+          -0.15678079426288605
+        ],
+        "max": [
+          0.17869479954242706,
+          1.1332027912139893,
+          0.1305486410856247
+        ]
+      },
+      "animations": [
+        {
+          "name": "Bread",
+          "duration": 3.6666666666666665,
+          "channels": 183,
+          "loop": false
+        },
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 183,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 183,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 183,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        },
+        {
+          "name": "Bread",
+          "from": 420,
+          "to": 530
+        }
+      ],
+      "vertex_color_meshes": 5,
+      "gltf_vertex_count": 27631,
+      "family": "bakers",
+      "fallback_png": "dad-bakers.png",
+      "validation": {
+        "file": "dad-bakers.glb",
+        "maximum_vertex_error": 2.883990646296297e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 2.674914185263333e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 2.838592990883626e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 2.643864490892156e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 2.4906901217036648e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 2.5230531264242018e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 2.4906901217036648e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 2.6049344796774676e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 2.883990646296297e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 2.5978069970733486e-06
+          },
+          {
+            "clip": "Bread",
+            "frame": 0,
+            "max_nearest_vertex_error": 2.6049344796774676e-06
+          },
+          {
+            "clip": "Bread",
+            "frame": 55,
+            "max_nearest_vertex_error": 2.681546675376012e-06
+          },
+          {
+            "clip": "Bread",
+            "frame": 110,
+            "max_nearest_vertex_error": 2.6220964173262473e-06
+          }
+        ],
+        "render": "dad-bakers.png"
+      }
+    },
+    {
+      "name": "dad-rockwells",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadRockwells.fbx",
+      "source_sha256": "270d437a41c315e692e90bf67b0c6c92fcb695cee5a31cccb8e3d6c8e7de14b6",
+      "file": "dad-rockwells.glb",
+      "bytes": 2171284,
+      "sha256": "e09bde272f2bd1cc9c5b57070287ac1311ead2279f4e0c4b89a48aa512e9795e",
+      "mesh_count": 2,
+      "vertices": 5296,
+      "triangles": 9929,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.28254038095474243,
+          1.6570332661558496e-07,
+          -0.23866361379623413
+        ],
+        "max": [
+          0.24664142727851868,
+          1.000311017036438,
+          0.09526901692152023
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 225,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 225,
+          "loop": true
+        },
+        {
+          "name": "Solo",
+          "duration": 3.6666666666666665,
+          "channels": 225,
+          "loop": false
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 225,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        },
+        {
+          "name": "Solo",
+          "from": 420,
+          "to": 530
+        }
+      ],
+      "vertex_color_meshes": 2,
+      "gltf_vertex_count": 27173,
+      "family": "rockwells",
+      "fallback_png": "dad-rockwells.png",
+      "validation": {
+        "file": "dad-rockwells.glb",
+        "maximum_vertex_error": 3.0349413009389536e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.2342704849288566e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 1.621438741494785e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 1.2156499451521086e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.338182528343168e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.3362583786147297e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 1.338182528343168e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.1577340046642348e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 9.040801387527608e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.2350798215265968e-06
+          },
+          {
+            "clip": "Solo",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.1577340046642348e-06
+          },
+          {
+            "clip": "Solo",
+            "frame": 55,
+            "max_nearest_vertex_error": 3.0349413009389536e-06
+          },
+          {
+            "clip": "Solo",
+            "frame": 110,
+            "max_nearest_vertex_error": 1.2952068573213182e-06
+          }
+        ],
+        "render": "dad-rockwells.png"
+      }
+    },
+    {
+      "name": "dad-sunnyfields",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadSunnyfields.fbx",
+      "source_sha256": "eeada0f2f05db7058ea999ed49b6aca5ae1db94ea85fd375d44c6902538d973a",
+      "file": "dad-sunnyfields.glb",
+      "bytes": 1851960,
+      "sha256": "8caab8210cb2206aa08207c9af34bea3b223a2a3e44eb119f96bcd58a474d9a1",
+      "mesh_count": 3,
+      "vertices": 5046,
+      "triangles": 9811,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.4306408166885376,
+          4.6240593576385436e-08,
+          -0.17834745347499847
+        ],
+        "max": [
+          0.1794915795326233,
+          1.1310911178588867,
+          0.09132800251245499
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 183,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 183,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 183,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        }
+      ],
+      "vertex_color_meshes": 3,
+      "gltf_vertex_count": 27948,
+      "family": "sunnyfields",
+      "fallback_png": "dad-sunnyfields.png",
+      "validation": {
+        "file": "dad-sunnyfields.glb",
+        "maximum_vertex_error": 3.6729547900904436e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.6200947306497255e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 3.6017681850353256e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 3.6026485759066418e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.591810127545614e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 3.6729547900904436e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 3.591810127545614e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.540092620823998e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 3.5333353025635006e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 3.4853430861403467e-06
+          }
+        ],
+        "render": "dad-sunnyfields.png"
+      }
+    },
+    {
+      "name": "dad-campbells",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadCampbells.fbx",
+      "source_sha256": "675b11ce3e98c9364f7b04a1543e6eba67301d1d2349b4930f870a8d12b824b4",
+      "file": "dad-campbells.glb",
+      "bytes": 2018280,
+      "sha256": "28b07d8b374a267a226099c2419806e24d928d9acb74447badbd6f40b757bc18",
+      "mesh_count": 4,
+      "vertices": 5381,
+      "triangles": 10501,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.17703965306282043,
+          6.23319564851954e-08,
+          -0.2163211703300476
+        ],
+        "max": [
+          0.1761264204978943,
+          1.0459554195404053,
+          0.08735889941453934
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 183,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 183,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 3,
+          "channels": 183,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 390
+        }
+      ],
+      "vertex_color_meshes": 4,
+      "gltf_vertex_count": 29447,
+      "family": "campbells",
+      "fallback_png": "dad-campbells.png",
+      "validation": {
+        "file": "dad-campbells.glb",
+        "maximum_vertex_error": 9.103133606913616e-07,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 7.755787123642222e-07
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 9.103133606913616e-07
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 7.564289035144611e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 9.045635351867531e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 8.462745313408959e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 9.045635351867531e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 8.395799682148208e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 45,
+            "max_nearest_vertex_error": 5.275200578580552e-07
+          },
+          {
+            "clip": "Wave",
+            "frame": 90,
+            "max_nearest_vertex_error": 8.887628268894332e-07
+          }
+        ],
+        "render": "dad-campbells.png"
+      }
+    },
+    {
+      "name": "dad-nakamuras",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadNakamuras.fbx",
+      "source_sha256": "d2c409e338896c0e8881ac4d82e0e5a495b5df9c1aec1fb8db9a3263cb17c6ba",
+      "file": "dad-nakamuras.glb",
+      "bytes": 1835168,
+      "sha256": "d2c5cc0f09563b15895c43348880c3ec031e1818f7c2c47678c7780a19353da3",
+      "mesh_count": 2,
+      "vertices": 4361,
+      "triangles": 8509,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.18273231387138367,
+          2.3149571148906034e-08,
+          -0.19111604988574982
+        ],
+        "max": [
+          0.18172071874141693,
+          1.0355148315429688,
+          0.0876118540763855
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 189,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 189,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 5,
+          "channels": 189,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 450
+        }
+      ],
+      "vertex_color_meshes": 2,
+      "gltf_vertex_count": 24395,
+      "family": "nakamuras",
+      "fallback_png": "dad-nakamuras.png",
+      "validation": {
+        "file": "dad-nakamuras.glb",
+        "maximum_vertex_error": 3.378230303496821e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.5715968402219005e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 1.700786015135236e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 1.5752748367958702e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.6688136383891106e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.638873754927772e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 1.6688136383891106e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.378230303496821e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 75,
+            "max_nearest_vertex_error": 3.2951534194580745e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 150,
+            "max_nearest_vertex_error": 1.4899344478180865e-06
+          }
+        ],
+        "render": "dad-nakamuras.png"
+      }
+    },
+    {
+      "name": "dad-papadopoulos",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadPapadopoulos.fbx",
+      "source_sha256": "9de4aaa29d5ed24808e172a95fc872883a6b2dcea877710e3b2269722b1a778c",
+      "file": "dad-papadopoulos.glb",
+      "bytes": 2068292,
+      "sha256": "40cf217d8b223c35a691348b7403b58473907efc98e9b5cdcacc1abbbabf8560",
+      "mesh_count": 3,
+      "vertices": 5452,
+      "triangles": 10408,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.25700393319129944,
+          -7.230341481090363e-08,
+          -0.18315483629703522
+        ],
+        "max": [
+          0.272355854511261,
+          1.0379561185836792,
+          0.11464744061231613
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 192,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 192,
+          "loop": true
+        },
+        {
+          "name": "Wave",
+          "duration": 5,
+          "channels": 192,
+          "loop": false
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        },
+        {
+          "name": "Wave",
+          "from": 300,
+          "to": 450
+        }
+      ],
+      "vertex_color_meshes": 3,
+      "gltf_vertex_count": 30311,
+      "family": "papadopoulos",
+      "fallback_png": "dad-papadopoulos.png",
+      "validation": {
+        "file": "dad-papadopoulos.glb",
+        "maximum_vertex_error": 3.1118199785851175e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.0059475193411345e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 3.094998874075827e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 3.0004871405253652e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.082317562075332e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 3.1118199785851175e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 3.082317562075332e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 0,
+            "max_nearest_vertex_error": 3.0714923013874795e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 75,
+            "max_nearest_vertex_error": 2.9657669529115083e-06
+          },
+          {
+            "clip": "Wave",
+            "frame": 150,
+            "max_nearest_vertex_error": 3.0932524168747477e-06
+          }
+        ],
+        "render": "dad-papadopoulos.png"
+      }
+    },
+    {
+      "name": "dad-okafors",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadOkafors.fbx",
+      "source_sha256": "3e8cfae8af8be6a4ffb41f806e6b75ff7a0c481b01fb7b5c2cb94efd93daff3e",
+      "file": "dad-okafors.glb",
+      "bytes": 1508956,
+      "sha256": "70ae04d324ace569ca95ea80b1c5d57cdcfc4a3e01ad53ed85556fee750ba7e8",
+      "mesh_count": 1,
+      "vertices": 4159,
+      "triangles": 7897,
+      "skin_count": 1,
+      "bounds": {
+        "min": [
+          -0.14421379566192627,
+          1.1805977351286856e-07,
+          -0.1051972433924675
+        ],
+        "max": [
+          0.14302575588226318,
+          0.9992964267730713,
+          0.08014794439077377
+        ]
+      },
+      "animations": [
+        {
+          "name": "Hop",
+          "duration": 2.066666666666667,
+          "channels": 186,
+          "loop": false
+        },
+        {
+          "name": "Idle",
+          "duration": 6,
+          "channels": 186,
+          "loop": true
+        }
+      ],
+      "source_clips": [
+        {
+          "name": "Hop",
+          "from": 0,
+          "to": 62
+        },
+        {
+          "name": "Idle",
+          "from": 100,
+          "to": 280
+        }
+      ],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 21921,
+      "family": "okafors",
+      "fallback_png": "dad-okafors.png",
+      "validation": {
+        "file": "dad-okafors.glb",
+        "maximum_vertex_error": 1.5171918903433834e-06,
+        "samples": [
+          {
+            "clip": "Hop",
+            "frame": 0,
+            "max_nearest_vertex_error": 8.991893878373958e-07
+          },
+          {
+            "clip": "Hop",
+            "frame": 31,
+            "max_nearest_vertex_error": 1.5171918903433834e-06
+          },
+          {
+            "clip": "Hop",
+            "frame": 62,
+            "max_nearest_vertex_error": 8.991893878373958e-07
+          },
+          {
+            "clip": "Idle",
+            "frame": 0,
+            "max_nearest_vertex_error": 1.085358121599711e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 90,
+            "max_nearest_vertex_error": 1.146422960118798e-06
+          },
+          {
+            "clip": "Idle",
+            "frame": 180,
+            "max_nearest_vertex_error": 1.085358121599711e-06
+          }
+        ],
+        "render": "dad-okafors.png"
+      }
+    }
+  ],
+  "locations": [
+    {
+      "name": "arch-beach",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/SectionArch/beach.fbx",
+      "source_sha256": "b62ce0a16f6133a92d19e0f23dc17ae7a0c6c23c0b79e2945b6c9fee1c7d35bc",
+      "file": "arch-beach.glb",
+      "bytes": 81700,
+      "sha256": "d78e9df158f3c36783633f7d2a8a73e9b8afe91b9bea31663fe6b75d4afd9cad",
+      "mesh_count": 1,
+      "vertices": 2138,
+      "triangles": 926,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -6.647970199584961,
+          -9.208245899117173e-08,
+          -1.219670057296753
+        ],
+        "max": [
+          6.647970199584961,
+          12.245397567749023,
+          2.119669198989868
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 2342
+    },
+    {
+      "name": "arch-ski",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/SectionArch/ski.fbx",
+      "source_sha256": "40f91453989b83155496bb0db05835328f34dd42f59eaa56d36248595f8c5b64",
+      "file": "arch-ski.glb",
+      "bytes": 517556,
+      "sha256": "73950af4a01f03002337a6c819d99d5d3eb524b48e44c7f629134a48a91c1037",
+      "mesh_count": 1,
+      "vertices": 2625,
+      "triangles": 5144,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -6.8839287757873535,
+          -9.928835709160921e-08,
+          -1.3151150941848755
+        ],
+        "max": [
+          6.8839287757873535,
+          12.889058113098145,
+          1.2877980470657349
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 15171
+    },
+    {
+      "name": "arch-camping",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/SectionArch/camping.fbx",
+      "source_sha256": "0dab50d5cae905480111a5fefcaeec1023d114f1bd0fd1240148ae933c05ee7c",
+      "file": "arch-camping.glb",
+      "bytes": 541020,
+      "sha256": "945a8d46f17df28099736ec6e2d33417d06cb528aa3241c872a71396d34e1db8",
+      "mesh_count": 1,
+      "vertices": 2881,
+      "triangles": 5351,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -6.8737616539001465,
+          -1.4140159976250288e-07,
+          -1.8729219436645508
+        ],
+        "max": [
+          6.8737616539001465,
+          12.123671531677246,
+          2.1196439266204834
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 15865
+    },
+    {
+      "name": "arch-pool",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/SectionArch/pool.fbx",
+      "source_sha256": "dbbcdca79450cb0aa398126d07244772cdb8a6007d687449322fcae274d4d28f",
+      "file": "arch-pool.glb",
+      "bytes": 474272,
+      "sha256": "330b9c94f1734723239f9001a82c100286e75a033058f671a44617ddbfb36288",
+      "mesh_count": 1,
+      "vertices": 2646,
+      "triangles": 5002,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -7.185805320739746,
+          -1.371993931797988e-07,
+          -1.8172619342803955
+        ],
+        "max": [
+          7.185805320739746,
+          12.13232135772705,
+          1.868667483329773
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 13845
+    }
+  ],
+  "props": [
+    {
+      "name": "prop-tree",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Trees/tree.fbx",
+      "source_sha256": "d1f530a314ae2697f9d71f5b122b09b720ebfa43bfe0fc2f5097073a315cbec8",
+      "file": "prop-tree.glb",
+      "bytes": 14252,
+      "sha256": "9c3046d946d76f0024b2a2f31b0c1cc370ed845eb61083b199cfd96db8aef0c1",
+      "mesh_count": 1,
+      "vertices": 78,
+      "triangles": 132,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -3.164191484451294,
+          -1.8440530880070582e-07,
+          -2.4425227642059326
+        ],
+        "max": [
+          3.1976654529571533,
+          7.0,
+          1.9439467191696167
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 384
+    },
+    {
+      "name": "prop-pine",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Trees/pine.fbx",
+      "source_sha256": "e168a40bd2f7c18083d1c0021453ed906f101441eb225f9e851cca8d7ddd2f80",
+      "file": "prop-pine.glb",
+      "bytes": 6388,
+      "sha256": "18b6d8609b7978d3eb5dee53c0bacf535c7c8b95f30dc1e090c940dc0c1a3fde",
+      "mesh_count": 1,
+      "vertices": 48,
+      "triangles": 68,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -2.25,
+          -1.6987027606774063e-07,
+          -2.250000476837158
+        ],
+        "max": [
+          2.25,
+          7.0,
+          2.25
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 152
+    },
+    {
+      "name": "prop-palm",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Beach/palm.fbx",
+      "source_sha256": "b5090eff8d4b611b6266182c6d3b78b57935ed417001ad1f95ce757fae6e048c",
+      "file": "prop-palm.glb",
+      "bytes": 27548,
+      "sha256": "2e345b05bbffa5e962845a40f8f59c2ef927800d8d1e4802679374b7d9dadfa7",
+      "mesh_count": 1,
+      "vertices": 679,
+      "triangles": 261,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -2.0098912715911865,
+          -1.8051494521387212e-07,
+          -2.390993356704712
+        ],
+        "max": [
+          5.150856018066406,
+          6.498349189758301,
+          2.359595775604248
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 775
+    },
+    {
+      "name": "prop-lamppost",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Lamps/lamp.fbx",
+      "source_sha256": "01bb6b72c61c67537d125a6c70c4c3b98403bdd2b434aed92fbfb622db78524d",
+      "file": "prop-lamppost.glb",
+      "bytes": 8124,
+      "sha256": "5d3869da078b2dbb1aeb98c90d578fd4fd294891d50a0dad47985843cbdcbcee",
+      "mesh_count": 1,
+      "vertices": 55,
+      "triangles": 102,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -0.6800000071525574,
+          -4.4460509940336124e-08,
+          -0.5888976454734802
+        ],
+        "max": [
+          0.6800000071525574,
+          5.0,
+          0.5888972878456116
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 198
+    },
+    {
+      "name": "prop-house-a",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Houses/house_a.fbx",
+      "source_sha256": "bc4e23aca4f9fbec6d0ab791dcf7cd4612acb5e0453b5f8c7eea742ecada3067",
+      "file": "prop-house-a.glb",
+      "bytes": 64264,
+      "sha256": "0b055c3545e13cef7deb5c15adbb17dc3ed677dc2c3132b5967a87174e21dfb5",
+      "mesh_count": 1,
+      "vertices": 1507,
+      "triangles": 2472,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -5.199999809265137,
+          0.046862613409757614,
+          -4.016371250152588
+        ],
+        "max": [
+          5.199999809265137,
+          6.6650004386901855,
+          4.155595302581787
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 1507,
+      "validation": {
+        "maximum_nearest_vertex_error": 1.669994048825174e-06,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-house-a.png"
+    },
+    {
+      "name": "prop-house-b",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Houses/house_b.fbx",
+      "source_sha256": "68f95e0ec6a56cb54cd8c57e0074d276cb7b17135d2e457fb8eb8b60a9861eb1",
+      "file": "prop-house-b.glb",
+      "bytes": 74844,
+      "sha256": "96736462bbf2de76c908dd9db46f2fb69d2fd9ec7e278b94bc003b87c52a99a1",
+      "mesh_count": 1,
+      "vertices": 1761,
+      "triangles": 2880,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -4.699999809265137,
+          0.046862632036209106,
+          -3.766201972961426
+        ],
+        "max": [
+          4.699999809265137,
+          6.53000020980835,
+          3.905595064163208
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 1761,
+      "validation": {
+        "maximum_nearest_vertex_error": 1.633496253816702e-06,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-house-b.png"
+    },
+    {
+      "name": "prop-house-c",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Houses/house_c.fbx",
+      "source_sha256": "1b09b4210832ad7b14adebc9573b4ec915ae5d5dd08c81d22950d8a97df99a15",
+      "file": "prop-house-c.glb",
+      "bytes": 67104,
+      "sha256": "b9aea6bc23c53b5ced94399071c5c129a25353ba8b55fb0f0bb8e3bd87c383b6",
+      "mesh_count": 1,
+      "vertices": 1583,
+      "triangles": 2540,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -5.949999809265137,
+          0.04686259478330612,
+          -4.266520977020264
+        ],
+        "max": [
+          5.949999809265137,
+          9.09999942779541,
+          4.405595302581787
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 1583,
+      "validation": {
+        "maximum_nearest_vertex_error": 2.1324806311895372e-06,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-house-c.png"
+    },
+    {
+      "name": "prop-bench",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Street/bench.fbx",
+      "source_sha256": "3db9dca05cc79c143bfaf7e8831d8999038da827006e37fd7cc7791fa9178260",
+      "file": "prop-bench.glb",
+      "bytes": 9256,
+      "sha256": "77e8951157d8a36a4720ae074035bb5d51cfdda8be42785faf239874bc7123d0",
+      "mesh_count": 1,
+      "vertices": 76,
+      "triangles": 128,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -0.8999999761581421,
+          -3.3596563753235387e-08,
+          -0.4450000822544098
+        ],
+        "max": [
+          0.8999999761581421,
+          1.263575792312622,
+          0.44999998807907104
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 228,
+      "validation": {
+        "maximum_nearest_vertex_error": 2.980232238769531e-07,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-bench.png"
+    },
+    {
+      "name": "prop-fence",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Fences/fence_a.fbx",
+      "source_sha256": "98242f79d32ce6707531d79bc1701a539386b13d05020fb56a78fdbcf2ef3415",
+      "file": "prop-fence.glb",
+      "bytes": 5000,
+      "sha256": "9fbbd6f1afabfbf851b2183541f7f550baab370a474a70044396a726be3b0a76",
+      "mesh_count": 1,
+      "vertices": 92,
+      "triangles": 152,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -2.0,
+          -3.3974056901087124e-09,
+          -0.04500008746981621
+        ],
+        "max": [
+          2.0,
+          1.1160000562667847,
+          0.10938441753387451
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 92,
+      "validation": {
+        "maximum_nearest_vertex_error": 2.6656007889869215e-07,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-fence.png"
+    },
+    {
+      "name": "prop-deckchair",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Beach/deckchair.fbx",
+      "source_sha256": "e17396074609405b70873ccfa748d383364a434412c0bc426b74265ec63359c4",
+      "file": "prop-deckchair.glb",
+      "bytes": 12816,
+      "sha256": "b245bf381e0bfa4cd15ee4f019c550859062c41884bfbd62024e9c2497974998",
+      "mesh_count": 1,
+      "vertices": 332,
+      "triangles": 166,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -0.36000001430511475,
+          -6.150155229533993e-08,
+          -0.8146128058433533
+        ],
+        "max": [
+          0.36000001430511475,
+          0.9752863049507141,
+          0.8098410367965698
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 332,
+      "validation": {
+        "maximum_nearest_vertex_error": 2.4575624024691933e-07,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-deckchair.png"
+    },
+    {
+      "name": "prop-snowman",
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupRoad/Kit/Ski/snowman.fbx",
+      "source_sha256": "528142770a35eb350721f7a8047bc6c6a18b8f39ce2842579ebf000a0ed0c23e",
+      "file": "prop-snowman.glb",
+      "bytes": 22176,
+      "sha256": "954295cd64e031c88e170bccdf35155b71ec7023274630784ae553f588f18fb4",
+      "mesh_count": 1,
+      "vertices": 598,
+      "triangles": 308,
+      "skin_count": 0,
+      "bounds": {
+        "min": [
+          -1.2231523990631104,
+          -4.692006072559707e-08,
+          -0.6214752197265625
+        ],
+        "max": [
+          1.2231523990631104,
+          2.3713245391845703,
+          0.5062001347541809
+        ]
+      },
+      "animations": [],
+      "source_clips": [],
+      "vertex_color_meshes": 1,
+      "gltf_vertex_count": 598,
+      "validation": {
+        "maximum_nearest_vertex_error": 5.734527803724632e-07,
+        "source_geometry_preserved": true
+      },
+      "preview_png": "prop-snowman.png"
+    }
+  ],
+  "validation": {
+    "all_source_hashes_rechecked": true,
+    "all_output_hashes_rechecked": true,
+    "maximum_dad_pose_vertex_error": 5.340606094250688e-06,
+    "test": "GLB reimport versus source FBX; start, midpoint and end of each clip, all original mesh vertices"
+  },
+  "street_extension": {
+    "files": [
+      "prop-house-a.glb",
+      "prop-house-b.glb",
+      "prop-house-c.glb",
+      "prop-bench.glb",
+      "prop-fence.glb",
+      "prop-deckchair.glb",
+      "prop-snowman.glb"
+    ],
+    "total_bytes": 255460,
+    "source_geometry_preserved": true,
+    "all_primitives_have_COLOR_0": true,
+    "maximum_vertex_error": 2.1324806311895372e-06
+  }
+}

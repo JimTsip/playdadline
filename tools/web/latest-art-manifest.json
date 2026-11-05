@@ -1,0 +1,77 @@
+{
+  "revision": "2026-11-05 family_happy final, current low poly power-ups",
+  "assets": [
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/weekenders_happy.png",
+      "source_sha256": "debd9ce36a8d99c8213be9ac11b3d02fe492ef5cbfc26961cf29b9f12b6c5542",
+      "output": "docs/assets/fr3d/families/weekenders.webp",
+      "sha256": "f9775eba40846ec7c260e1d63490e24e0737421c7d98f4692fcbef5dc0ddd6e0"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/bakers_happy.png",
+      "source_sha256": "a42e49a3e5c084efd10b2d7b034a3385179750d8f32186822a88b57d688566f2",
+      "output": "docs/assets/fr3d/families/bakers.webp",
+      "sha256": "23bfc79baf37711424be4bcfbb06741a5700e84660ff78e3b21e24c7ae22fc7d"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/sprinters_happy.png",
+      "source_sha256": "b31eaa31060cb0087f1ec60e80f060d75395d60c492ed39ce8d406a6263b4ef4",
+      "output": "docs/assets/fr3d/families/sprinters.webp",
+      "sha256": "da5afcc90105393976463e98653c1e1110c73c62b31a303020ce8d2c77a92485"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/campbells_happy.png",
+      "source_sha256": "41527979802b871ea896cc0109b0ecdb6bcfbc7b0f79b2319e90fbebc2aff6a4",
+      "output": "docs/assets/fr3d/families/campbells.webp",
+      "sha256": "38492466e4023898c39c50b6221cb6bdcf05d260bdfaf1156895e8daf15d3619"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/sunnyfields_happy.png",
+      "source_sha256": "cbf3f85f586868421aab58b62ed18a1d959a7e16054a246b52337c922646d348",
+      "output": "docs/assets/fr3d/families/sunnyfields.webp",
+      "sha256": "c4708299edd431dfd643fc9034b5ceb2cf4c0cfb5c7eab47e15decbf5948c826"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/rockwells_happy.png",
+      "source_sha256": "9491d0c75d325661df2666ce87d1c16a1fcbd80d6e5c1975643d69c31ffce82a",
+      "output": "docs/assets/fr3d/families/rockwells.webp",
+      "sha256": "b465d85f4a352a70498981fb85ed188cac594bae4ca3896ead7e0208a6943923"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/nakamuras_happy.png",
+      "source_sha256": "ddad31571231e506ef375d5c88acebd1a412d5dc5deb022f6040e3b8ff3e3a81",
+      "output": "docs/assets/fr3d/families/nakamuras.webp",
+      "sha256": "901a697de57f79c598f31fa9019ce130600defa18a863bd986bbc9e97ae6b313"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/papadopoulos_happy.png",
+      "source_sha256": "215925a5512b98d3c05c7317b78b83ffd2518fa71ce39d3a9337cd21646138b7",
+      "output": "docs/assets/fr3d/families/papadopoulos.webp",
+      "sha256": "990cdec33df3929c16b63d4c716cedb8e01db2966260437169e1be28ed22ef1f"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/family_happy_5nov/final/okafors_happy.png",
+      "source_sha256": "4713aaadf7a2d116d46b787d0d5a1a58d774b1cf6d937526b55b3af19690c2fb",
+      "output": "docs/assets/fr3d/families/okafors.webp",
+      "sha256": "906180a154603924eb442b14dd9bf149f2eca87de7b075afc3aa65097c83b999"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush-newdads/Unity/Assets/FamilyCup/Resources/CupArt/pupage/pu_weekenders_listcheck.png",
+      "source_sha256": "997b340835a0c10b3714a99b775d12ffdbc9edda2ee6c867538fb00e7d6300df",
+      "output": "docs/assets/fr3d/powers/listcheck.webp",
+      "sha256": "52825d7c04efa01ad4ba55c51fcef2de9c244164e535cf34da6cc049d7d38421"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush-newdads/Unity/Assets/FamilyCup/Resources/CupArt/pupage/pu_weekenders_skatedash.png",
+      "source_sha256": "2e0c9283d60c927f8341fefecbc93e43fb486bff749b4dfd9ec806a8c2304e0d",
+      "output": "docs/assets/fr3d/powers/skatedash.webp",
+      "sha256": "5d3f7b7a733ff530a0930666ad8bb1d2381f96f4fcffea528de05aa66515a78d"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush-newdads/Unity/Assets/FamilyCup/Resources/CupArt/pupage/pu_weekenders_stickerswap.png",
+      "source_sha256": "4e33764f00feeecbaaa5a9c98b53b7623db4594b901ce5cdf7c6d38bcf05c741",
+      "output": "docs/assets/fr3d/powers/stickerswap.webp",
+      "sha256": "bec2e672ae2bfa3bdd374efbd554f66bd3f961b8ff4891442356c5c7b5ccc0ba"
+    }
+  ]
+}

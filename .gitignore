@@ -36,3 +36,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Static Family Rush build tooling
+/tools/web/node_modules/
