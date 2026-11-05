@@ -28,10 +28,14 @@ retained; no independently invented marketing palette.
 
 `asset-manifest.json` records original FBX-to-GLB sources, hashes and geometry/pose QA.
 Original geometry, rigs, painted vertex colours and animation cuts are retained.
-`cel-material.js` ports `CupRoadSoftCel` and `CupDadCel`: three sunlight bands,
-low-contrast shadows, hemisphere fill, rim and colour-tinted silhouette ink.
+`cel-material.js` applies `CupDadCel`-based three-band sunlight across the whole
+solid scene: arms, road/pavement/grass, lane markings, houses, trees, fences and
+lampposts. The earlier SoftCel ambient fill washed out the environment's bands;
+the environment now shares the Dad's discrete lighting, preserving painted
+colours, with restrained rim and readable colour-tinted silhouette ink.
 Skinned arms share the original skeleton; street outlines share instance buffers.
-The ink narrows with distance. This is a web adaptation, not a Unity renderer.
+The ink narrows with distance. Street assets must all load before the preview is
+marked ready; failures use the recorded fallback. This is a web adaptation, not a Unity renderer.
 Recorded video retains its captured shading.
 
 `native-art-manifest.json` records the native UI artwork and source hashes, plus

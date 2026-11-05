@@ -26,10 +26,6 @@ export async function createDadRun(canvas) {
     Math.atan(2 * 0.0009 * Math.sqrt(3 / 0.0009)) +
     Math.atan((0.5 - 250 / 1311) * 2 * Math.tan(T.MathUtils.degToRad(74) / 2));
   camera.lookAt(0, 3 - Math.tan(runTilt) * 100, -84);
-  scene.add(new T.HemisphereLight(0xfff7df, 0x93a3bb, 1.35));
-  const sun = new T.DirectionalLight(0xfff4da, 1.7);
-  sun.position.set(-10, 20, 14);
-  scene.add(sun);
   const loader = new GLTFLoader(),
     load = (n) => loader.loadAsync(`/assets/fr3d/models/${n}.glb`);
   const roadMaterial = celMaterial();
@@ -68,7 +64,9 @@ export async function createDadRun(canvas) {
   ground.setAttribute("color", new T.Float32BufferAttribute(col, 3));
   ground.setIndex(indices);
   ground.computeVertexNormals();
-  scene.add(new T.Mesh(ground, roadMaterial));
+  const streetSurface = new T.Mesh(ground, roadMaterial);
+  streetSurface.name = "Cel road, kerbs, pavement and grass";
+  scene.add(streetSurface);
   const skyMap = new T.TextureLoader().load("/assets/fr3d/sky.jpg");
   skyMap.colorSpace = T.SRGBColorSpace;
   const sky = new T.Mesh(
@@ -114,6 +112,7 @@ export async function createDadRun(canvas) {
     g.translate(-center.x, -box.min.y, -center.z);
     g.scale(scale, scale, scale);
     const mesh = new T.InstancedMesh(g, roadMaterial, 30);
+    mesh.name = `Cel ${name} ${x < 0 ? "left" : "right"}`;
     mesh.frustumCulled = false;
     mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);
     scene.add(mesh);
@@ -144,14 +143,16 @@ export async function createDadRun(canvas) {
       ),
     );
   }
-  Promise.allSettled(streetTasks).then(() => {});
+  await Promise.all(streetTasks);
   const dash = new T.InstancedMesh(
     new T.BoxGeometry(0.12, 0.03, 1.4),
-    new T.MeshBasicMaterial({ color: 0xfff8e5 }),
+    celMaterial({ color: 0xfff8e5 }),
     100,
   );
   dash.frustumCulled = false;
+  dash.name = "Cel lane markings";
   scene.add(dash);
+  addCelOutline(dash, roadInk);
   const g = await load("arms-weekenders"),
     arms = g.scene;
   arms.rotation.y = Math.PI;
