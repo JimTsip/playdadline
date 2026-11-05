@@ -40,5 +40,5 @@ footage. No public store availability is asserted. The tester CTA remains email.
 
 One renderer, pooled/instanced street props, lazy Dad models, capped pixel ratio,
 30/45 FPS animation admission, off-tab suspension and reduced-motion handling.
-Video loads only in its scene and pauses when the scene leaves. Native controls
-are supplemented by explicit keyboard-accessible video buttons.
+Video loads only in its scene and pauses when the scene leaves. Explicit
+keyboard-accessible video buttons control playback.
