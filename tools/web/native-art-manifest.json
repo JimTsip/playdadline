@@ -1,0 +1,116 @@
+{
+  "design": "family-cup.pen",
+  "palette_source": [
+    "O8G5m/RT1Pg",
+    "litwZ",
+    "mIKbg/WnRUf",
+    "Lptjs/P4zPGW"
+  ],
+  "assets": [
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/intro_c_3nov/ready_title.png",
+      "node": "G61aN",
+      "output": "docs/assets/fr3d/native/ready.webp",
+      "sha256": "71fc824c3a8b1dda82f15399ed5400c18fef2efe07f8617862896fb1b38fd2bd",
+      "source_sha256": "e199ce30904995d99471e3d1e0b81186ad57b49059d28af83da7c3a83004269c"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/intro_c_3nov/word_letsrun.png",
+      "node": "G61aN",
+      "output": "docs/assets/fr3d/native/lets-run.webp",
+      "sha256": "4b2a0f12dfdeabb59378996bbf72a6ffc1a93b97103547c511b2b46e63e163f8",
+      "source_sha256": "74bccf6993d0617ff5929db1cdf5429258f533c58c096e13e23f8fd61f4cfcf5"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/intro_c_3nov/tfx_glow1_blue.png",
+      "node": "G61aN",
+      "output": "docs/assets/fr3d/native/glow.webp",
+      "sha256": "c2f1ee848eb842c5a263d3a7a2021e62badd7ff60d8c68de6d7e2319718a7be9",
+      "source_sha256": "42cbbdaa441c006e480610cdd8d17a3f15ecf550b6ad2328aa3924c06c38ffcd"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/mm_kit_3nov/burst_blue.jpg",
+      "node": "mIKbg",
+      "output": "docs/assets/fr3d/native/burst-blue.webp",
+      "sha256": "804744b38b2b8a95f2cf19c6cc5834bf6b9c4ec014707509cfa2925e33bcf025",
+      "source_sha256": "e990f17ab2f846ca433cfbc1fd65b6de0d05f937794eb958f4ccc6d8a8fb3587"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/mm_kit_3nov/burst_orange.jpg",
+      "node": "mIKbg",
+      "output": "docs/assets/fr3d/native/burst-orange.webp",
+      "sha256": "50f3850c9aa0acdd506bd1f8b70f5ddd07823babd08b831e9248beecc8a18500",
+      "source_sha256": "33d3c6147a36769b6984e5db738417210dc6046161c4906e6c1b74f3ec927a69"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/mm_kit_3nov/vs_plain.png",
+      "node": "mIKbg",
+      "output": "docs/assets/fr3d/native/vs.webp",
+      "sha256": "e10116ad4fc1cba31320d44a4c3ddcbc74772a41f9f07bbdc116f06da93d9cc1",
+      "source_sha256": "eb832c8b17cd9650204958380c49124e0ee6513557245eab63308f744cde143c"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_owl.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-owl.webp",
+      "sha256": "f3c4696bf40bcf8a6c53af24b60b65236f47ac76d7c7e8285826bb6be472e1f0",
+      "source_sha256": "d33b9477bf1a044c33cf39e1de15890d67150090f92921e6413cb8d70559374b"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_magnet.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-magnet.webp",
+      "sha256": "dacd1cbafa6e560864f454a7af10ddca3e59e27547d39f8e5205895981865903",
+      "source_sha256": "8184af10412411ede5690c4b5d28c6f40fad40a5a4e481fa834aa62aa103f457"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_bombtoss.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-bombtoss.webp",
+      "sha256": "33a5c87e3c3e272b22213462b3ee46d39a144ba08cd27315e5aa1a9efb0908b8",
+      "source_sha256": "5f331361eb237d84bd672b5297728f5e2339c913c71a6dabbb66792cb59597c6"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_rocket.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-rocket.webp",
+      "sha256": "6b1f9cf9c1522cd6a82421c97354dd1354a0c5a0dc6c2558df769dba00bb4adc",
+      "source_sha256": "59d9911f80e75cc6398db231c0f294072bfb3410fda79bbb80d9c0620472254b"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_duckies.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-duckies.webp",
+      "sha256": "f44b712730a85372d1ac6eba5142c808b00105226d6560b25523971d69586351",
+      "source_sha256": "a10d01991198322a1992a9b042e35e1daaa1c52c3d56171c55e00c9f23b9f4ac"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_doublespeed.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-doublespeed.webp",
+      "sha256": "8972f7c4dd551078261d94db34e5c14113e73502829ac511cdb0b742416e6e47",
+      "source_sha256": "121be3d1a53a04eaa2c9c614930a94e5b19098f5564e7767a91e3411755401b8"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_magicpush.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-magicpush.webp",
+      "sha256": "74744fe05a3a0d39447c96b2895455dead75ba390c39dd2002017b428cf401d3",
+      "source_sha256": "2a5654551fd9d4907a3c35c18dcf9b3b04c7d03893ef74bf6fc1a851ea326ae4"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/powerups_4nov/cut/pu_expose.png",
+      "node": "Lptjs / XcxfX",
+      "output": "docs/assets/fr3d/native/pu-expose.webp",
+      "sha256": "1f83b3bf261347dde67f48238360ade025d53e60300afc2b2caf2f282cb3d394",
+      "source_sha256": "f6284272c483c2cd416fe0e0b71e9325df8dcd216fdabbddd9018983c1dae07b"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/TLC/site/web/assets/tlc-logo.webp",
+      "output": "docs/assets/fr3d/native/the-last-click.webp",
+      "sha256": "81506a612513fec7805196cad404f45cb5b1440d59769bf219a270b787bfc180",
+      "usage": "Official studio logo, exact copy without recolouring",
+      "source_sha256": "81506a612513fec7805196cad404f45cb5b1440d59769bf219a270b787bfc180"
+    }
+  ]
+}

@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Family Rush — Life moves fast. Bring the family.</title>
+    <title>Family Rush — Small matches. Big family energy.</title>
     <meta
       name="description"
-      content="Take a trip through Family Rush. Follow Dad down the road, discover a shared match-3 rivalry, meet nine families and find your next adventure."
+      content="Watch a Family Rush match unfold. Match three, help your family, charge DAD MODE and jump into the action. Discover family power-ups and our upcoming PvP rivalry."
     />
-    <meta name="theme-color" content="#6cc8fb" />
+    <meta name="theme-color" content="#0B1F4D" />
     <link rel="canonical" href="https://playfamilyrush.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://playfamilyrush.com/" />
     <meta
       property="og:title"
-      content="Family Rush — Life moves fast. Bring the family."
+      content="Family Rush — Small matches. Big family energy."
     />
     <meta
       property="og:description"
-      content="One Dad. The whole family. An everyday adventure with extraordinary detours."
+      content="One shared board. Two very competitive families. Then Dad takes over."
     />
     <meta property="og:image" content="https://playfamilyrush.com/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,298 +26,467 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link
       rel="preload"
-      href="/fonts/LilitaOne.ttf"
       as="font"
       type="font/ttf"
+      href="/fonts/LilitaOne.ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="/rush.css?v=road2" />
-    <script type="module" src="/family-rush.js?v=road2"></script>
+    <link rel="stylesheet" href="/rush.css?v=phone-cel4" />
+    <script type="module" src="/family-rush.js?v=phone-cel4"></script>
   </head>
   <body>
-    <a class="skip" href="#story-start">Skip to the journey</a>
-    <div class="world" aria-hidden="true">
-      <div class="sky"></div>
-      <div class="fallback-world"></div>
-      <canvas id="road-canvas"></canvas>
-      <div class="world-vignette"></div>
-      <div class="speed-lines"></div>
-    </div>
-    <header class="nav">
-      <a href="#story-start" aria-label="Family Rush home"
+    <a class="skip" href="#powers">Skip gameplay story</a>
+    <header class="site-header">
+      <a href="#top" aria-label="Family Rush home"
         ><img
-          class="logo"
           src="/assets/fr/wordmark.webp"
-          width="150"
-          height="76"
+          width="135"
+          height="68"
           alt="Family Rush"
       /></a>
-      <nav aria-label="Journey navigation">
-        <a href="#story-game">The game</a><a href="#story-family">Your family</a
-        ><a href="#story-join" class="join-nav">Join the rush ↗</a>
+      <nav aria-label="Main navigation">
+        <a href="#powers">Family power</a><a href="#rivals">The rivalry</a
+        ><a class="nav-join" href="#join">Join the rush ↗</a>
       </nav>
     </header>
-    <div class="journey-status">
-      <span class="status-dot"></span
-      ><span id="place-name">THE ROAD STARTS HERE</span
-      ><span class="status-line"></span><span id="journey-percent">00%</span>
-    </div>
-    <main id="journey">
-      <section id="story-start" class="chapter chapter-start" data-stop="0">
-        <div class="chapter-inner">
-          <p class="eyebrow">WELCOME TO THE BEAUTIFUL CHAOS</p>
-          <h1>
-            Life moves fast.<br /><span>Bring the <br />family.</span>
-          </h1>
-          <p class="body-copy">
-            One Dad. The whole crew. And a very ordinary day that’s about to get
-            extraordinary.
-          </p>
-          <a class="scroll-cta" href="#story-game"
-            ><span class="scroll-icon">↓</span
-            ><span
-              >SCROLL TO GET THE FAMILY MOVING<small
-                >You scroll. Dad takes it from here.</small
-              ></span
-            ></a
-          >
+    <main id="top">
+      <section
+        class="cinema"
+        id="how-to-play"
+        aria-label="Watch how Family Rush is played"
+      >
+        <div class="cinema-stage">
+          <div class="stage-dots" aria-hidden="true"></div>
+          <img
+            class="intro-glow"
+            src="/assets/fr3d/native/glow.webp"
+            alt=""
+            width="512"
+            height="512"
+          />
+          <div class="intro-sparks" aria-hidden="true"></div>
+          <div class="script-captions">
+            <article class="script-copy active" data-caption="0">
+              <p class="eyebrow">FAMILY VS FAMILY. ONE SHARED BOARD.</p>
+              <h1 class="ready-wordart">
+                <img
+                  src="/assets/fr3d/native/ready.webp"
+                  alt="ARE YOU READY?"
+                  width="1000"
+                  height="530"
+                />
+              </h1>
+              <p class="body-copy">
+                Match three. Help your family.<br />Then charge up for
+                <strong>DAD MODE.</strong>
+              </p>
+              <div class="intro-actions">
+                <button type="button" id="play-story" class="button coral">
+                  LET’S PLAY! <span>▷</span></button
+                ><span class="scroll-label">SCROLL TO WATCH THE MATCH ↓</span>
+              </div>
+              <p class="tiny">In development for iPhone · Gameplay preview</p>
+            </article>
+            <article
+              class="script-copy"
+              data-caption="1"
+              aria-hidden="true"
+              inert
+            >
+              <p class="eyebrow">01 / YOUR TURN</p>
+              <h2>Same board. <br /><span>YOUR MOVE.</span></h2>
+              <p class="body-copy">
+                Swap two neighbours to match three or more. Collect the pieces
+                on your family’s errand cards. Two moves, then the other family
+                takes a turn.
+              </p>
+              <span class="rule-label">MATCH → COLLECT → SCORE</span>
+            </article>
+            <article
+              class="script-copy"
+              data-caption="2"
+              aria-hidden="true"
+              inert
+            >
+              <p class="eyebrow">02 / THAT’S THE FAMILY ENERGY</p>
+              <h2>
+                Good matches. <br /><span>GREAT <br />CHARGE.</span>
+              </h2>
+              <p class="body-copy">
+                Matching your blue crests fills Dad’s meter. Keep the matches
+                coming. Six crests, and he’s ready.
+              </p>
+              <div class="charge-callout">
+                <img
+                  src="/assets/fr3d/story/crest.webp"
+                  alt="Blue Dad crest"
+                  width="50"
+                  height="65"
+                /><span>ONE METER. <br /><strong>ONE BIG MOMENT.</strong></span>
+              </div>
+            </article>
+            <article
+              class="script-copy"
+              data-caption="3"
+              aria-hidden="true"
+              inert
+            >
+              <p class="eyebrow">03 / HOLD ON TO YOUR SHOPPING LIST</p>
+              <h2>HERE. <br />COMES. <br /><span>DAD.</span></h2>
+              <p class="body-copy">
+                The board makes way. <br />Dad’s taking this one personally.
+              </p>
+            </article>
+            <article
+              class="script-copy"
+              data-caption="4"
+              aria-hidden="true"
+              inert
+            >
+              <p class="eyebrow">04 / BACK IN THE MATCH</p>
+              <h2>
+                Big run. <br /><span>BIGGER <br />FAMILY SMILES.</span>
+              </h2>
+              <p class="body-copy">
+                Bring that energy back to the board. There are more errands to
+                finish — and another family chasing the win.
+              </p>
+            </article>
+            <article
+              class="script-copy"
+              data-caption="5"
+              aria-hidden="true"
+              inert
+            >
+              <p class="eyebrow">AND THAT’S JUST THE START</p>
+              <h2>
+                Now meet <br /><span>YOUR <br />SECRET WEAPON.</span>
+              </h2>
+              <p class="body-copy">
+                Hint: they’ve been cheering for Dad all along.
+              </p>
+            </article>
+          </div>
+          <div class="phone-shadow" aria-hidden="true"></div>
+          <div class="phone" id="story-phone">
+            <div class="phone-edge"></div>
+            <div class="phone-screen">
+              <video
+                id="match-film"
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/fr3d/match-poster.webp"
+                aria-label="Development gameplay: matching pieces, charging Dad Mode, running to collect errands and returning to the board"
+              >
+                <source
+                  src="/assets/fr3d/story/match-to-dadmode.mp4"
+                  type="video/mp4"
+                /></video
+              ><canvas id="dad-canvas" aria-hidden="true"></canvas>
+              <div class="run-fallback" aria-hidden="true">
+                <video
+                  id="run-fallback-film"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  data-src="/assets/fr3d/dad-mode-gameplay.mp4"
+                  poster="/assets/fr3d/dad-mode-poster.webp"
+                ></video>
+              </div>
+              <div class="run-overlay" aria-hidden="true">
+                <div class="run-top">
+                  <span class="run-label"
+                    ><img
+                      src="/assets/fr3d/story/dadmode-word.webp"
+                      width="400"
+                      height="200"
+                      alt="DAD MODE" /></span
+                  ><span class="run-score"
+                    >FAMILY ENERGY <b id="run-score">+0</b></span
+                  >
+                </div>
+                <div class="run-scream">
+                  <span>LET’S</span><strong>RUN!</strong>
+                </div>
+                <div class="run-message">THE WHOLE FAMILY’S BEHIND YOU.</div>
+                <small>Animated game preview</small>
+              </div>
+            </div>
+            <div class="phone-island" aria-hidden="true"></div>
+          </div>
+          <div class="charge-strip" aria-label="Dad Mode charge">
+            <span class="charge-name">DAD MODE</span>
+            <div class="charge-pips" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <b id="charge-value">0 / 6</b
+            ><span class="charge-ready">READY!</span>
+          </div>
+          <img
+            class="flying-piece piece-watermelon"
+            src="/assets/fr3d/items/strawberry.webp"
+            alt=""
+            width="160"
+            height="160"
+          /><img
+            class="flying-piece piece-coconut"
+            src="/assets/fr3d/items/apple.webp"
+            alt=""
+            width="150"
+            height="150"
+          /><span class="actual-note">DEVELOPMENT GAMEPLAY</span>
+          <div class="scene-navigation">
+            <div class="scene-progress"><i></i></div>
+            <div class="scene-controls">
+              <span id="scene-title" aria-live="polite">MEET FAMILY RUSH</span
+              ><button type="button" id="motion-toggle" aria-pressed="false">
+                Pause motion</button
+              ><button type="button" id="next-beat">NEXT MOMENT ↓</button>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="story-game" class="chapter" data-stop="1">
-        <div class="scene-wash game-wash"></div>
-        <div class="scene-giant" aria-hidden="true">YOUR MOVE.</div>
-        <div class="chapter-inner">
-          <p class="eyebrow">01 / A LITTLE FRIENDLY COMPETITION</p>
-          <h2>Two families.<br />One board.<br /><span>Your move.</span></h2>
-          <p class="body-copy">
-            Take turns on a shared match-3 board. Match what your family needs,
-            finish their errands and race for the points.
+      <section id="powers" class="powers normal-section">
+        <p class="eyebrow">EVERY FAMILY HAS A FEW TRICKS.</p>
+        <div class="power-intro">
+          <h2>Dad’s got <br /><span>BACKUP.</span></h2>
+          <p>
+            A well-timed helping hand. <br />A beautifully chaotic combo.
+            <br />That’s what family is for.
           </p>
-          <p class="chapter-note">Every good move keeps your family moving.</p>
         </div>
-        <div class="game-window">
-          <span>ACTUAL GAMEPLAY</span
-          ><video
-            class="story-video"
-            data-scene-video="1"
-            data-src="/assets/fr3d/match-gameplay.mp4"
-            muted
-            loop
-            playsinline
-            preload="none"
-            poster="/assets/fr3d/match-poster.webp"
-            aria-label="Actual Family Rush gameplay: matching pieces and completing family errands"
-          ></video
-          ><button
-            type="button"
-            class="video-toggle"
-            aria-label="Pause gameplay video"
-          >
-            Pause video Ⅱ
-          </button>
-        </div>
-        <div class="match-callout">
-          <strong>SWAP. MATCH. RUSH.</strong
-          ><span>Your family’s list. Your next big move.</span>
-        </div>
-        <img
-          class="giant-piece gp1"
-          src="/assets/fr3d/items/strawberry.webp"
-          alt=""
-          width="300"
-          height="300"
-        /><img
-          class="giant-piece gp2"
-          src="/assets/fr3d/items/apple.webp"
-          alt=""
-          width="300"
-          height="300"
-        />
-      </section>
-      <section id="story-help" class="chapter" data-stop="2">
-        <div class="scene-wash help-wash"></div>
-        <div class="scene-giant" aria-hidden="true">TEAMWORK!</div>
-        <div class="chapter-inner">
-          <p class="eyebrow">02 / NO DAD DOES IT ALONE</p>
-          <h2>That’s what<br /><span>family is for.</span></h2>
-          <p class="body-copy">
-            A little help from Mom. A perfectly timed skate dash. A few stickers
-            in just the right place. Your family’s power-ups have your back.
-          </p>
-          <div class="power-row">
-            <img
+        <div class="power-show">
+          <article class="power-item power-mom">
+            <span class="power-number">01</span
+            ><img
               src="/assets/fr3d/powers/listcheck.webp"
-              width="80"
-              height="80"
-              alt="List Check power-up"
-              loading="lazy"
-            /><img
-              src="/assets/fr3d/powers/skatedash.webp"
-              width="80"
-              height="80"
-              alt="Skate Dash power-up"
-              loading="lazy"
-            /><img
-              src="/assets/fr3d/powers/stickerswap.webp"
-              width="80"
-              height="80"
-              alt="Sticker Swap power-up"
+              width="500"
+              height="500"
+              alt="List Check family power-up"
               loading="lazy"
             />
+            <h3>Mom’s on it.</h3>
+            <p>A little list checking. <br />A lot less on Dad’s plate.</p>
+            <span class="power-name">LIST CHECK</span>
+          </article>
+          <article class="power-item power-kid">
+            <span class="power-number">02</span
+            ><img
+              src="/assets/fr3d/powers/skatedash.webp"
+              width="500"
+              height="500"
+              alt="Skate Dash family power-up"
+              loading="lazy"
+            />
+            <h3>Make some room.</h3>
+            <p>A perfectly timed dash. <br />That’s how you clear a path.</p>
+            <span class="power-name">SKATE DASH</span>
+          </article>
+          <article class="power-item power-little">
+            <span class="power-number">03</span
+            ><img
+              src="/assets/fr3d/powers/stickerswap.webp"
+              width="500"
+              height="500"
+              alt="Sticker Swap family power-up"
+              loading="lazy"
+            />
+            <h3>A little mischief.</h3>
+            <p>A few stickers. <br />A whole new set of possibilities.</p>
+            <span class="power-name">STICKER SWAP</span>
+          </article>
+        </div>
+        <p class="power-bottom">
+          HELP THE FAMILY. <span>THE FAMILY HELPS YOU.</span>
+        </p>
+      </section>
+      <section id="dad-powers" class="dad-powers normal-section">
+        <p class="eyebrow">THE SAME 8 POWERS FOR EVERY DAD</p>
+        <h2>DAD MODE.<br /><span>MORE WAYS TO RUSH.</span></h2>
+        <div class="dad-power-layout">
+          <div class="dad-power-detail">
+            <div class="dad-power-burst">
+              <img
+                id="dp-icon"
+                src="/assets/fr3d/native/pu-magnet.webp"
+                alt="Magnet power-up"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+            <h3 id="dp-title">MAGNET</h3>
+            <p id="dp-description">
+              Coins and items in nearby lanes fly toward Dad.
+            </p>
+            <div
+              class="dad-power-picker"
+              role="group"
+              aria-label="Explore Dad Mode power-ups"
+            ></div>
           </div>
-          <p class="chapter-note">Help the family. Feel the family energy.</p>
-        </div>
-        <div class="power-parade" aria-hidden="true">
-          <img src="/assets/fr3d/powers/listcheck.webp" alt="" /><img
-            src="/assets/fr3d/powers/skatedash.webp"
-            alt=""
-          /><img src="/assets/fr3d/powers/stickerswap.webp" alt="" />
-        </div>
-      </section>
-      <section id="story-dad" class="chapter" data-stop="3">
-        <div class="scene-wash dad-wash"></div>
-        <div class="chapter-inner">
-          <p class="eyebrow">03 / HERE COMES THE BIG MOMENT</p>
-          <h2>Good move.<br /><span>Dad move.</span></h2>
-          <p class="body-copy">
-            Build your charge. Hit DAD MODE. The errands become a race and the
-            whole family gets behind you.
-          </p>
-          <button type="button" id="boost-button" class="boost-button">
-            LET’S GO, DAD <span aria-hidden="true">ϟ</span>
-          </button>
-          <p class="chapter-note" id="boost-status" aria-live="polite">
-            Try a little burst of family energy.
-          </p>
-        </div>
-        <div class="world-shout" aria-hidden="true">GO<br />DAD<br />GO!</div>
-        <div class="dad-footage">
-          <video
-            class="story-video"
-            data-scene-video="3"
-            data-src="/assets/fr3d/dad-mode-gameplay.mp4"
-            muted
-            loop
-            playsinline
-            preload="none"
-            poster="/assets/fr3d/dad-mode-poster.webp"
-            aria-label="Actual Dad Mode gameplay: the board turns into a first-person road run to collect family errands"
-          ></video
-          ><button
-            type="button"
-            class="video-toggle"
-            aria-label="Pause Dad Mode video"
-          >
-            Pause video Ⅱ</button
-          ><span class="footage-caption">MATCH IT. THEN RUN FOR IT.</span>
+          <div class="dad-power-preview">
+            <video
+              id="dp-video"
+              muted
+              loop
+              playsinline
+              preload="none"
+              poster="/assets/fr3d/dad-mode-poster.webp"
+              aria-label="Development footage showing the selected Dad Mode power-up"
+            ></video
+            ><button type="button" id="dp-play" class="button blue">
+              WATCH THE POWER ▷
+            </button>
+          </div>
         </div>
       </section>
-      <section id="story-family" class="chapter family-chapter" data-stop="4">
-        <div class="scene-wash family-wash"></div>
-        <div class="scene-giant" aria-hidden="true">THE WHOLE CREW.</div>
-        <div class="chapter-inner">
-          <p class="eyebrow">04 / SAME ROAD. YOUR KIND OF FAMILY.</p>
-          <h2>Meet your<br /><span id="family-title">Weekenders.</span></h2>
-          <p class="body-copy" id="family-copy">
-            The everyday all-stars. A little chaotic, always up for an
-            adventure, and better together.
+      <section id="rivals" class="rivals normal-section">
+        <div class="rival-orbit" aria-hidden="true"></div>
+        <p class="eyebrow">THE NEXT CHALLENGE / PvP AT LAUNCH</p>
+        <h2>
+          Real players. <br /><span>REAL FAMILY <br />RIVALRIES.</span>
+        </h2>
+        <p class="rival-description">
+          Go head-to-head with other families. Same board. Your best moves. One
+          very friendly fight for family bragging rights.
+        </p>
+        <div class="rival-stage">
+          <div class="family-side family-you">
+            <span>YOUR FAMILY</span
+            ><img
+              id="your-family"
+              src="/assets/fr3d/families/weekenders.webp"
+              width="1000"
+              height="1017"
+              alt="The Weekenders family"
+              loading="lazy"
+            />
+            <h3 id="your-name">THE WEEKENDERS</h3>
+          </div>
+          <span class="versus" aria-label="versus"
+            ><img
+              src="/assets/fr3d/native/vs.webp"
+              width="690"
+              height="470"
+              alt=""
+          /></span>
+          <div class="family-side family-them">
+            <span>THE OTHER FAMILY</span
+            ><img
+              src="/assets/fr3d/families/bakers.webp"
+              width="1000"
+              height="1017"
+              alt="The Bakers family"
+              loading="lazy"
+            />
+            <h3>THE BAKERS</h3>
+          </div>
+        </div>
+        <div
+          class="family-picker"
+          role="group"
+          aria-label="Preview your family"
+        ></div>
+        <p class="rival-fine">
+          Multiplayer is planned for launch. Current footage shows development
+          gameplay.
+        </p>
+      </section>
+      <section class="question normal-section">
+        <span class="question-small"
+          >ONE SHARED BOARD. ENDLESS FAMILY BRAGGING RIGHTS.</span
+        >
+        <h2>So… whose <br />family is <br /><span>THE BEST?</span></h2>
+        <img
+          class="question-family qf-one"
+          src="/assets/fr3d/families/okafors.webp"
+          width="1000"
+          height="1017"
+          alt="The Okafors"
+          loading="lazy"
+        /><img
+          class="question-family qf-two"
+          src="/assets/fr3d/families/papadopoulos.webp"
+          width="1000"
+          height="1017"
+          alt="The Papadopoulos"
+          loading="lazy"
+        />
+        <p>There’s only one way to find out.</p>
+        <a class="button navy" href="#join">Bring your family <span>↓</span></a>
+      </section>
+      <section id="join" class="join normal-section">
+        <p class="eyebrow">YOUR FAMILY’S NEXT BIG ADVENTURE</p>
+        <h2>
+          Let’s make <br /><span>A RUSH <br />OF IT.</span>
+        </h2>
+        <div class="join-copy">
+          <p>
+            Family Rush is in development for iPhone. <br />Join our TestFlight
+            crew and help shape what comes next.
           </p>
-          <div
-            class="family-choices"
-            role="group"
-            aria-label="Choose the family Dad travelling down the road"
-          ></div>
-          <p class="chapter-note" id="family-status" aria-live="polite">
-            Pick a family. Watch their real 3D Dad take the lead.
-          </p>
+          <a
+            class="button coral"
+            href="mailto:hello@thelastclick.ai?subject=Family%20Rush%20TestFlight%20invite"
+            >Become a tester <span>↗</span></a
+          ><small>Send us a hello. We’ll take it from there.</small>
         </div>
         <img
-          class="family-art"
-          id="family-art"
           src="/assets/fr3d/families/weekenders.webp"
-          width="800"
-          height="800"
-          alt="The Weekenders family"
+          width="1000"
+          height="1017"
+          alt="The Weekenders are ready for the next adventure"
           loading="lazy"
         />
       </section>
-      <section id="story-worlds" class="chapter" data-stop="5">
-        <div class="chapter-inner">
-          <p class="eyebrow">05 / AROUND EVERY CORNER</p>
-          <h2>
-            Everyday life.<br /><span>Anything but<br />ordinary.</span>
-          </h2>
-          <p class="body-copy">
-            Sunny beaches. Snowy peaks. Camping trips and pool parties. Follow
-            the road into a whole new kind of family outing.
-          </p>
-          <p class="chapter-note">
-            Keep going. There’s always another adventure ahead.
-          </p>
-        </div>
-      </section>
-      <section id="story-join" class="chapter chapter-join" data-stop="6">
-        <div class="chapter-inner">
-          <p class="eyebrow">YOUR FAMILY’S NEXT BIG ADVENTURE</p>
-          <h2>You’re<br /><span>one of us.</span></h2>
-          <p class="body-copy">
-            Family Rush is in development for iPhone. Want to help shape the
-            adventure? Ask to join our TestFlight crew.
-          </p>
-          <a
-            class="primary-button"
-            href="mailto:hello@thelastclick.ai?subject=Family%20Rush%20TestFlight%20invite"
-            >Become a tester <span>↗</span></a
-          >
-          <p class="chapter-note">A hello is all it takes.</p>
-          <div class="end-links">
-            <a href="https://thelastclick.ai/">THE LAST CLICK.</a>
-            <nav aria-label="Legal and support">
-              <a href="/support/">Support</a><a href="/privacy/">Privacy</a
-              ><a href="/terms/">Terms</a>
-            </nav>
-            <small>© 2026 The Last Click L.P. · Development visuals.</small>
-          </div>
-        </div>
-      </section>
     </main>
-    <div class="road-ui">
-      <div class="route-progress">
-        <span class="route-dot"></span>
-        <div class="route-line"><i></i></div>
-        <span class="route-flag">⚑</span>
-      </div>
-      <div class="road-bottom">
-        <span class="current-step"
-          >YOUR FAMILY ADVENTURE <b id="chapter-count">01 / 07</b></span
-        >
-        <div class="road-controls">
-          <button type="button" id="motion-toggle" aria-pressed="false">
-            Pause motion</button
-          ><a id="next-stop" href="#story-game">KEEP GOING ↓</a>
-        </div>
-      </div>
-    </div>
-    <div id="loading-note" role="status">Getting the family ready…</div>
+    <footer>
+      <a
+        href="https://thelastclick.ai/"
+        class="studio"
+        aria-label="The Last Click studio"
+      >
+        <span>A GAME BY</span>
+        <img
+          src="/assets/fr3d/native/the-last-click.webp"
+          width="870"
+          height="646"
+          alt="The Last Click"
+          loading="lazy"
+        />
+      </a>
+      <nav aria-label="Footer">
+        <a href="/support/">Support</a><a href="/privacy/">Privacy</a
+        ><a href="/terms/">Terms</a
+        ><a href="mailto:hello@thelastclick.ai">Say hello ↗</a>
+      </nav>
+      <p>
+        © 2026 The Last Click L.P. · Development footage and animated previews.
+      </p>
+      <a href="#top">BACK TO THE MATCH ↑</a>
+    </footer>
     <noscript
       ><style>
-        .world canvas {
-          display: none;
-        }
-        #journey {
+        .cinema {
           height: auto;
         }
-        .chapter {
-          position: relative !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          min-height: 90vh !important;
-          transform: none !important;
+        .cinema-stage {
+          height: 100vh;
         }
-        .world {
-          opacity: 0.3;
+        .script-copy {
+          display: none;
         }
-        .road-ui {
+        .script-copy:first-child {
+          display: block;
+        }
+        .phone {
+          display: none;
+        }
+        .charge-strip,
+        .scene-navigation {
           display: none;
         }
       </style></noscript

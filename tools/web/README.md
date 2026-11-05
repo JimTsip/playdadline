@@ -8,37 +8,48 @@ Preview with byte-range video support: `node tools/web/preview.mjs` from the rep
 
 ## Direction and camera contract
 
-The site is one scroll-driven trip down Home's road. Gameplay, family help, Dad Mode,
-family selection, destinations and tester invitation appear along that trip.
-Keep the camera in **LOW FILM**, using the current game source:
+The current story starts inside a phone: real match footage explains the shared
+board and six-crest Dad Mode charge. The phone expands into a live fullscreen
+first-person Dad Mode preview, shrinks back into the match, then leaves the scene.
+Family help, eight common Dad Mode powers, family rivalry and a tester invitation
+follow. Scroll manually, use Next Moment or play the 29-second guided sequence.
 
-- `CupData/road.json`: original eye 12, back 16, vertical FOV 56, horizon .3,
-  curvature .0016 along and .0026 across, follow X .35.
-- `CupHomeArchPass.cs`: eye **3.8**, arch size **.75**, film holes approaching
-  the eye at 18 / 5 / 2 units.
-- `CupRoad3DHome.cs`: preserve the original target when lowering the eye.
-- `CupHomeTrackRoad.cs`: 5.8 tile step, 4.4 section gap, 15-tile zig,
-  yellow/blue podiums and 3.4-high Dad. A wider browser changes aspect only.
+The live run uses the current `CupRoad3D` Dad Mode camera: eye 3, vertical FOV 74,
+near .1, curve .0009 along/across, and the source horizon aim. The actual current
+camera-local arm rig uses position (0,0,-.9), +10-degree pitch and scale 3. Browser
+aspect widens the same view. Do not replace it with an orbit or visible Dad back.
 
-No angled showcase camera, camera orbit, camera bob or FOV animation on the road.
-Parallax comes from perspective travel, world geometry and the story layers.
+The palette and typography come from the actual editable game screens in
+`family-cup.pen`: O8G5m, mIKbg, G61aN, litwZ and Lptjs. Character reference-sheet
+beige is not a game UI colour. Native navy/blue, gold, white and green buttons are
+retained; no independently invented marketing palette.
 
 ## Sources
 
 `asset-manifest.json` records original FBX-to-GLB sources, hashes and geometry/pose QA.
 Original geometry, rigs, painted vertex colours and animation cuts are retained.
-The site uses Three.js toon materials; this is an adaptation of the game shading.
+`cel-material.js` ports `CupRoadSoftCel` and `CupDadCel`: three sunlight bands,
+low-contrast shadows, hemisphere fill, rim and colour-tinted silhouette ink.
+Skinned arms share the original skeleton; street outlines share instance buffers.
+The ink narrows with distance. This is a web adaptation, not a Unity renderer.
+Recorded video retains its captured shading.
+
+`native-art-manifest.json` records the native UI artwork and source hashes, plus
+the official unmodified The Last Click logo used in the footer. `arms-qa.json`
+records the camera-local arm export and source animation/geometry comparison.
 
 `latest-art-manifest.json` records the **5 November final happy family artwork**,
 from `DadLineFamilyCup/Design/images/family_happy_5nov/final`, without grandparents.
 Do not replace these with stale `CupArt/families/*_lineup.png` exports.
-Only the nine families with actual current 3D Dads are selectable on the road.
+The nine supported families are selectable in the rivalry presentation.
 
 Current match and Dad Mode footage comes from the 5 November `powerups210/owl_video`
-capture in `FamilyRush-newdads`, trimmed/resized without sound. It is development
-footage. No public store availability is asserted. The tester CTA remains email.
+capture in `FamilyRush-newdads`, trimmed/resized without sound. Power demos use
+the same build's eight captured power videos and load only on selection. This is
+development footage. PvP is described as planned for launch, not verified online
+play in this demo. No public store availability is asserted. Tester CTA is email.
 
-One renderer, pooled/instanced street props, lazy Dad models, capped pixel ratio,
+One lazy renderer, pooled/instanced street props, capped pixel ratio,
 30/45 FPS animation admission, off-tab suspension and reduced-motion handling.
 Video loads only in its scene and pauses when the scene leaves. Explicit
 keyboard-accessible video buttons control playback.

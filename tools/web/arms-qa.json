@@ -1,0 +1,185 @@
+{
+  "name": "arms-weekenders",
+  "source": "/Users/jimtsip/Projects/FamilyRush-newdads/Unity/Assets/FamilyCup/Resources/CupRoad/Dad/FR_DadArms.fbx",
+  "source_sha256": "3c9e74ff391aa1ba224f734394b81423961f9a57b5548e5fce0b2b29753a5465",
+  "file": "arms-weekenders.glb",
+  "bytes": 440952,
+  "sha256": "4a74ae10e8a064711964d40c0b3e37bd9156dcf13c915b185e02d27c0e046630",
+  "mesh_count": 1,
+  "vertices": 1190,
+  "triangles": 2372,
+  "skin_count": 1,
+  "bounds": {
+    "min": [
+      -0.184097021818161,
+      -0.37218353152275085,
+      -0.11586176604032516
+    ],
+    "max": [
+      0.184097021818161,
+      -0.1740504652261734,
+      0.09236136823892593
+    ]
+  },
+  "animations": [
+    {
+      "name": "Ready",
+      "duration": 0.03333333333333333,
+      "channels": 132
+    },
+    {
+      "name": "Run",
+      "duration": 0.8,
+      "channels": 132
+    }
+  ],
+  "source_clips": [
+    {
+      "name": "Run",
+      "from": 0,
+      "to": 24
+    },
+    {
+      "name": "Ready",
+      "from": 40,
+      "to": 41
+    }
+  ],
+  "vertex_color_meshes": 1,
+  "gltf_vertex_count": 6748,
+  "source_bones": [
+    "Chest",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "LeftIndex1",
+    "LeftIndex2",
+    "LeftIndex3",
+    "LeftMiddle1",
+    "LeftMiddle2",
+    "LeftMiddle3",
+    "LeftRing1",
+    "LeftRing2",
+    "LeftRing3",
+    "LeftLittle1",
+    "LeftLittle2",
+    "LeftLittle3",
+    "LeftThumb1",
+    "LeftThumb2",
+    "LeftThumb3",
+    "LeftLowerArm_D",
+    "LeftUpperArm_D",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "RightIndex1",
+    "RightIndex2",
+    "RightIndex3",
+    "RightMiddle1",
+    "RightMiddle2",
+    "RightMiddle3",
+    "RightRing1",
+    "RightRing2",
+    "RightRing3",
+    "RightLittle1",
+    "RightLittle2",
+    "RightLittle3",
+    "RightThumb1",
+    "RightThumb2",
+    "RightThumb3",
+    "RightLowerArm_D",
+    "RightUpperArm_D"
+  ],
+  "qa": {
+    "frames_checked": 27,
+    "maximum_nearest_vertex_error": 4.129208264203044e-06,
+    "all_COLOR_0": true,
+    "source_sha256_rechecked": true,
+    "all_geometry_preserved": true
+  },
+  "placement": {
+    "parent": "camera",
+    "unity_dad_mode": {
+      "position": [
+        0,
+        0,
+        0.9
+      ],
+      "pitch_degrees": -10,
+      "uniform_scale": 3
+    },
+    "unity_match": {
+      "position": [
+        0,
+        0.24,
+        0.72
+      ],
+      "pitch_degrees": -10,
+      "uniform_scale": 3
+    },
+    "threejs_camera_anchor": {
+      "dad_mode_position": [
+        0,
+        0,
+        -0.9
+      ],
+      "match_position": [
+        0,
+        0.24,
+        -0.72
+      ],
+      "rotation_x_degrees": 10,
+      "uniform_scale": 3,
+      "gltf_child_rotation_y_degrees": 180
+    },
+    "camera": {
+      "dad_mode_vertical_fov": 74,
+      "match_vertical_fov": 78,
+      "near": 0.1
+    },
+    "blend_k": "size=3; position=lerp([0,.24,.72],[0,0,.9],ArmK); pitch=-10 Unity degrees",
+    "origin_warning": "The source origin is the Dad eye. Preserve it; do not center the mesh or scale by bounds.",
+    "coordinate_conversion": "The exported glTF follows right-handed Y-up model axes. Camera anchors look down -Z; retain the model child Y rotation of 180 degrees as specified."
+  },
+  "animation_mapping": {
+    "Run": {
+      "source_frames": [
+        0,
+        24
+      ],
+      "duration": 0.8,
+      "loop": true,
+      "time": "frac(stride/(2*pi)) * .8",
+      "weight": "clamp(speed/4,0,1)"
+    },
+    "Ready": {
+      "source_frames": [
+        40,
+        41
+      ],
+      "duration": 0.03333333333333333,
+      "loop": false,
+      "time": 0,
+      "weight": "1-clamp(speed/4,0,1)"
+    }
+  },
+  "runtime_additive_pose": {
+    "upper_arm": "rotation = R(root.right, -(kick*9 + jumpFraction*7)) * R(root.forward, outward*jumpFraction*14) * original; outward=-1 left,+1 right; angles in degrees",
+    "lower_arm": "rotation = R(root.right, -kick*4.5) * original; angles in degrees",
+    "jumpFraction": "clamp(st.Jump / 2.1,0,1)",
+    "note": "Procedural additives are not in the source FBX clips; apply after sampling clips if required."
+  },
+  "appearance": {
+    "vertex_colors": true,
+    "flat_normals": true,
+    "runtime_shader": "CupRoad/CupDadCel",
+    "gain": 1,
+    "sun": true,
+    "shadow_strength": 0,
+    "ink_width": 0.0018,
+    "ink_mix": 0.7,
+    "caveat": "Custom runtime cel/ink shader is supplied by the web scene; portable PBR fallback is in GLB."
+  }
+}
