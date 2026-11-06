@@ -20,7 +20,8 @@ camera-local arm rig uses position (0,0,-.9), +10-degree pitch and scale 3. Brow
 aspect widens the same view. Do not replace it with an orbit or visible Dad back.
 
 The palette and typography come from the actual editable game screens in
-`family-cup.pen`: O8G5m, mIKbg, G61aN, litwZ and Lptjs. Character reference-sheet
+`family-cup.pen`. Current source references include P5 Match `ELfFJ`, Home
+`iw8eB` and loading `U3LH0w`; the existing cinematic site composition remains. Character reference-sheet
 beige is not a game UI colour. Native navy/blue, gold, white and green buttons are
 retained; no independently invented marketing palette.
 
@@ -42,16 +43,24 @@ Recorded video retains its captured shading.
 the official unmodified The Last Click logo used in the footer. `arms-qa.json`
 records the camera-local arm export and source animation/geometry comparison.
 
-`latest-art-manifest.json` records the **5 November final happy family artwork**,
+`latest-art-manifest.json` records the **5 November happy family rivalry artwork**,
 from `DadLineFamilyCup/Design/images/family_happy_5nov/final`, without grandparents.
-Do not replace these with stale `CupArt/families/*_lineup.png` exports.
+These rivalry cutouts are separate from the current catless loading-family asset.
 The nine supported families are selectable in the rivalry presentation.
 
-Current match and Dad Mode footage comes from the 5 November `powerups210/owl_video`
-capture in `FamilyRush-newdads`, trimmed/resized without sound. Power demos use
-the same build's eight captured power videos and load only on selection. This is
-development footage. PvP is described as planned for launch, not verified online
-play in this demo. No public store availability is asserted. Tester CTA is email.
+`nov6-art-manifest.json` records the current white/cyan/orange logo, catless
+loading family, P5 Match poster, Home screen, Farmers groceries and recorded
+footage from the active `FamilyRush` checkout. The source P5 r4 recording has
+one main road and a rival picture-in-picture, enters Dad Mode around 3.8 seconds
+and returns at 15.93 seconds. Scroll seeks use the corresponding recording time;
+this is actual development footage, not a reconstructed game UI. The Home link
+opens the current `iw8eB` runtime capture. The social preview composes only the
+current source logo and catless family on the approved navy.
+
+The eight selectable power demos remain genuine 5 November captures with an
+earlier HUD, explicitly labelled beside the selector. No current capture for
+each individual power was supplied. PvP remains described as planned for launch;
+no public store availability is asserted. Tester CTA is email.
 
 One lazy renderer, pooled/instanced street props, capped pixel ratio,
 30/45 FPS animation admission, off-tab suspension and reduced-motion handling.

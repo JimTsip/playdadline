@@ -184,7 +184,7 @@ export async function createDadRun(canvas) {
     const map = tl.load(
       "/assets/fr3d/items/" +
         ["strawberry", "apple", "banana", "milk"][i % 4] +
-        ".webp",
+        ".webp?v=20261106",
     );
     map.colorSpace = T.SRGBColorSpace;
     const sprite = new T.Sprite(

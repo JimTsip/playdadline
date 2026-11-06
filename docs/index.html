@@ -20,7 +20,10 @@
       property="og:description"
       content="One shared board. Two very competitive families. Then Dad takes over."
     />
-    <meta property="og:image" content="https://playfamilyrush.com/og.png" />
+    <meta
+      property="og:image"
+      content="https://playfamilyrush.com/og.png?v=20261106"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -31,17 +34,17 @@
       href="/fonts/LilitaOne.ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="/rush.css?v=scene-cel5" />
-    <script type="module" src="/family-rush.js?v=scene-cel5"></script>
+    <link rel="stylesheet" href="/rush.css?v=scene-p5-nov6" />
+    <script type="module" src="/family-rush.js?v=scene-p5-nov6"></script>
   </head>
   <body>
     <a class="skip" href="#powers">Skip gameplay story</a>
     <header class="site-header">
       <a href="#top" aria-label="Family Rush home"
         ><img
-          src="/assets/fr/wordmark.webp"
+          src="/assets/fr/wordmark.webp?v=20261106"
           width="135"
-          height="68"
+          height="67"
           alt="Family Rush"
       /></a>
       <nav aria-label="Main navigation">
@@ -176,11 +179,11 @@
                 muted
                 playsinline
                 preload="metadata"
-                poster="/assets/fr3d/match-poster.webp"
-                aria-label="Development gameplay: matching pieces, charging Dad Mode, running to collect errands and returning to the board"
+                poster="/assets/fr3d/match-poster.webp?v=20261106"
+                aria-label="Current development gameplay: single-view match with rival picture-in-picture, Dad Mode and return to the board"
               >
                 <source
-                  src="/assets/fr3d/story/match-to-dadmode.mp4"
+                  src="/assets/fr3d/story/match-to-dadmode.mp4?v=20261106"
                   type="video/mp4"
                 /></video
               ><canvas id="dad-canvas" aria-hidden="true"></canvas>
@@ -191,8 +194,8 @@
                   loop
                   playsinline
                   preload="none"
-                  data-src="/assets/fr3d/dad-mode-gameplay.mp4"
-                  poster="/assets/fr3d/dad-mode-poster.webp"
+                  data-src="/assets/fr3d/dad-mode-gameplay.mp4?v=20261106"
+                  poster="/assets/fr3d/dad-mode-poster.webp?v=20261106"
                 ></video>
               </div>
               <div class="run-overlay" aria-hidden="true">
@@ -226,13 +229,13 @@
           </div>
           <img
             class="flying-piece piece-watermelon"
-            src="/assets/fr3d/items/strawberry.webp"
+            src="/assets/fr3d/items/strawberry.webp?v=20261106"
             alt=""
             width="160"
             height="160"
           /><img
             class="flying-piece piece-coconut"
-            src="/assets/fr3d/items/apple.webp"
+            src="/assets/fr3d/items/apple.webp?v=20261106"
             alt=""
             width="150"
             height="150"
@@ -334,12 +337,15 @@
               loop
               playsinline
               preload="none"
-              poster="/assets/fr3d/dad-mode-poster.webp"
-              aria-label="Development footage showing the selected Dad Mode power-up"
+              poster="/assets/fr3d/dad-mode-poster.webp?v=20261106"
+              aria-label="Recorded development demonstration of the selected power; earlier HUD"
             ></video
             ><button type="button" id="dp-play" class="button blue">
               WATCH THE POWER ▷
             </button>
+            <p class="power-capture-note">
+              Recorded power demos · earlier HUD.
+            </p>
           </div>
         </div>
       </section>
@@ -433,11 +439,18 @@
             href="mailto:hello@thelastclick.ai?subject=Family%20Rush%20TestFlight%20invite"
             >Become a tester <span>↗</span></a
           ><small>Send us a hello. We’ll take it from there.</small>
+          <a
+            class="home-capture-link"
+            href="/assets/fr3d/screens/home.webp?v=20261106"
+            target="_blank"
+            rel="noopener"
+            >See your family’s road ahead ↗</a
+          >
         </div>
         <img
-          src="/assets/fr3d/families/weekenders.webp"
-          width="1000"
-          height="1017"
+          src="/assets/fr3d/loading-family.webp?v=20261106"
+          width="899"
+          height="1024"
           alt="The Weekenders are ready for the next adventure"
           loading="lazy"
         />

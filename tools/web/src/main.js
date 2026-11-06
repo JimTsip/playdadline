@@ -111,7 +111,11 @@ function buildTimeline() {
   renderStory();
 }
 function seekFilm(t) {
-  requestedTime = clamp(t, 0, 14.8);
+  requestedTime = clamp(
+    t,
+    0,
+    Number.isFinite(film.duration) ? Math.max(0, film.duration - 0.1) : 20.8,
+  );
   if (film.readyState < 1 || seeking) return;
   if (Math.abs(film.currentTime - requestedTime) < 0.065) return;
   seeking = true;
@@ -145,9 +149,9 @@ function setCaption(index) {
 function videoTime(p) {
   if (p < 0.18) return range(0.07, 0.18, p) * 1.7;
   if (p < 0.38) return 1.7 + range(0.18, 0.38, p) * 3.7;
-  if (p < 0.69) return 5.4 + range(0.38, 0.69, p) * 7.8;
-  // Cut back to the clean match footage behind the shrinking 3D scene.
-  return 1.4 + range(0.69, 0.89, p) * 0.9;
+  if (p < 0.69) return 5.4 + range(0.38, 0.69, p) * 10.2;
+  // The current P5 capture returns from Dad Mode at 15.93 seconds.
+  return 16.7 + range(0.69, 0.89, p) * 3.8;
 }
 async function ensurePreview() {
   if (previewPromise) return previewPromise;

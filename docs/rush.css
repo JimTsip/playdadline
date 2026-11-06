@@ -1721,3 +1721,18 @@ footer > a:last-child {
     animation-duration: 0.01ms !important;
   }
 }
+
+.home-capture-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--gold);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.power-capture-note {
+  margin: 14px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}

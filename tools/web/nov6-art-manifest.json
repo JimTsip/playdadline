@@ -1,0 +1,115 @@
+{
+  "revision": "2026-11-06 active FamilyRush / current Pencil reference",
+  "assets": [
+    {
+      "source": "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/logo/final/family_rush_logo.png",
+      "source_sha256": "b575f36510ac80a45a7ca5dbfcac2a7525add87d5aa68d74215677be4e49bd0d",
+      "output": "docs/assets/fr/wordmark.webp",
+      "sha256": "d7cc1f6c1495ab423db36c816ff8f215897558238a44962034294a4927dfb6f5",
+      "bytes": 80972,
+      "use": "Current white/cyan wordmark with orange streaks"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/loading/family.png",
+      "source_sha256": "b6b2000e504759ce434c88f0b3319aedfa389acb481e6f4604b3b6fd3a10a192",
+      "output": "docs/assets/fr3d/loading-family.webp",
+      "sha256": "44b49ad1195cbbe2c601ea2151e2358dabef490ec37d7bc4e0d9404268ac10e3",
+      "bytes": 180488,
+      "use": "Current catless loading family"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Builds/home_iw8eB/nav_590x1278/home.png",
+      "source_sha256": "a7d45b204d3a05e05e1f345ca7e3e0994fff0efda5cfa5625c1484106d9aee80",
+      "output": "docs/assets/fr3d/screens/home.webp",
+      "sha256": "63f398db8ef23a9d8887dc6e5745574e68da07d90c4a3d93fdab0a8dcd833205",
+      "bytes": 85804,
+      "use": "Current iw8eB Home camera and navigation"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Builds/match_p5/out_r4/p5_match_B.png",
+      "source_sha256": "263ffe2213f8ca64cef4ce97974e2ba0e9536d9d20b9b35c561a7d988b561fe1",
+      "output": "docs/assets/fr3d/match-poster.webp",
+      "sha256": "c3b769b38ac2a1f8069395f9150f7e3a8d7c59efbabb12e974751786a34e0647",
+      "bytes": 151420,
+      "use": "Current P5 single POV, PiP and board"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Builds/match_p5/out_r4/current_dad.png",
+      "source_sha256": "d8f28d6744d77c288c8fb90cc7e4f6bec40ed1edc9245851a9789c2f9d867b97",
+      "output": "docs/assets/fr3d/dad-mode-poster.webp",
+      "sha256": "99f6bd0c83121ae2c057eedf2d11d8de36100bc7a2fa12a0eda4082b45b53092",
+      "bytes": 84204,
+      "use": "Current first-person Dad Mode HUD"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/items/item_farmers_apple.png",
+      "source_sha256": "1f069ca8ef49c1195b6524dce808e18d785761460abed6666dcb57717c54f852",
+      "output": "docs/assets/fr3d/items/apple.webp",
+      "sha256": "71e36190a21e4b87da6424978c6e72de5a4ec1879b304eae08095bfea38c1c00",
+      "bytes": 13758,
+      "use": "Current Farmers grocery art used by P5 footage"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/items/item_farmers_banana.png",
+      "source_sha256": "0f295b21eda44eebb90cb354f9865cb3572f335cddd0c9449edacecc899c75de",
+      "output": "docs/assets/fr3d/items/banana.webp",
+      "sha256": "f31cd86a3d09b636dec6bea63626aa05631bca66ac37c38ccd810f2606ab1666",
+      "bytes": 11992,
+      "use": "Current Farmers grocery art used by P5 footage"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/items/item_farmers_strawberry.png",
+      "source_sha256": "c5443872469bc9d30b8a66a67b1b75e9dbb7e35bd33ad9e3d8dbccc5372c020a",
+      "output": "docs/assets/fr3d/items/strawberry.webp",
+      "sha256": "a0b87606756aa21cc5804d5f45edd2778fe3b27d9894c3ebb4c01a1aae355f7a",
+      "bytes": 14980,
+      "use": "Current Farmers grocery art used by P5 footage"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/items/item_farmers_milk.png",
+      "source_sha256": "adb4d2c525009f65a684ee106f3b5aa5c48584db12e6fa96fc9ee654db738e45",
+      "output": "docs/assets/fr3d/items/milk.webp",
+      "sha256": "bac769a0b08345cc9968eec8833c74857856a02ebdf519d405e778f7f44711af",
+      "bytes": 8074,
+      "use": "Current Farmers grocery art used by P5 footage"
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Builds/match_p5/out_r4/match_p5.mp4",
+      "source_sha256": "dcc860cee77c1b7006c10c7e6cd2dbbf50c4bfd9bc2a24da96b2b21b552a05c5",
+      "output": "docs/assets/fr3d/story/match-to-dadmode.mp4",
+      "sha256": "e13d0dd7e1122538d3a800e1c68f2c50a6630b40545bfff2bbf7e4f4971ff2e9",
+      "bytes": 5792369,
+      "use": {
+        "capture": "P5 r4 recorded development footage, 6 November",
+        "trim_start": 0,
+        "trim_duration": null
+      }
+    },
+    {
+      "source": "/Users/jimtsip/Projects/FamilyRush/Builds/match_p5/out_r4/match_p5.mp4",
+      "source_sha256": "dcc860cee77c1b7006c10c7e6cd2dbbf50c4bfd9bc2a24da96b2b21b552a05c5",
+      "output": "docs/assets/fr3d/dad-mode-gameplay.mp4",
+      "sha256": "656c0c293ad002d4835254b302e80ae2090dc852fb0a4d84dc78ca0ae510c480",
+      "bytes": 2159071,
+      "use": {
+        "capture": "P5 r4 recorded development footage, 6 November",
+        "trim_start": 6.2,
+        "trim_duration": 8
+      }
+    },
+    {
+      "output": "docs/og.png",
+      "sources": [
+        "/Users/jimtsip/Projects/DadLineFamilyCup/Design/images/logo/final/family_rush_logo.png",
+        "/Users/jimtsip/Projects/FamilyRush/Unity/Assets/FamilyCup/Resources/CupArt/loading/family.png"
+      ],
+      "sha256": "e801c084e87e13326ce4486016dec297d37b3c8f09d1acb6d13cace54e3c4c71",
+      "use": "Standard composition of current source logo and catless family on approved navy; no generated artwork"
+    }
+  ],
+  "unchanged_compatible": [
+    "Source arms FBX SHA256 unchanged from arms-qa.json; exact camera placement retained.",
+    "DadCrests=6 remains confirmed by active CupData/plan.json.",
+    "Eight selected power demos retain earlier genuine development HUD and are labelled accordingly."
+  ]
+}
