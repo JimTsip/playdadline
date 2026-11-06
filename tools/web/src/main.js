@@ -123,7 +123,7 @@ function seekFilm(t) {
 }
 film.addEventListener("seeked", () => {
   seeking = false;
-  if (Math.abs(film.currentTime - requestedTime) > 0.08)
+  if (progress >= 0.07 && Math.abs(film.currentTime - requestedTime) > 0.08)
     seekFilm(requestedTime);
 });
 film.addEventListener("loadedmetadata", () => {
