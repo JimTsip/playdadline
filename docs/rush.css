@@ -960,6 +960,9 @@ p + p {
 }
 .puzzle-piece {
   width: 45%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
   position: absolute;
   right: -6%;
   bottom: 0;
