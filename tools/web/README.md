@@ -1,68 +1,42 @@
 # Family Rush public site
 
-The public domain `playfamilyrush.com` is GitHub Pages, branch `main`, `/docs`.
-The historical React/Sites app at the repository root is a separate application.
+Official deployment: GitHub Pages, `main:/docs`, `playfamilyrush.com`. The historical root React/Sites app is separate.
 
-Build: `cd tools/web && npm ci && npm run build`.
-Preview with byte-range video support: `node tools/web/preview.mjs` from the repository root.
+- Build: `npm run build --prefix tools/web`
+- Validate shipped assets and anchors: `node tools/web/validate.mjs`
+- Preview with byte-range video support: `node tools/web/preview.mjs` (port8766)
+- Format source: `npm run format --prefix tools/web`
 
-## Direction and camera contract
+## 6 November redesign
 
-The current story starts inside a phone: real match footage explains the shared
-board and six-crest Dad Mode charge. The phone expands into a live fullscreen
-first-person Dad Mode preview, shrinks back into the match, then leaves the scene.
-Family help, eight common Dad Mode powers, family rivalry and a tester invitation
-follow. Scroll manually, use Next Moment or play the 29-second guided sequence.
+A continuous navy world, bold white/gold typography interleaved with real character art and current Pencil screens. GSAP scrub moves separate type/art layers through every chapter. The page contains hero, Classic duel→Dad Mode→return, Knockout Sprint, family/power selectors, cup/mode progression, an interactive last puzzle piece, ranks/tournaments/daily gifts, tester invitation and the official The Last Click footer logo.
 
-The live run uses the current `CupRoad3D` Dad Mode camera: eye 3, vertical FOV 74,
-near .1, curve .0009 along/across, and the source horizon aim. The actual current
-camera-local arm rig uses position (0,0,-.9), +10-degree pitch and scale 3. Browser
-aspect widens the same view. Do not replace it with an orbit or visible Dad back.
+`PEN-RULES-20261106.md` documents the current rules and the ten Sprint/progression references. Additional studied boards:
 
-The palette and typography come from the actual editable game screens in
-`family-cup.pen`. Current source references include P5 Match `ELfFJ`, Home
-`iw8eB` and loading `U3LH0w`; the existing cinematic site composition remains. Character reference-sheet
-beige is not a game UI colour. Native navy/blue, gold, white and green buttons are
-retained; no independently invented marketing palette.
+| Node   | Interpretation used                                                                                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| BblNZ  | Historical list-style Shop; its every-four-hours gift is superseded by the AW daily wheel direction.                                         |
+| temZ2  | Actual coins/cards/gift Shop asset sources.                                                                                                  |
+| TdPL6  | Quiet Shop AW: daily free wheel turn, deals/cards/coins, one main green button. The website shows the design without promising fixed prices. |
+| L14A6A | Selected loading A, U3LH0w: current logo and large catless Weekenders.                                                                       |
+| SrQ8H  | Selected Face-off icon IBtVP, now used for site icons.                                                                                       |
+| P52fq  | Logo v6 exploration; alternatives are not the approved identity.                                                                             |
+| dUhQW  | Five intentionally different unselected logo directions.                                                                                     |
+| ZXP4K  | Explicitly marks current white FAMILY/cyan RUSH logo as approved; other variants remain alternatives.                                        |
+| grQcU  | Several gameplay layouts; current P5 ELfFJ is one main POV road with rival PiP. Real P5 footage is used for Classic.                         |
+| tFLMg  | Home/HUD alternatives; current reference iw8eB is shown for the road/cup progression.                                                        |
+| YbbK2  | Reward-led result K2: cups/coins and earned puzzle piece. Fixed example amounts are not advertised.                                          |
+| ScCYM  | Quiet Power page, separate member and Dad powers, equipped/locked/exhausted states.                                                          |
+| RmKfW  | Family selection and rename, current family lineups, one green action.                                                                       |
 
-## Sources
+Keep Classic and Sprint separate. Sprint's individual boards turn matches directly into speed; its combos do not create Classic's rockets/rainbows/gifts. Thirteen new twist concepts are additional to Classic. Puzzle picture/room rewards are coins; obsolete refill claims were excluded. Selected Ranks C separates weekly/all-time and global/country; tournament layouts remain development proposals. The website describes the experience being built, with development status and tester invitation, without claiming a public store launch.
 
-`asset-manifest.json` records original FBX-to-GLB sources, hashes and geometry/pose QA.
-Original geometry, rigs, painted vertex colours and animation cuts are retained.
-`cel-material.js` applies `CupDadCel`-based three-band sunlight across the whole
-solid scene: arms, road/pavement/grass, lane markings, houses, trees, fences and
-lampposts. The earlier SoftCel ambient fill washed out the environment's bands;
-the environment now shares the Dad's discrete lighting, preserving painted
-colours, with restrained rim and readable colour-tinted silhouette ink.
-Skinned arms share the original skeleton; street outlines share instance buffers.
-The ink narrows with distance. Street assets must all load before the preview is
-marked ready; failures use the recorded fallback. This is a web adaptation, not a Unity renderer.
-Recorded video retains its captured shading.
+## Assets and camera
 
-`native-art-manifest.json` records the native UI artwork and source hashes, plus
-the official unmodified The Last Click logo used in the footer. `arms-qa.json`
-records the camera-local arm export and source animation/geometry comparison.
+`docs/assets/fr-next/screens/` contains read-only Pencil exports, not proof of shipped UI. `art/` contains actual puzzle illustrations and Sprint item cutouts. `families/` uses the current 6 November no-animal loading sources. Original game/design files were not changed.
 
-`latest-art-manifest.json` records the **5 November happy family rivalry artwork**,
-from `DadLineFamilyCup/Design/images/family_happy_5nov/final`, without grandparents.
-These rivalry cutouts are separate from the current catless loading-family asset.
-The nine supported families are selectable in the rivalry presentation.
+Classic recording: active FamilyRush `Builds/match_p5/out_r4/match_p5.mp4`; the current video is20.93s, with Dad Mode around3.8s and return around15.93s. `nov6-art-manifest.json` retains its provenance. Old power demo videos are not part of the redesigned page.
 
-`nov6-art-manifest.json` records the current white/cyan/orange logo, catless
-loading family, P5 Match poster, Home screen, Farmers groceries and recorded
-footage from the active `FamilyRush` checkout. The source P5 r4 recording has
-one main road and a rival picture-in-picture, enters Dad Mode around 3.8 seconds
-and returns at 15.93 seconds. Scroll seeks use the corresponding recording time;
-this is actual development footage, not a reconstructed game UI. The Home link
-opens the current `iw8eB` runtime capture. The social preview composes only the
-current source logo and catless family on the approved navy.
+The lazy Three.js run retains the native first-person camera contract: eye3, vertical FOV74, near.1, road curve.0009, source horizon aim, camera-local arms at(0,0,-.9), +10° pitch, scale3. Browser aspect widens the same view. `cel-material.js` keeps the whole solid scene in the same cel-shaded lighting. Preserve the real geometry, rigs and painted colors; do not substitute an orbit or visible Dad back. Recorded fallback is used if WebGL fails.
 
-The eight selectable power demos remain genuine 5 November captures with an
-earlier HUD, explicitly labelled beside the selector. No current capture for
-each individual power was supplied. PvP remains described as planned for launch;
-no public store availability is asserted. Tester CTA is email.
-
-One lazy renderer, pooled/instanced street props, capped pixel ratio,
-30/45 FPS animation admission, off-tab suspension and reduced-motion handling.
-Video loads only in its scene and pauses when the scene leaves. Explicit
-keyboard-accessible video buttons control playback.
+One renderer, capped pixel ratio, 30/45FPS admission, off-tab suspension, on-scroll visibility, reduced motion and pause controls. Source geometry/native-art/arms manifests remain in this folder.

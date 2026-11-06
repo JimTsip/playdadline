@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-06",
+  "design": "DadLineFamilyCup/Design/family-cup.pen",
+  "method": "Read-only Pencil exports and web encodings of existing production artwork",
+  "files": [
+    {
+      "file": "docs/assets/fr-next/art/puzzle-sandcastle.webp",
+      "bytes": 219478,
+      "sha256": "2d9e86fc7ace9b6e1c357fc632d20284645a4a17edca9adc0b130ab3755d9041"
+    },
+    {
+      "file": "docs/assets/fr-next/art/puzzle-splash.webp",
+      "bytes": 324392,
+      "sha256": "c58586b45833f009d20be490edab945390069c148f39c7306ec9679d47d5dc5d"
+    },
+    {
+      "file": "docs/assets/fr-next/art/puzzle-sunset.webp",
+      "bytes": 273062,
+      "sha256": "4406cd0a0d35229bafc63450fa7bc27b049995d4f482726d573293a4f65ee3f8"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-bolt.webp",
+      "bytes": 13990,
+      "sha256": "1e6143d92e7e990791e0ae4b1f73da3d8cd42c7ee2a30570a6681e6feddecb8e"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-drink.webp",
+      "bytes": 20082,
+      "sha256": "c19901433b6ff345136f4f27f37e95c8ed66ad1b754cd8db9d544b9f247ff323"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-orange.webp",
+      "bytes": 21950,
+      "sha256": "2fb5f704a47c0e6db86e82c7731ffc73903452a75643c7f6c9e870b8f72a2d17"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-shoe.webp",
+      "bytes": 18652,
+      "sha256": "00f8caa3fa6becd030309e585e28b85f9bea704db627b06733eca16fdc7d2128"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-watch.webp",
+      "bytes": 19068,
+      "sha256": "888378c74cfc1645cbb6af72046822bdb3cdeee1815846d44d33ff930ca964b2"
+    },
+    {
+      "file": "docs/assets/fr-next/art/sprint-water.webp",
+      "bytes": 9412,
+      "sha256": "bcf705927456f60071a051afff8700850fd25956a04cb68ad8024e8e033b6ed2"
+    },
+    {
+      "file": "docs/assets/fr-next/families/bakers.webp",
+      "bytes": 188108,
+      "sha256": "a43c8b26e2d88407ef608bfbb99590c3d9d3b39a49761435d4e328c18eff011e"
+    },
+    {
+      "file": "docs/assets/fr-next/families/campbells.webp",
+      "bytes": 167300,
+      "sha256": "e38965e3e9666972aef94beaf4658ad4bacc40e0dbed83db1cbdb1a1c0e07161"
+    },
+    {
+      "file": "docs/assets/fr-next/families/sprinters.webp",
+      "bytes": 229894,
+      "sha256": "10e2d969bc64a17f16f6a9a39d451590163163fa0b61085cdc64602fbef0e24b"
+    },
+    {
+      "file": "docs/assets/fr-next/families/weekenders.webp",
+      "bytes": 168458,
+      "sha256": "b9096449b99812994c3e053c414d4f72014c47b6bea086125661258c8b82072d"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/ELfFJ.webp",
+      "bytes": 140030,
+      "sha256": "396186c3d4f9d1ff30f5bba93a84abd772eeaa8f74d58483c8368539ae5009c6"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/Gxno4.webp",
+      "bytes": 104142,
+      "sha256": "f19d501200de6ab01cf25ff863893a25784ae4a92c2495147325bad44eb95193"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/KU8LO.webp",
+      "bytes": 97928,
+      "sha256": "904b802c463a51c756fd0629b184741693c8e7fdbb109f43c81428afe9983134"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/Kmb88.webp",
+      "bytes": 59562,
+      "sha256": "7fe8069f151aae441dedc075a3133ef802dbfb20e403c8cff7164d3882547288"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/S8e3KJ.webp",
+      "bytes": 66700,
+      "sha256": "a3eb183ec7cf7a37f2ee7adc0cee287731e2bdb8174d5d716eb2d9acefb4100f"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/VzUVL.webp",
+      "bytes": 90336,
+      "sha256": "3331b15ef99f282886053c7dc0318c48c6f311fcb66ccf103f45267763f3cf49"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/bO5zl.webp",
+      "bytes": 64964,
+      "sha256": "4b345d253b73704adc2eb6a20e617839e3d5fbf61ac4eb12271eaf370566647f"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/dFaZ9.webp",
+      "bytes": 100710,
+      "sha256": "ba691ccc463a37ebd3e6917037f1ad65de340065f0e81ddc1fc46af02fd6b142"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/iw8eB.webp",
+      "bytes": 81736,
+      "sha256": "10066319a281f91d9ca19ea70d9026e5b5caac68fc31c9dac90fff4dd741f10f"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/jI7xF.webp",
+      "bytes": 130242,
+      "sha256": "baaddb4b313709476bf166437df936ab4e9f47ebbfd747f8b41b474bac0000d1"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/oHVaD.webp",
+      "bytes": 60542,
+      "sha256": "c9bcebfbda18fbf9b537738b51c4f3b338428bd74ddc3868252b0f62a95c8e62"
+    },
+    {
+      "file": "docs/assets/fr-next/screens/oYDhS.webp",
+      "bytes": 85754,
+      "sha256": "f022600558ac481b2eb383bdc394cd90c73f5d3429a48bc61db517a3ea3ca427"
+    }
+  ]
+}
